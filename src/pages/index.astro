@@ -1,0 +1,28 @@
+---
+import MySiteLayout from '../layouts/MySiteLayout.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Myworks from '../components/MyWorks.astro';
+import MySkills from '../components/MySkills.astro';
+import  "../css/index.css";
+
+const title= "Home";
+---
+
+<BaseHead title = {title}> 
+</BaseHead>
+<MySiteLayout>
+       <main>
+              <section class="hero-section">
+                     <h1 class="headline">I design. I code. I contribute.</h1>
+                     <h2>Front End developer and designer</h2>
+                     <figure>
+                            <img src="/src/assets/img/pencil.jpg" alt="">
+                     </figure>
+              </section>
+              <MySkills/>
+              <Myworks/>
+      </main>
+</MySiteLayout>
+
+
+

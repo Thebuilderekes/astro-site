@@ -1,0 +1,131 @@
+---
+
+const skillCards = [
+
+
+{
+   icon:  'https://api.iconify.design/vscode-icons:file-type-css.svg',
+
+},
+
+{
+   icon:  'https://api.iconify.design/logos:sass.svg',
+
+},
+
+{
+   icon:  'https://api.iconify.design/logos:tailwindcss.svg',
+
+},
+
+
+
+{
+   icon:  'https://api.iconify.design/logos:javascript.svg',
+ 
+},
+
+{
+   icon:  'https://api.iconify.design/logos:astro.svg',
+ 
+},
+
+{
+   icon:  'https://api.iconify.design/vscode-icons:file-type-reactjs.svg ',
+
+}
+
+
+
+]
+---
+
+
+<section class="skills">
+    <h2>My skills</h2>
+    <div class="card-container">
+            {skillCards.map(skillCard =>
+            <div class="card">     
+                     <img src={skillCard.icon} alt=""/>
+            </div>
+            )
+            }
+    </div>
+</section>
+
+<style>
+    
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skills{
+    padding: 5rem 1rem;
+    background-color: #9ea3e7;
+    z-index: 100;
+}
+
+.skills h2 {
+    padding-bottom: 1.5rem;
+}
+
+
+.skills .card-container {
+    display: flex;
+ 
+    gap: 1.5rem;
+}
+
+
+.skills .card-container .card {
+    text-align: center;
+    width:33.33%;
+    padding: 0.9rem;
+    border-radius: 24px;
+    background-color: #898fe9;
+    transition: 0.5s;
+} 
+
+.skills .card-container .card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+@media (max-width: 800px){
+    .skills .card-container .card {
+        width: 100%;
+}
+
+}
+
+
+
+.skills .card-container .card img {
+    text-align: center;
+    color: #9ea3e7;
+    width: 100px;
+    height: 100px;
+
+}
+
+.skills .card-container .card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0.9rem 0;
+    display: block;
+}
+
+
+@media (max-width:800px){
+    .card-container {
+        flex-direction: column;
+    }
+    
+}
+
+</style>

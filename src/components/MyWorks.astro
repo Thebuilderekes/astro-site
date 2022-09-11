@@ -1,0 +1,104 @@
+---
+const workCards = [
+
+{
+    imgUrl: '/src/assets/img/pencil-300.jpg',
+    text: "this is about project  commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+},
+
+{
+    imgUrl: '/src/assets/img/pencil-300.jpg',
+    text: "this is about project lorem commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "
+},
+
+{
+    imgUrl: '/src/assets/img/pencil-300.jpg',
+    text: "this is about project commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+}
+
+]
+---
+
+<section class="works">
+        <h2>My works</h2>
+        <div class="card-container">
+                {workCards.map(WorkCard =>
+                <div class="card">
+                        <figure>
+                            <img src={WorkCard.imgUrl} alt="portfolio card"/>
+                       </figure>
+                        <p>{WorkCard.text}</p>
+                </div>
+                )
+                }
+        </div>
+</section>
+
+<style>
+
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.works{
+    padding: 5rem 1rem;
+    background-color: #9ea3e7;
+    z-index: 100;
+}
+
+.works h2 {
+    padding-bottom: 1.5rem;
+}
+
+
+.works .card-container {
+    display: flex;
+ 
+    gap: 1.5rem;
+}
+
+
+.works .card-container .card {
+    width:33.33%;
+    padding: 0.9rem;
+    border-radius: 24px;
+    background-color: #898fe9;
+} 
+
+@media (max-width: 800px){
+    .works .card-container .card {
+        width: 100%;
+}
+
+}
+
+.works .card-container .card figure {
+    width: 100%;
+}
+
+
+.works .card-container .card figure img {
+  border-radius : 16px;
+  width: 100%;
+}
+
+.works .card-container .card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0.9rem 0;
+    display: block;
+}
+
+
+@media (max-width:800px){
+    .card-container {
+        flex-direction: column;
+    }
+    
+}
+
+</style>
