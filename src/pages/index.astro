@@ -6,15 +6,17 @@ import MySkills from '../components/MySkills.astro';
 import  "../css/index.css";
 
 const title= "Home";
+import 'animate.css';
+
 ---
 
 <BaseHead title = {title}> 
 </BaseHead>
 <MySiteLayout>
-       <main>
+       <main  id="swup" class="transition-fade"> 
               <section class="hero-section">
-                     <h1 class="headline">I design. I code. I contribute.</h1>
-                     <h2>Front End developer and designer</h2>
+                     <h1 class=" animate__animated animate__fadeIn"> <span class="small-text">Hi there, my name is <br></span>Seun Olawale </h1>
+                     <h2  class=" animate__animated animate__fadeInUp animate__faster">Front End developer and designer</h2>
                      <figure>
                             <img src="/src/assets/img/pencil.jpg" alt="">
                      </figure>
@@ -26,3 +28,4 @@ const title= "Home";
 
 
 
+       

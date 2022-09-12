@@ -1,40 +1,40 @@
 ---
+import 'animate.css';
 
 const skillCards = [
 
 
 {
    icon:  'https://api.iconify.design/vscode-icons:file-type-css.svg',
+   animation: "card animate__animated animate__fadeIn delay-1"
 
 },
 
 {
    icon:  'https://api.iconify.design/logos:sass.svg',
-
+      animation: "card animate__animated animate__fadeIn delay-2" 
 },
 
 {
    icon:  'https://api.iconify.design/logos:tailwindcss.svg',
-
+   animation: "card animate__animated animate__fadeIn delay-3"
 },
-
 
 
 {
    icon:  'https://api.iconify.design/logos:javascript.svg',
- 
+   animation: "card animate__animated animate__fadeIn delay-4"
 },
 
 {
    icon:  'https://api.iconify.design/logos:astro.svg',
- 
+   animation: "card animate__animated animate__fadeIn delay-5"
 },
 
 {
    icon:  'https://api.iconify.design/vscode-icons:file-type-reactjs.svg ',
-
+   animation: "card animate__animated animate__fadeIn delay-6"
 }
-
 
 
 ]
@@ -42,10 +42,13 @@ const skillCards = [
 
 
 <section class="skills">
-    <h2>My skills</h2>
+    <h2 class="animate__animated animate__fadeIn">My skills</h2>
+    <div class="design-text">
+        SKILLS
+    </div>
     <div class="card-container">
             {skillCards.map(skillCard =>
-            <div class="card">     
+            <div class= {skillCard.animation}   >     
                      <img src={skillCard.icon} alt=""/>
             </div>
             )
@@ -63,20 +66,58 @@ const skillCards = [
 }
 
 .skills{
-    padding: 5rem 1rem;
-    background-color: #9ea3e7;
-    z-index: 100;
+    padding: 7rem 1.5rem;
+    background-color: #ffffff;
+    position: relative;
+
 }
 
-.skills h2 {
-    padding-bottom: 1.5rem;
+
+
+ .skills .design-text {
+    font-family: 'Archivo Black';
+    position: absolute;
+    top: 5%;
+    font-size: 10rem;
+    opacity: 0.1;
+
+ }
+
+ @media (max-width: 500px){
+.skills .design-text {
+    display: none;
 }
+
+}
+
+    @media (min-width:1400px){
+ .skills {
+    padding: 7rem 3rem;
+    background-color: #ffffff;
+
+    }
+}
+
+.skills h2.animate__animated.animate__fadeIn  {
+    padding-bottom: 4rem;
+    --animate-duration: 6s;
+    background: #0A1926;
+  background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:800px){
+    .skills h2{
+        font-size:3rem;
+    }
+}
+
 
 
 .skills .card-container {
     display: flex;
- 
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 
@@ -84,15 +125,37 @@ const skillCards = [
     text-align: center;
     width:33.33%;
     padding: 0.9rem;
-    border-radius: 24px;
-    background-color: #898fe9;
-    transition: 0.5s;
+    background-color: #e4e4f8;
+    box-shadow: 10px 10px 13px -1px rgba(0,0,0,0.53);
+-webkit-box-shadow: 10px 10px 13px -1px rgba(0,0,0,0.53);
+-moz-box-shadow: 10px 10px 13px -1px rgba(0,0,0,0.53);
 } 
 
-.skills .card-container .card:hover {
 
-    transform: translateY(-5px);
+/*Animation for skill cards*/
+.animate__animated.animate__fadeIn.delay-1{
+  --animate-duration: 7s;
+  
+}
 
+.animate__animated.animate__fadeIn.delay-2{
+  --animate-duration: 8s;
+}
+
+.animate__animated.animate__fadeIn.delay-3{
+  --animate-duration: 9s;
+}
+
+.animate__animated.animate__fadeIn.delay-4{
+  --animate-duration: 10s;
+}
+
+.animate__animated.animate__fadeIn.delay-5{
+  --animate-duration: 11s;
+}
+
+.animate__animated.animate__fadeIn.delay-6{
+  --animate-duration: 12s;
 }
 
 @media (max-width: 800px){
@@ -122,6 +185,8 @@ const skillCards = [
 
 
 @media (max-width:800px){
+
+
     .card-container {
         flex-direction: column;
     }
