@@ -1,0 +1,215 @@
+---
+import "animate.css";
+
+const skillCards = [
+  [
+    {
+      icon: "https://api.iconify.design/vscode-icons:file-type-css.svg",
+      animation: "card animate__animated animate__fadeIn delay-1",
+    },
+
+    {
+      icon: "https://api.iconify.design/logos:sass.svg",
+      animation: "card animate__animated animate__fadeIn delay-2",
+    },
+  ],
+
+  [
+    {
+      icon: "https://api.iconify.design/logos:tailwindcss.svg",
+      animation: "card animate__animated animate__fadeIn delay-3",
+    },
+
+    {
+      icon: "https://api.iconify.design/logos:javascript.svg",
+      animation: "card animate__animated animate__fadeIn delay-4",
+    },
+  ],
+
+  [
+    {
+      icon: "https://api.iconify.design/logos:astro.svg",
+      animation: "card animate__animated animate__fadeIn delay-5",
+    },
+
+    {
+      icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
+      animation: "card animate__animated animate__fadeIn delay-6",
+    },
+  ]
+];
+---
+
+<section class="skills" id= "skills">
+  <h2 class="animate__animated animate__fadeIn">SKILLS</h2>
+  <div class="design-text">SKILLS</div>
+  <div class="card-container">
+
+
+ 
+      {
+        skillCards[0].map((skillCard) => (
+          <div class={skillCard.animation}>
+            <img src={skillCard.icon} alt="" />
+          </div>
+        ))
+      }
+
+      {
+        skillCards[1].map((skillCard) => (
+          <div class={skillCard.animation}>
+            <img src={skillCard.icon} alt="" />
+          </div>
+        ))
+      }
+
+
+      {
+        skillCards[2].map((skillCard) => (
+          <div class={skillCard.animation}>
+            <img src={skillCard.icon} alt="" />
+          </div>
+        ))
+      }
+ 
+  </div>
+</section>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*ANIMATION STYLES FOR SKILL CARDS*/
+  .animate__animated.animate__fadeIn.delay-1 {
+    --animate-duration: 7s;
+  }
+
+  .animate__animated.animate__fadeIn.delay-2 {
+    --animate-duration: 8s;
+  }
+
+  .animate__animated.animate__fadeIn.delay-3 {
+    --animate-duration: 9s;
+  }
+
+  .animate__animated.animate__fadeIn.delay-4 {
+    --animate-duration: 10s;
+  }
+
+  .animate__animated.animate__fadeIn.delay-5 {
+    --animate-duration: 11s;
+  }
+
+  .animate__animated.animate__fadeIn.delay-6 {
+    --animate-duration: 12s;
+  }
+
+
+  /*SKILL SECTION STYLES*/
+
+  .skills {
+    padding: 7rem 2rem;
+    position: relative;
+  }
+
+  @media (min-width: 1400px) {
+    .skills {
+      padding: 7rem 3rem;
+      background-color: #fdfafa;
+    }
+  }
+
+
+  @media (max-width: 800px) {
+    .skills {
+      padding: 4rem 1rem;
+    }
+  }
+
+  .skills .design-text {
+    font-family: "Archivo Black";
+    position: absolute;
+    top: 5%;
+    font-size: 10rem;
+    opacity: 0.1;
+  }
+
+  @media (max-width: 1070px) {
+    .skills .design-text {
+      font-size: 8rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .skills .design-text {
+      font-size: 3rem;
+    }
+  }
+
+  
+  .skills h2.animate__animated.animate__fadeIn {
+    padding-bottom: 4rem;
+    --animate-duration: 6s;
+    background: #0a1926;
+    background: linear-gradient(to right, #0a1926 0%, #3535c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 800px) {
+    .skills h2 {
+      font-size: 3rem;
+    }
+  }
+
+/* SKILLS CARD STYLES*/
+
+  .skills .card-container {
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-column-gap: 3rem;
+      grid-row-gap: 0px;
+  }
+
+  
+  @media (max-width: 600px){
+        .skills .card-container {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        }
+
+  }
+  .skills .card-container .card {
+    text-align: center;
+    padding: 0.9rem;
+    margin: 2rem 0;
+    background-color: #e4e4f8;
+    box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
+-webkit-box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
+-moz-box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
+  }
+
+  .skills .card-container .card img {
+    text-align: center;
+    color: #9ea3e7;
+    width: 100px;
+    height: 100px;
+  }
+
+  .skills .card-container .card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0.9rem 0;
+
+  }
+</style>

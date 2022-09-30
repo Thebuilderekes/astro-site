@@ -1,8 +1,9 @@
 ---
-import MySiteLayout from '../layouts/MySiteLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import BaseHead from '../components/BaseHead.astro';
-import Myworks from '../components/MyWorks.astro';
-import MySkills from '../components/MySkills.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Skills from '../components/Skills.astro';
 import  "../css/index.css";
 
 const title= "Home";
@@ -10,21 +11,14 @@ import 'animate.css';
 
 ---
 
-<BaseHead title = {title}> 
-</BaseHead>
-<MySiteLayout>
+<BaseHead title = {title}/> 
+<BaseLayout>
        <main  id="swup" class="transition-fade"> 
-              <section class="hero-section">
-                     <h1 class=" animate__animated animate__fadeIn"> <span class="small-text">Hi there, my name is <br></span>Seun Olawale </h1>
-                     <h2  class=" animate__animated animate__fadeInUp animate__faster">Front End developer and designer</h2>
-                     <figure>
-                            <img src="/src/assets/img/pencil.jpg" alt="">
-                     </figure>
-              </section>
-              <MySkills/>
-              <Myworks/>
+              <HeroSection/>
+              <Skills/>
+              <Portfolio/>
       </main>
-</MySiteLayout>
+</BaseLayout>
 
 
 

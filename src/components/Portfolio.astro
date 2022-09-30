@@ -1,38 +1,45 @@
 ---
-const workCards = [
+
+const portfolioCards = [
 
 {
-imgUrl: '/src/assets/img/pencil-300.jpg',
-text: " CSS, TailwindCSS Javascript",
-animation: " card animate__animated animate__fadeInUp"
+imgUrl: '/src/assets/img/praize-web.png',
+text: " CSS, Bootstrap, Javascript",
+animation: " card animate__animated animate__fadeInUp",
+webUrl:  "https://praizecollectables.netlify.app/"
 },
 
 {
-imgUrl: '/src/assets/img/pencil-300.jpg',
-text: " CSS, TailwindCSS Javascript",
-animation: " card animate__animated animate__fadeInUp"
+imgUrl: '/src/assets/img/jackson-web.png',
+text: " HTML, CSS, Javascript",
+animation: " card animate__animated animate__fadeInUp",
+webUrl: "https://jackson-tan.vercel.app"
+
 },
 
 {
-imgUrl: '/src/assets/img/pencil-300.jpg',
-text: " CSS, TailwindCSS Javascript",
-animation: " card animate__animated animate__fadeInUp"
+imgUrl: '/src/assets/img/kombo-img.png',
+text: " CSS, TailwindCSS, Javascript",
+animation: " card animate__animated animate__fadeInUp",
+webUrl: "https://github.com/Thebuilderekes/kombo"
 }
 
 ]
 ---
 
-<section class="works">
-  <h2>My works</h2>
+<section class="portfolio" id="portfolio">
+  <h2>PORTFOLIO</h2>
   <div class="design-text">PORTFOLIO</div>
   <div class="card-container">
-    {workCards.map(workCard =>
-    <div class={workCard.animation}>
-      <figure>
-        <img src={workCard.imgUrl} alt="portfolio card" />
-        <figcaption> <a href="">VISIT WEBSITE</a>   </figcaption>
-      </figure>
-      <p><span>Technologies:</span> {workCard.text}</p>
+    {portfolioCards.map(portfolioCard =>
+    <div class={portfolioCard.animation}>
+        <figure>
+          <img src={portfolioCard.imgUrl} alt="portfolio card" />
+          <figcaption>
+            <a href={portfolioCard.webUrl} target = "_blank">VISIT WEBSITE</a>   
+          </figcaption>
+        </figure>
+      <p><span>Technologies:</span> {portfolioCard.text}</p>
     </div>
     )
     }
@@ -44,6 +51,10 @@ animation: " card animate__animated animate__fadeInUp"
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
 /* archivo-black-regular - latin */
@@ -61,39 +72,31 @@ animation: " card animate__animated animate__fadeInUp"
 }
 
 
-  .works {
-    padding: 7rem 1rem;
+/* PORTFOLIO SECTION STYLES*/
+
+  .portfolio {
+    padding: 7rem 2rem;
     background-color: #9ea3e7;
     position: relative;
   }
 
-  .works .design-text {
-    font-family: 'Archivo Black';
-    position: absolute;
-    top: 5%;
-    font-size: 10rem;
-    opacity: 0.1;
-  }
+@media (min-width:1400px){
+ .portfolio {
 
-  @media (max-width: 500px){
-
-    .works .design-text {
-
-        display: none;
-    }
-
-  }
-
-
-
-  @media (min-width:1400px){
- .works {
     padding: 7rem 3rem;
 
     }
 }
 
-  .works h2 {
+@media (max-width: 800px){
+    .portfolio {
+
+      padding: 4rem 3rem;
+
+    }
+  }
+
+  .portfolio h2 {
     padding-bottom: 4rem;
     background: #0A1926;
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
@@ -102,18 +105,45 @@ animation: " card animate__animated animate__fadeInUp"
   }
 
   @media (max-width:800px) {
-    .works h2 {
+    .portfolio h2 {
       font-size: 3rem;
     }
   }
 
-  .works .card-container {
+  .portfolio .design-text {
+    font-family: 'Archivo Black';
+    position: absolute;
+    top: 5%;
+    font-size: 10rem;
+    opacity: 0.1;
+  }
+
+  @media (max-width: 800px){
+    
+    .portfolio .design-text {
+      font-size: 7rem;
+
+  }
+
+ }
+
+ @media (max-width:600px){
+    
+    .portfolio .design-text {
+      top: 4%;
+      font-size: 3rem;
+  }
+
+ }
+
+
+/* PORTFOLIO CARD STYLES*/
+  .portfolio .card-container {
     display: flex;
     gap: 1.5rem;
   }
 
-
-  .works .card-container .card {
+  .portfolio .card-container .card {
     width: 33.33%;
     padding: 0.9rem;
     border-radius: 24px;
@@ -127,25 +157,25 @@ animation: " card animate__animated animate__fadeInUp"
   }
 
   @media (max-width: 800px) {
-    .works .card-container .card {
+    .portfolio .card-container .card {
       width: 100%;
     }
 
   }
 
-  .works .card-container .card figure {
+  .portfolio .card-container .card figure {
     position: relative;
     z-index: 10;
     width: 100%;
   }
 
-  .works .card-container .card figure img {
+  .portfolio .card-container .card figure img {
     border-radius: 16px;
     width: 100%;
   }
 
  
-  .works .card-container .card figure figcaption {
+  .portfolio .card-container .card figure figcaption {
    padding: 0;
    margin: 0;
     position: absolute;
@@ -162,39 +192,34 @@ animation: " card animate__animated animate__fadeInUp"
     animation-delay: ;
   }
 
-  .works .card-container .card figure figcaption   a{
+  .portfolio .card-container .card figure figcaption a{
      text-decoration: none;
      font-weight: 700;
      color: #ffffff;
-     font-size: 2rem;
+     font-size: 1.5rem;
+     font-family: 'Archivo Black';
  
   }
-  .works .card-container .card figure figcaption a:hover {
+  .portfolio .card-container .card figure figcaption a:hover {
 
-    color:#e8f532;
+     text-decoration: underline;
   }
 
 
-  .works .card-container .card figure:hover > figcaption {
+  .portfolio .card-container .card figure:hover > figcaption {
     visibility: visible;
   }
   
 
-
-  .works .card-container .card figure figcaption:hover {
-
-    visibility:visible;
-
-  }
-
-  .works .card-container .card p {
+  .portfolio .card-container .card p {
+  font-family: "Helvetica";
     font-size: 0.8rem;
     line-height: 1.5;
     text-align: left;
     padding: 0.9rem 0;
   }
 
-  .works .card-container .card p span {
+  .portfolio .card-container .card p span {
     font-weight: 900;
   }
 
