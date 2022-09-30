@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/Ai";
 import "../css/navigation.css";
 
 export default function Navigation() {
@@ -35,12 +34,10 @@ export default function Navigation() {
 
             <button className="btn" onClick={handleClick}>
               {!navb ? (
-                <AiOutlineClose
-                  style={{ width: "30px", height: "30px", color: "#ffffff" }}
+                <img src = "/src/assets/img/icons8-close-30.png"
                 />
               ) : (
-                <AiOutlineMenu
-                  style={{ width: "30px", height: "30px", color: "#ffffff" }}
+                <img src = "/src/assets/img/icons8-menu-30.png"
                 />
               )}
             </button>

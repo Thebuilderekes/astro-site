@@ -16,12 +16,6 @@ html {
   z-index: 999;
   transition: 0.7s all ease-in;
 }
-.header:hover {
-  background-color: #46444b;
-}
-.header:hover .desktop-navLink {
-  color: #262b33;
-}
 .header .display-none {
   display: none;
 }
