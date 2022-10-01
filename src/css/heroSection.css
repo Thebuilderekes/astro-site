@@ -94,21 +94,5 @@ main .hero-section {
     color: #ffffff;
     font-family: 'Candara';
     font-size: 20px;
-  
   }
   
-  
-  main .hero-section figure img {
-    z-index:-1;
-    border-radius: 30px;
-  
-  }
-  
-  
-  @media (min-width: 1500px){
-  
-    main .hero-section figure img {
-    top: 50%;
-    right: 30%;
-    }
-  }
