@@ -66,12 +66,12 @@ html {
   display: none;
   background-color: transparent;
   border: none;
-  visibility: hidden;
+ 
 }
 @media (min-width: 800px) {
   .header .nav-container button {
     display: none;
-    visibility: hidden;
+    
   }
 }
 @media (max-width: 799px) {
