@@ -6,7 +6,7 @@
   }
   
   
-  html {
+  html{
   width: 100%;
   }
 
@@ -19,16 +19,37 @@ body {
   }
 
 
-.container {
-  width: 100%;
-  padding: 10% 3rem;
-}
+
+  @media (min-width:300px){
+
+    .container {
+      padding: 20% 3rem;
+    }
+  }
   
-h1 {
+@media (min-width:600px){
+
+  .container {
+    padding: 10% 3rem;
+  }
+}
+
+
+
+.container h1 {
   background: #0A1926;
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
       margin: 0 50px;
-      font-family: 'Candara';
+      font-family: "Poppins";
+      font-size: 40px;
+  }
+
+  @media (min-width:320px){
+
+    .container h1 {
+
+      font-size: 30px;
+    }
   }

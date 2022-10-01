@@ -9,7 +9,19 @@ main .hero-section {
   
   @media (max-width: 800px) {
     main .hero-section {
-      height: 50vh;
+      height: 70vh;
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+  
+    }
+  }
+
+  @media (max-width: 400px) {
+    main .hero-section {
+      height: 90vh;
+      padding-top: 10%;
       display: flex;
       flex-direction: column;
     justify-content: center;
@@ -59,7 +71,7 @@ main .hero-section {
   
   @media (max-width: 800px) {
     main h2 {
-      font-size: var(--fs-);
+      font-size: var(--fs-medium);
     }
   }
 

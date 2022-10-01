@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <header className="header">
-            <div className="container">
+        <div className="nav-container">
             <a href="#" className = "logo">LOGO</a>
             <nav className="desktop-nav nav">
                   <div className="desktop-navItems">
@@ -23,10 +23,10 @@ export default function Navigation() {
                         <a className="mobile-navLink" onClick={handleMenu} href="#skills">
                         Skills
                       </a>
-                        <a className="desktop-navLink" href="#portfolio">
+                        <a className="desktop-navLink" href="index.html#portfolio">
                           Portfolio
                         </a>
-                        <a className="desktop-navLink" href="#footer">
+                        <a className="desktop-navLink" href="index.html#footer">
                           Contact
                         </a>
                   </div>
@@ -34,10 +34,10 @@ export default function Navigation() {
 
             <button className="btn" onClick={handleClick}>
               {!navb ? (
-                <img src = "/src/assets/img/icons8-close-30.png"
+                <img className ="menu-btn" src = "/src/assets/img/icons8-close-30.png"
                 />
               ) : (
-                <img src = "/src/assets/img/icons8-menu-30.png"
+                <img className ="menu-btn" src = "/src/assets/img/icons8-menu-30.png"
                 />
               )}
             </button>
@@ -56,10 +56,10 @@ export default function Navigation() {
               <a className="mobile-navLink" onClick={handleMenu} href="/about">
                 About
               </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="#portfolio">
+              <a className="mobile-navLink" onClick={handleMenu} href="index.html#portfolio">
                 Portfolio
               </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="#footer">
+              <a className="mobile-navLink" onClick={handleMenu} href="index.html#footer">
                 Contact
               </a>
             </div>

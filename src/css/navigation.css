@@ -22,44 +22,60 @@ html {
 .header .logo {
   font-weight: 900;
 }
-.header .container {
+.header .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 8rem;
   font-family: "Candara";
 }
-@media (max-width: 780px) {
-  .header .container {
+@media (max-width: 1400px) {
+  .header .nav-container {
     padding: 0 2rem;
   }
 }
-.header .container a {
+@media (max-width: 780px) {
+  .header .nav-container {
+    padding: 0 2rem;
+  }
+}
+.header .nav-container a {
   text-decoration: none;
   color: #ffffff;
   font-size: 18px;
 }
-.header .container .desktop-nav {
+.header .nav-container .desktop-nav {
   display: none;
 }
-.header .container .desktop-nav .desktop-navItems .desktop-navLink {
+.header .nav-container .desktop-nav .desktop-navItems .desktop-navLink {
   color: #ffffff;
   padding: 0 10px;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 1000ms ease;
+}
+.header .nav-container .desktop-nav .desktop-navItems .desktop-navLink:hover {
+  transform: translateY(5px);
 }
 @media (min-width: 800px) {
-  .header .container .desktop-nav {
+  .header .nav-container .desktop-nav {
     display: block;
   }
 }
-.header .container button {
+.header .nav-container button {
   display: none;
   background-color: transparent;
   border: none;
+  visibility: hidden;
+}
+@media (min-width: 800px) {
+  .header .nav-container button {
+    display: none;
+    visibility: hidden;
+  }
 }
 @media (max-width: 799px) {
-  .header .container button {
+  .header .nav-container button {
     display: block;
   }
 }
