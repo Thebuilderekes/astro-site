@@ -20,7 +20,7 @@ export default function Navigation() {
                         <a className="desktop-navLink" href="/about">
                           About
                         </a>
-                        <a className="mobile-navLink" onClick={handleMenu} href="#skills">
+                        <a className="desktop-navLink" href="index.html#skills">
                         Skills
                       </a>
                         <a className="desktop-navLink" href="index.html#portfolio">
@@ -34,10 +34,10 @@ export default function Navigation() {
 
             <button className="btn" onClick={handleClick}>
               {!navb ? (
-                <img className ="menu-btn" src = "../assets/img/icons8-close-30.png"
+                <img className ="menu-btn" src = "../src/assets/img/icons8-close-30.png"
                 />
               ) : (
-                <img className ="menu-btn" src = "../assets/img/icons8-menu-30.png"
+                <img className ="menu-btn" src = "../src/assets/img/icons8-menu-30.png"
                 />
               )}
             </button>
@@ -50,7 +50,7 @@ export default function Navigation() {
               <a className="mobile-navLink" onClick={handleMenu} href="/">
                 Home
               </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="#skills">
+              <a className="mobile-navLink" onClick={handleMenu} href="index.html#skills">
                 Skills
               </a>
               <a className="mobile-navLink" onClick={handleMenu} href="/about">
