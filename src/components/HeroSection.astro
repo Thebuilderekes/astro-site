@@ -9,3 +9,121 @@ import "../css/heroSection.css";
     <p class=" animate__animated animate__fadeInUp animate__faster">I specialize in crafting responsive, high converting websites and web experiences.</p>
     <a class=" animate__animated animate__fadeInUp animate__faster" href="#portfolio">View portfolio</a>
 </section>
+
+
+<style>
+    main .hero-section {
+  background-image: url("../assets/img/bg-img.png");
+  padding: 0 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+  
+  @media (max-width: 800px) {
+    main .hero-section {
+      height: 70vh;
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+  
+    }
+  }
+
+  @media (max-width: 400px) {
+    main .hero-section {
+      height: 90vh;
+      padding-top: 10%;
+      display: flex;
+      flex-direction: column;
+    justify-content: center;
+  
+    }
+  }
+  
+  main h1 {
+    color: rgb(61, 61, 61);
+    font-size:  var(--fs-extralarge);
+    font-family: 'Candara';
+    font-weight: bold;
+  }
+  
+  @media (max-width: 800px) {
+    main h1 {
+      font-size: var(--fs-large);
+    }
+  }
+
+
+  main h1 span {
+    font-size: 1.7rem;
+    font-family: 'Comfortaa';
+    font-weight: 900;
+    background: #0A1926;
+    background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+  
+  main h1.animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+  }
+  
+  main h2 {
+    font-size: var(--fs-large);
+    font-weight: 500;
+    color: var(--secondary-color);
+    background: #0A1926;
+    background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins";
+    --animate-duration: 2s;
+  }
+  
+  @media (max-width: 800px) {
+    main h2 {
+      font-size: var(--fs-medium);
+    }
+  }
+
+  main .hero-section p{
+
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #272727;
+  }
+
+  main .hero-section a{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 10px;
+    width: 300px;
+    background: #0A1926;
+    background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+    color: #ffffff;
+    font-family: 'Candara';
+    font-size: 20px;
+  
+  }
+  
+  
+  main .hero-section figure img {
+    z-index:-1;
+    border-radius: 30px;
+  
+  }
+  
+  
+  @media (min-width: 1500px){
+  
+    main .hero-section figure img {
+    top: 50%;
+    right: 30%;
+    }
+  }
+</style>
