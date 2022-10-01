@@ -34,10 +34,10 @@ export default function Navigation() {
 
             <button className="btn" onClick={handleClick}>
               {!navb ? (
-                <img src ="../src/assets/img/icons8-close-30.png"  alt = "close menu icon"
+                <img src ="src/assets/img/icons8-close-30.png"  alt = "close menu icon"
                 />
               ) : (
-                <img src ="../src/assets/img/icons8-menu-30.png" alt="hamburger icon"/>
+                <img src ="src/assets/img/icons8-menu-30.png" alt="hamburger icon"/>
 
               )}
             </button>
