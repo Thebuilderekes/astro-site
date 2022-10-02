@@ -11,7 +11,7 @@ export default function Navigation() {
   return (
     <header className="header">
         <div className="nav-container">
-            <a href="#" className = "logo">LOGO</a>
+            <a href="#" className = "logo">EB</a>
             <nav className="desktop-nav nav">
                   <div className="desktop-navItems">
                         <a className="desktop-navLink" href="/">

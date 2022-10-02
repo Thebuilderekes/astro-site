@@ -66,6 +66,7 @@ html {
   display: none;
   background-color: transparent;
   color: #ffffff;
+  font-weight: 600;
   border: none;
 }
 @media (min-width: 800px) {

@@ -32,7 +32,7 @@ main .hero-section {
   main h1 {
     color: rgb(61, 61, 61);
     font-size:  var(--fs-extralarge);
-    font-family: 'Candara';
+    font-family: 'Poppins';
     font-weight: bold;
   }
   
@@ -92,7 +92,18 @@ main .hero-section {
     background: #0A1926;
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
     color: #ffffff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     font-family: 'Candara';
     font-size: 20px;
+    transition: 1s all ease;
+  }
+
+  main .hero-section a:hover {
+
+transform: translateY(-5px);
+
+
   }
   
