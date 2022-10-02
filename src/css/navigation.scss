@@ -73,6 +73,7 @@ html {
     button {
       display: none;
       background-color: transparent;
+      color : #ffffff;
       border: none;
     
 
@@ -94,8 +95,7 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 15%;
-      transition: opacity 5s ease-in;
+      padding-top: 13%;
       height: 100vh;
 
       .mobile-navLink {
