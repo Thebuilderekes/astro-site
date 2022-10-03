@@ -34,10 +34,10 @@ export default function Navigation() {
 
             <button className="btn" onClick={handleClick}>
               {!navb ? (
-               "[CLOSE MENU]"
+               <img src="/assets/img/icons8-close-30.png"/>
               ) : (
                  
-                  "[MENU]"
+                <img src="/assets/img/icons8-menu-30.png"/>
               )}
             </button>
           </div>
