@@ -2,8 +2,6 @@
 import MyAboutPage from '../layouts/MyAboutPage.astro';
 import BaseHead from '../components/BaseHead.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import "../css/index.css"
- import  "../css/about.css"
 const title = "About";
 ---
 
@@ -14,7 +12,7 @@ const title = "About";
 
 <main class="container">
             <h1>About me </h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis labore, praesentium nostrum recusandae magni eaque itaque cupiditate fugit optio dolor beatae necessitatibus tenetur sapiente, perferendis dolorem numquam aliquam accusamus amet saepe eligendi excepturi id. Minus quam magni obcaecati labore, aliquid voluptatem enim. Ea provident, et adipisci quod nostrum dicta minus.</p>
+            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I have been learning and building websites for almost 2 years. I grew up in Lagos Nigeria and later went on to acquire a degree in computer Science from Rivers state in southern Nigeria. When I'm not building websites, I create content on <a href="">twitter</a> and <a href="">instagram</a> around productivity, web development resources and photography. I've been a huge fan of web development communitties and I enjoy answering questions and  helping people solve problems concerning their projects questions.  </p>
 
 </main>
 
@@ -30,6 +28,21 @@ const title = "About";
   }
   
   
+/* archivo-black-regular - latin */
+@font-face {
+  font-family: 'Archivo Black';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.svg#ArchivoBlack') format('svg'); /* Legacy iOS */
+}
+
+  
   html{
   width: 100%;
   }
@@ -42,7 +55,38 @@ body {
     height: 100%;
   }
 
+  .container h1 {
+  background: #0A1926;
+    background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      margin: 0 50px;
+      font-family: 'Archivo Black';
+      text-transform: uppercase;
+      font-size: 3rem;
+  }
 
+  @media (max-width: 800px){
+
+    .container h1 {
+
+      font-size: 30px;
+    }
+  }
+
+@media (min-width: 800px){
+
+  .container p {
+
+    font-size: 18px;
+   
+  }
+
+  .container p  a {
+color: red;
+text-decoration: underline;
+}
+}
 
   @media (min-width:300px){
 
@@ -60,21 +104,5 @@ body {
 
 
 
-.container h1 {
-  background: #0A1926;
-    background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-      margin: 0 50px;
-      font-family: 'Archivo Black';
-      font-size: 3rem;
-  }
 
-  @media (max-width: 800px){
-
-    .container h1 {
-
-      font-size: 30px;
-    }
-  }
 </style>
