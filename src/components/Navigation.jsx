@@ -43,25 +43,25 @@ export default function Navigation() {
           </div>
 
           <nav className="mobile-nav nav">
-            <div
-              className={!navb || !click ? "display-mobile-nav" : "display-none"}
-            >
-              <a className="mobile-navLink" onClick={handleMenu} href="/">
-                Home
-              </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="index.html#skills">
-                Skills
-              </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="/about">
-                About
-              </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="index.html#portfolio">
-                Portfolio
-              </a>
-              <a className="mobile-navLink" onClick={handleMenu} href="index.html#footer">
-                Contact
-              </a>
-            </div>
+              <div
+                className={!navb || !click ? "display-mobile-nav" : "display-none"}
+              >
+                <a className="mobile-navLink" onClick={handleMenu} href="/">
+                  Home
+                </a>
+                <a className="mobile-navLink" onClick={handleMenu} href="index.html#skills">
+                  Skills
+                </a>
+                <a className="mobile-navLink" onClick={handleMenu} href="/about">
+                  About
+                </a>
+                <a className="mobile-navLink" onClick={handleMenu} href="index.html#portfolio">
+                  Portfolio
+                </a>
+                <a className="mobile-navLink" onClick={handleMenu} href="index.html#footer">
+                  Contact
+                </a>
+              </div>
           </nav>
     </header>
   );
