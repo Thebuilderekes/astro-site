@@ -18,9 +18,9 @@ main .hero-section {
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 550px) {
     main .hero-section {
-      height: 90vh;
+      height: 95vh;
       padding-top: 10%;
       display: flex;
       flex-direction: column;
