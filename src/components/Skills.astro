@@ -6,11 +6,13 @@ const skillCards = [
     {
       icon: "https://api.iconify.design/vscode-icons:file-type-css.svg",
       animation: "card animate__animated animate__fadeIn delay-1",
+      alt: "css"
     },
 
     {
       icon: "https://api.iconify.design/logos:sass.svg",
       animation: "card animate__animated animate__fadeIn delay-2",
+      alt: "sass"
     },
   ],
 
@@ -18,11 +20,13 @@ const skillCards = [
     {
       icon: "https://api.iconify.design/logos:tailwindcss.svg",
       animation: "card animate__animated animate__fadeIn delay-3",
+      alt: "tailwind css"
     },
 
     {
       icon: "https://api.iconify.design/logos:javascript.svg",
       animation: "card animate__animated animate__fadeIn delay-4",
+      alt: "javascript"
     },
   ],
 
@@ -30,11 +34,13 @@ const skillCards = [
     {
       icon: "https://api.iconify.design/logos:astro.svg",
       animation: "card animate__animated animate__fadeIn delay-5",
+      alt: "astro"
     },
 
     {
       icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
       animation: "card animate__animated animate__fadeIn delay-6",
+      alt: "react"
     },
   ]
 ];
@@ -44,13 +50,10 @@ const skillCards = [
   <h2 class="animate__animated animate__fadeIn">SKILLS</h2>
   <div class="design-text">SKILLS</div>
   <div class="card-container">
-
-
- 
       {
         skillCards[0].map((skillCard) => (
           <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt="" />
+            <img src={skillCard.icon} alt = {skillCard.alt}/>
           </div>
         ))
       }
@@ -58,7 +61,7 @@ const skillCards = [
       {
         skillCards[1].map((skillCard) => (
           <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt="" />
+            <img src={skillCard.icon} alt = {skillCard.alt}/>
           </div>
         ))
       }
@@ -67,7 +70,7 @@ const skillCards = [
       {
         skillCards[2].map((skillCard) => (
           <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt="" />
+            <img src={skillCard.icon} alt = {skillCard.alt}/>
           </div>
         ))
       }

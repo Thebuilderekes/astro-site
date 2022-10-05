@@ -32,12 +32,12 @@ export default function Navigation() {
                   </div>
           </nav>
 
-            <button className="btn" onClick={handleClick}>
+            <button className="btn"  role="navigation" aria-label="main" onClick={handleClick}>
               {!navb ? (
-               <img src="/assets/img/icons8-close-30.png"/>
+               <img src="/assets/img/close-icon.png" alt= "close navigation icon" />
               ) : (
                  
-                <img src="/assets/img/icons8-menu-30.png"/>
+                <img src="/assets/img/hamburger-icon.png" alt= "open navigation icon" />
               )}
             </button>
           </div>

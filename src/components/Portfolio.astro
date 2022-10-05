@@ -4,22 +4,23 @@
 const portfolioCards = [
 
 {
-imgUrl: "/assets/img/praize-web.png",
+imgUrl: "/assets/img/praize-img.webp",
 text: " CSS, Bootstrap, Javascript",
 animation: " card animate__animated animate__fadeInUp",
 webUrl:  "https://praizecollectables.netlify.app/"
 },
 
 {
-imgUrl: "/assets/img/jackson-web.webp",
+imgUrl: "/assets/img/jackson-img.webp",
 text: " HTML, CSS, Javascript",
+
 animation: " card animate__animated animate__fadeInUp",
 webUrl: "https://jackson-tan.vercel.app"
 
 },
 
 {
-imgUrl: "/assets/img/kombo-img.png",
+imgUrl: "/assets/img/kombo-img.webp",
 text: " CSS, TailwindCSS, Javascript",
 animation: " card animate__animated animate__fadeInUp",
 webUrl: "https://kombojmg.vercel.app"
@@ -36,11 +37,9 @@ webUrl: "https://kombojmg.vercel.app"
     <div class={portfolioCard.animation}>
         <figure>
           <img src={portfolioCard.imgUrl} alt="portfolio card" />
-          <figcaption>
-            <a href={portfolioCard.webUrl} target = "_blank">VISIT WEBSITE</a>   
-          </figcaption>
         </figure>
-      <p><span>Technologies:</span> {portfolioCard.text}</p>
+      <p><span>Technologies used:</span> {portfolioCard.text}</p>
+      <a href={portfolioCard.webUrl} target = "_blank" role="link">VISIT WEBSITE</a>   
     </div>
     )
     }
@@ -147,8 +146,9 @@ webUrl: "https://kombojmg.vercel.app"
   .portfolio .card-container .card {
     width: 33.33%;
     padding: 0.9rem;
-    border-radius: 24px;
     background-color: #898fe9;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
 
   }
 
@@ -171,7 +171,8 @@ webUrl: "https://kombojmg.vercel.app"
   }
 
   .portfolio .card-container .card figure img {
-    border-radius: 16px;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
     width: 100%;
   }
 
@@ -193,17 +194,20 @@ webUrl: "https://kombojmg.vercel.app"
  
   }
 
-  .portfolio .card-container .card figure figcaption a{
+  .portfolio .card-container .card a{
+    font-weight: 600;
+    padding: 5px 10px;
      text-decoration: none;
-     font-weight: 700;
+     font-size: 1rem;
+     background-color: #0A1926;
      color: #ffffff;
-     font-size: 1.5rem;
-     font-family: 'Archivo Black';
+     border-radius: 10px;
  
   }
-  .portfolio .card-container .card figure figcaption a:hover {
+  .portfolio .card-container .card a:hover , a:focus {
+    color: #0A1926;
+background-color: #ffffff;
 
-     text-decoration: underline;
   }
 
 
