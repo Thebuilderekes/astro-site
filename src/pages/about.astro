@@ -12,7 +12,7 @@ const title = "About";
 
 <main class="container">
             <h1>About me </h1>
-            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I have been building websites for almost 2 years. I grew up in Lagos Nigeria and later went on to acquire a degree in computer Science from Rivers state University in southern Nigeria. Whenever I'm not building websites or experimenting with web technologies, I create content on social media around web development and productivity. I've been a huge fan of online web development communities and I enjoy answering questions and helping people solve their web development problems. </p>
+            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. I later taught myself how to build websites and I've been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently Astro frameworks for a little over two years. My curiousity and problem solving skills has made me able to quickly pick up and use web technologies on different projects. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity and I've been a huge fan of online web development communities, sharing my journey and helping people solve problems online. <br> <br> I am currently open to web development job opportunities that will allow me contribute, as well as grow my skills and experience.  </p>
                       
 </main>
 
@@ -67,11 +67,19 @@ body {
   }
 
   @media (max-width: 800px){
-
     .container h1 {
 
       font-size: 30px;
     }
+  }
+
+  @media (max-width: 400px){
+
+      .container h1 {
+
+        font-size: 25px;
+      }
+
   }
 
 @media (min-width: 800px){
@@ -88,12 +96,7 @@ text-decoration: underline;
 }
 }
 
-  @media (min-width:300px){
 
-    .container {
-      padding: 20% 3rem;
-    }
-  }
   
 @media (min-width:600px){
 
@@ -103,6 +106,11 @@ text-decoration: underline;
 }
 
 
+@media (min-width:300px){
 
+.container {
+  padding: 30% 3rem;
+}
+}
 
 </style>
