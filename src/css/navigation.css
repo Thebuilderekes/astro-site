@@ -14,7 +14,6 @@ html {
   width: 100%;
   position: fixed;
   z-index: 999;
-  transition: 0.7s all ease-in;
 }
 .header .display-none {
   display: none;

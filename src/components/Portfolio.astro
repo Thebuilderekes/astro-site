@@ -7,23 +7,24 @@ const portfolioCards = [
 imgUrl: "/assets/img/praize-img.webp",
 text: " CSS, Bootstrap, Javascript",
 animation: " card animate__animated animate__fadeInUp",
-webUrl:  "https://praizecollectables.netlify.app/"
+webUrl:  "https://praizecollectables.netlify.app/",
+gitUrl: "https://github.com/Thebuilderekes/shop"
 },
 
 {
 imgUrl: "/assets/img/jackson-img.webp",
 text: " HTML, CSS, Javascript",
-
 animation: " card animate__animated animate__fadeInUp",
-webUrl: "https://jackson-tan.vercel.app"
-
+webUrl: "https://jackson-tan.vercel.app",
+gitUrl: "https://github.com/Thebuilderekes/jackson"
 },
 
 {
 imgUrl: "/assets/img/kombo-img.webp",
 text: " CSS, TailwindCSS, Javascript",
 animation: " card animate__animated animate__fadeInUp",
-webUrl: "https://kombojmg.vercel.app"
+webUrl: "https://kombojmg.vercel.app",
+gitUrl: "https://github.com/Thebuilderekes/kombo"
 }
 
 ]
@@ -39,7 +40,11 @@ webUrl: "https://kombojmg.vercel.app"
           <img src={portfolioCard.imgUrl} alt="portfolio card" />
         </figure>
       <p><span>Technologies used:</span> {portfolioCard.text}</p>
-      <a href={portfolioCard.webUrl} target = "_blank" role="link">VISIT WEBSITE</a>   
+      <div class ="btn-group">
+        <a href={portfolioCard.webUrl} target = "_blank" role="link">VISIT WEBSITE</a>   
+        <a class="github-btn" href={portfolioCard.gitUrl} target = "_blank" role="link">GITHUB</a>   
+        
+        </div>
     </div>
     )
     }
@@ -195,7 +200,12 @@ webUrl: "https://kombojmg.vercel.app"
  
   }
 
-  .portfolio .card-container .card a{
+  .portfolio .card-container .card .btn-group {
+    display: flex;
+     
+  }
+
+  .portfolio .card-container .card .btn-group a{
     font-weight: 600;
     padding: 5px 10px;
      text-decoration: none;
@@ -204,6 +214,10 @@ webUrl: "https://kombojmg.vercel.app"
      color: #ffffff;
      border-radius: 10px;
  
+  }
+
+  .portfolio .card-container .card .btn-group .github-btn {
+    margin-left: 15px;
   }
   .portfolio .card-container .card a:hover , a:focus {
     color: #0A1926;
