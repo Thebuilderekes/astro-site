@@ -10,9 +10,9 @@ const title = "About";
 <BaseLayout>
 <MyAboutPage>
 
-<main class="container">
+<main class="wrapper">
             <h1>About me </h1>
-            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. I later taught myself how to build websites and I've been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently Astro frameworks for a little over two years. My curiousity and problem solving skills has made me able to quickly pick up and use web technologies on different projects. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity and I've been a huge fan of online web development communities, sharing my journey and helping people solve problems online. <br> <br> I am currently open to web development job opportunities that will allow me contribute, as well as grow my skills and experience.  </p>
+            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. I've been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently Astro frameworks for a little over two years. My curiousity and problem solving skills has made me able to quickly pick up and use web technologies on different projects. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity and I've been a huge fan of online web development communities, sharing my journey and helping people solve problems online. <br> <br> I am currently open to web development job opportunities that will allow me contribute, as well as grow my skills and experience.  </p>
                       
 </main>
 
@@ -55,7 +55,10 @@ body {
     height: 100%;
   }
 
-  .container h1 {
+
+
+  
+  .wrapper h1 {
   background: #0A1926;
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
     -webkit-background-clip: text;
@@ -67,7 +70,7 @@ body {
   }
 
   @media (max-width: 800px){
-    .container h1 {
+    .wrapper h1 {
 
       font-size: 30px;
     }
@@ -75,7 +78,7 @@ body {
 
   @media (max-width: 400px){
 
-      .container h1 {
+      .wrapper h1 {
 
         font-size: 25px;
       }
@@ -84,33 +87,28 @@ body {
 
 @media (min-width: 800px){
 
-  .container p {
+  .wrapper p {
 
     font-size: 18px;
    
   }
 
-  .container p  a {
-color: red;
-text-decoration: underline;
+}  
+
+@media (min-width:300px){
+
+.wrapper {
+  padding: 30% 3rem;
 }
 }
-
-
-  
 @media (min-width:600px){
 
-  .container {
+  .wrapper {
     padding: 10% 3rem;
   }
 }
 
 
-@media (min-width:300px){
 
-.container {
-  padding: 30% 3rem;
-}
-}
 
 </style>

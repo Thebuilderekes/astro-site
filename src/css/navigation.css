@@ -29,6 +29,12 @@ html {
   padding: 0 8rem;
   font-family: "Candara";
 }
+.header .nav-container .top-icons {
+  display: flex;
+}
+.header .nav-container .top-icons a {
+  padding: 0 10px;
+}
 @media (max-width: 1400px) {
   .header .nav-container {
     padding: 0 2rem;
