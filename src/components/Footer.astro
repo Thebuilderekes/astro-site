@@ -45,14 +45,16 @@
 
     
     <div class="footer-attributes py-2 mt-6 bg-[#dfe1ff]">
-        <p class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg">&copy; 2022 - Today. Made with <span class="text-bold">Astro + Tailwind css + React </span> </p>
+        <p class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg">&copy; 2022 - Today. Made with <span class="text-bold">Astro + TailwindCSS + React </span> </p>
         <p class="text-center xs:text-center  lg:text-xs xs:text-xs sm:text-xs md:text-xl"> Designed and built by <a class=" underline" href="https://twitter.com/iamthebuilder__">Ekeopre</a> </p>  
     </div>     
 </footer>      
 
 <style>
     /*FOOTER STYLES*/
-
+footer {
+  margin: 5% 0;
+}
 footer .row h3 {
   font-family: 'Poppins', sans-serif, 'arial';
   text-transform: uppercase;
@@ -76,6 +78,10 @@ footer h4 {
   font-size: 20px;
   color: #0A1926;
   line-height: 1.5;
+}
+
+footer .footer-attributes p {
+  margin: 10px 0;
 }
 
 /* ///// inputs /////*/

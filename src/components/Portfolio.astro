@@ -5,7 +5,8 @@ const portfolioCards = [
 
 {
 imgUrl: "/assets/img/praize-img.webp",
-text: " CSS, Bootstrap, Javascript",
+technology: " CSS, Bootstrap, Javascript",
+description: "This is website for a jewelry store where users can order through the contacts available on the website. It was built with HTML, Bootstrap and CSS",
 animation: " card animate__animated animate__fadeInUp",
 webUrl:  "https://praizecollectables.netlify.app/",
 gitUrl: "https://github.com/Thebuilderekes/shop"
@@ -13,7 +14,8 @@ gitUrl: "https://github.com/Thebuilderekes/shop"
 
 {
 imgUrl: "/assets/img/jackson-img.webp",
-text: " HTML, CSS, Javascript",
+technology: " HTML, CSS, Javascript",
+description: "An Actors/Artist's website built with HTML, Bootstrap, CSS and JavaScript. The responsive navigation menu was custom made using JavaScript DOM manipulation. The Idea behind this project was to have a gallery to display the actor's works and guide visitors to his social media pages. ",
 animation: " card animate__animated animate__fadeInUp",
 webUrl: "https://jackson-tan.vercel.app",
 gitUrl: "https://github.com/Thebuilderekes/jackson"
@@ -21,7 +23,8 @@ gitUrl: "https://github.com/Thebuilderekes/jackson"
 
 {
 imgUrl: "/assets/img/kombo-img.webp",
-text: " CSS, TailwindCSS, Javascript",
+technology: " CSS, TailwindCSS, Javascript",
+description: "A project website for an A&R manager that is built using HTML, TailwindCSS, CSS and JavaScript. The custom responsive navigation menu was custom made using JavaScript DOM manipulation.",
 animation: " card animate__animated animate__fadeInUp",
 webUrl: "https://kombojmg.vercel.app",
 gitUrl: "https://github.com/Thebuilderekes/kombo"
@@ -39,7 +42,8 @@ gitUrl: "https://github.com/Thebuilderekes/kombo"
         <figure>
           <img src={portfolioCard.imgUrl} alt="portfolio card" />
         </figure>
-      <p><span>Technologies used:</span> {portfolioCard.text}</p>
+      <p><span>Technologies used:</span> {portfolioCard.technology}</p>
+      <p>{portfolioCard.description}</p>
       <div class ="btn-group">
         <a href={portfolioCard.webUrl} target = "_blank" role="link">VISIT WEBSITE</a>   
         <a class="github-btn" href={portfolioCard.gitUrl} target = "_blank" role="link">GITHUB</a>   
@@ -162,11 +166,11 @@ gitUrl: "https://github.com/Thebuilderekes/kombo"
     --animate-duration: 4s;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     .portfolio .card-container .card {
       width: 100%;
     }
-
+ 
   }
 
   .portfolio .card-container .card figure {
@@ -215,6 +219,14 @@ gitUrl: "https://github.com/Thebuilderekes/kombo"
      border-radius: 10px;
  
   }
+
+  @media (max-width: 900px){  
+     .portfolio .card-container .card .btn-group a {
+      font-size: 14px;
+    }
+
+  }
+
 
   .portfolio .card-container .card .btn-group .github-btn {
     margin-left: 15px;

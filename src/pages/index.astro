@@ -6,14 +6,17 @@ import Portfolio from '../components/Portfolio.astro';
 import Skills from '../components/Skills.astro';
 import  "../css/index.css";
 
-const title= "Home";
+const title= "Home - The Personal website of Ekeopre Beredugo, a frontend web developer based in Nigeria"
+const description = "Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites "
+const author = "Ekeopre Beredugo"
+
 import 'animate.css';
 
 ---
 
 
 <BaseLayout>
-       <BaseHead title = {title}/> 
+       <BaseHead title = {title} description = {description} author = {author} /> 
 
        <main> 
               <HeroSection/>
