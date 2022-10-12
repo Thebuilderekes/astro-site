@@ -103,15 +103,16 @@ export default function Navigation() {
           <a className="mobile-navLink" onClick={handleMenu} href="/">
             Home
           </a>
-          <a
+          
+          <a className="mobile-navLink" onClick={handleMenu} href="/about">
+            About
+          </a>
+<a
             className="mobile-navLink"
             onClick={handleMenu}
             href="index.html#skills"
           >
             Skills
-          </a>
-          <a className="mobile-navLink" onClick={handleMenu} href="/about">
-            About
           </a>
           <a
             className="mobile-navLink"
