@@ -124,7 +124,7 @@ export default function Navigation() {
           <a
             className="mobile-navLink"
             onClick={handleMenu}
-            href="index.html#footer"
+            href="#footer"
           >
             Contact
           </a>

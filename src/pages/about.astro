@@ -13,7 +13,7 @@ const description = "Ekeopre Beredugo is a frontend web developer that specializ
 
 <main class="wrapper">
             <h1>About me </h1>
-            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. I've been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently Astro frameworks for a little over two years. My curiousity and problem solving skills has made me able to quickly pick up and use web technologies on different projects. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity and I've been a huge fan of online web development communities, sharing my journey and helping people solve problems online. <br> <br> I am currently open to web development job opportunities that will allow me contribute, as well as grow my skills and experience.  </p>
+            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. <br> <br> I have been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently, Astro for a little over two years and my curiousity for the web and problem solving skills has made me able to quickly adapt, pick up and work with new web technologies when solving problems. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity. I also enjoy being part of developer communities, helping people solve problems and sharing my web development journey<br> <br> I'm always excited and looking to take on new full tiime or freelance job opportunities, feel free to send me a message for a job or maybe just to say HI and i'll be looking forward to connecting with you. </p>
                       
 </main>
 
@@ -67,10 +67,45 @@ body {
       margin: 0 50px;
       font-family: 'Archivo Black';
       text-transform: uppercase;
+      font-size: 3.5rem;
+  }
+
+  .wrapper p {
+    font-size: 18px;
+  }
+
+  
+@media (min-width: 800px){
+
+.wrapper {
+  margin: 0 20%;
+}
+.wrapper p {
+
+  font-size: 18px;
+ 
+}
+
+}  
+  @media (max-width: 1250px){
+
+.wrapper h1 {
       font-size: 3rem;
   }
 
-  @media (max-width: 800px){
+  }
+
+  @media (max-width: 1000px){
+
+
+  }
+
+  @media (max-width: 820px){
+
+    .wrapper {
+
+      margin: 5% 0;
+    }
     .wrapper h1 {
 
       font-size: 30px;
@@ -86,20 +121,11 @@ body {
 
   }
 
-@media (min-width: 800px){
-
-  .wrapper p {
-
-    font-size: 18px;
-   
-  }
-
-}  
 
 @media (min-width:300px){
 
 .wrapper {
-  padding: 30% 3rem;
+  padding: 25% 3rem;
 }
 }
 @media (min-width:600px){
