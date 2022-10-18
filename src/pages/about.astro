@@ -12,8 +12,8 @@ const description = "Ekeopre Beredugo is a frontend web developer that specializ
 <MyAboutPage>
 
 <main class="wrapper">
-            <h1>About me </h1>
-            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. <br> <br> I have been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently, Astro for a little over two years and my curiousity for the web and problem solving skills has made me able to quickly adapt, pick up and work with new web technologies when solving problems. <br> <br> When I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity. I also enjoy being part of developer communities, helping people solve problems and sharing my web development journey<br> <br> I'm always excited and looking to take on new full tiime or freelance job opportunities, feel free to send me a message for a job or maybe just to say HI and i'll be looking forward to connecting with you. </p>
+            <h1>About</h1>
+            <p> I'm a frontend web developer based in Bayelsa, Nigeria and I'm passionate about creating accessible websites. I spent most of my early years growing up in Lagos, Nigeria before moving to acquire a degree in computer Science from Rivers state University, Nigeria. <br> <br> I have been building accessible websites primarily using HTML, CSS, JavaScript, React and more recently, <a href="https://astro.build">Astro</a>  framework for a little over two years and my curiousity for the web and problem solving skills has made me able to quickly pick up and adadpt to new web technologies when solving problems. <br> <br> Whenever I'm not building websites or experimenting with web technologies, I enjoy sharing content on social media around web development and productivity as well as contibuting to developer communities,<br> <br> I'm always excited and looking to take on full time or freelance job opportunities so feel free to send me a message any time. I'll be looking forward to connecting with you. </p>
                       
 </main>
 
@@ -64,7 +64,7 @@ body {
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-      margin: 0 50px;
+      margin: 20px auto;
       font-family: 'Archivo Black';
       text-transform: uppercase;
       font-size: 3.5rem;
@@ -72,6 +72,10 @@ body {
 
   .wrapper p {
     font-size: 18px;
+  }
+
+  .wrapper p a  {
+     color: orangered;
   }
 
   
@@ -95,11 +99,6 @@ body {
 
   }
 
-  @media (max-width: 1000px){
-
-
-  }
-
   @media (max-width: 820px){
 
     .wrapper {
@@ -112,8 +111,10 @@ body {
     }
   }
 
-  @media (max-width: 400px){
-
+  @media (max-width: 599px){
+  .wrapper {
+    margin: 30% 1.5rem;
+  }
       .wrapper h1 {
 
         font-size: 25px;
@@ -122,12 +123,7 @@ body {
   }
 
 
-@media (min-width:300px){
 
-.wrapper {
-  padding: 25% 3rem;
-}
-}
 @media (min-width:600px){
 
   .wrapper {
