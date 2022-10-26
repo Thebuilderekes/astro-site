@@ -45,7 +45,7 @@ main .hero-section {
 
   @media (max-width: 400px) {
     main h1 {
-      font-size: var(--fs-medium);
+      font-size: var( --fs-hero-h1-small-screen);
     }
   }
 
@@ -85,7 +85,7 @@ main .hero-section {
 
   @media (max-width: 400px) {
     main h2 {
-      font-size: 1.2rem;
+      font-size: var( --fs-hero-h2-small-screen);
     }
   }
 
@@ -93,6 +93,7 @@ main .hero-section {
   main .hero-section p{
 
     font-size: 1.2rem;
+    max-width: 50%;
     margin-bottom: 20px;
     color: #272727;
   }
@@ -100,7 +101,8 @@ main .hero-section {
   @media (max-width:400px){
 
     main .hero-section p{
-      font-size: var(--fs-default);
+      font-size: var(--fs-hero-p-small-screen);
+      max-width: 100%;
 
     }
 
