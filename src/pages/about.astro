@@ -1,5 +1,4 @@
 ---
-import MyAboutPage from '../layouts/MyAboutPage.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title= "About - Ekeopre Beredugo";
 const description = "Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites."
@@ -7,8 +6,7 @@ const author = "Ekeopre Beredugo"
 ---
 
 
-<BaseLayout   title = {title} description = {description} author = {author}>
-<MyAboutPage>
+<BaseLayout title = {title} description = {description} author = {author}>
 
 <main class="wrapper">
             <h1>About</h1>
@@ -16,8 +14,6 @@ const author = "Ekeopre Beredugo"
                       
 </main>
 
-
-</MyAboutPage>
 </BaseLayout>
 
 <style>   
