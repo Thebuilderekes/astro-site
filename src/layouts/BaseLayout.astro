@@ -2,11 +2,13 @@
 import "../css/index.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer.astro";
-
+import BaseHead from "../components/BaseHead.astro";
+const {title, description, author } = Astro.props;
 const footer = "#footer"
 ---
  
 <html lang="en">
+ <BaseHead title = {title} description = {description} author = {author}></BaseHead>
   <body>
   <Navigation client:load/>
       <slot />

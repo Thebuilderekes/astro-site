@@ -3,6 +3,18 @@
 
 const portfolioCards = [
 
+[
+
+
+{
+imgUrl: "/assets/img/my-portfolio.png",
+technology: " CSS, TailwindCSS, Javascript",
+description: "A portfolio website to showcase my projects and skills. Built with astro framework, react and tailwindcss. The idea was to keep the design simple and avoid distracting animations with a functional form for easy communication ",
+animation: " card animate__animated animate__fadeInUp",
+webUrl: "https://kombojmg.vercel.app",
+gitUrl: "https://github.com/Thebuilderekes/kombo"
+},
+
 {
 imgUrl: "/assets/img/kombo-img.webp",
 technology: " CSS, TailwindCSS, Javascript",
@@ -21,7 +33,9 @@ webUrl: "https://jackson-tan.vercel.app",
 gitUrl: "https://github.com/Thebuilderekes/jackson"
 },
 
+], 
 
+[
 {
 imgUrl: "/assets/img/praize-img.webp",
 technology: " CSS, Bootstrap, Javascript",
@@ -30,8 +44,24 @@ animation: " card animate__animated animate__fadeInUp",
 webUrl:  "https://praizecollectables.vercel.app/",
 gitUrl: "https://github.com/Thebuilderekes/shop"
 },
+{
+imgUrl: "/assets/img/bank-website.png",
+technology: " HTML, CSS grid, Javascript",
+description: "The idea behind this website was to make ithe design look like a resume. The layout was achieved using CSS grid.",
+animation: " card animate__animated animate__fadeInUp",
+webUrl:  "https://praizecollectables.vercel.app/",
+gitUrl: "https://thebuilderekes.github.io/Bank-resume/"
+},
+{
+imgUrl: "/assets/img/wuka-website.png",
+technology: " CSS, Bootstrap, Javascript",
+description: "Thi is a website for a music artiste. The idea was to lead the wenbbsite users to the music links to various streaming platforms. Built using SASS and bootstrap ",
+animation: " card animate__animated animate__fadeInUp",
+webUrl:  "https://praizecollectables.vercel.app/",
+gitUrl: "https://github.com/Thebuilderekes/shop"
+},
 
-
+]
 
 ]
 ---
@@ -40,7 +70,25 @@ gitUrl: "https://github.com/Thebuilderekes/shop"
   <h2>PORTFOLIO</h2>
   <div class="design-text">PORTFOLIO</div>
   <div class="card-container">
-    {portfolioCards.map(portfolioCard =>
+    {portfolioCards[0].map(portfolioCard =>
+    <div class={portfolioCard.animation}>
+        <figure>
+          <img src={portfolioCard.imgUrl} alt="portfolio card" />
+        </figure>
+      <p><span>Technologies used:</span> {portfolioCard.technology}</p>
+      <p>{portfolioCard.description}</p>
+      <div class ="btn-group">
+        <a href={portfolioCard.webUrl} target = "_blank" role="link">VISIT WEBSITE</a>   
+        <a class="github-btn" href={portfolioCard.gitUrl} target = "_blank" role="link">GITHUB</a>   
+        
+        </div>
+    </div>
+    )
+    }
+  </div>
+
+  <div class="card-container">
+    {portfolioCards[1].map(portfolioCard =>
     <div class={portfolioCard.animation}>
         <figure>
           <img src={portfolioCard.imgUrl} alt="portfolio card" />
@@ -151,6 +199,7 @@ gitUrl: "https://github.com/Thebuilderekes/shop"
 
 /* PORTFOLIO CARD STYLES*/
   .portfolio .card-container {
+    margin : 3rem 0;
     display: flex;
     gap: 1.5rem;
   }
