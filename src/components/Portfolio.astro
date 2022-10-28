@@ -4,21 +4,19 @@
 const portfolioCards = [
 
 [
-
-
 {
 imgUrl: "/assets/img/my-portfolio.png",
-technology: " CSS, TailwindCSS, Javascript",
+technology: " Astro, React, CSS",
 description: "A portfolio website to showcase projects and skills. Built with astro framework, react and tailwindcss. The idea was to keep the design simple and avoid distracting animations with a functional form for easy communication ",
 animation: " card animate__animated animate__fadeInUp",
-webUrl: "https://kombojmg.vercel.app",
-gitUrl: "https://github.com/Thebuilderekes/kombo"
+webUrl: "https://ekeopre.vercel.app",
+gitUrl: "https://github.com/Thebuilderekes/astro-site"
 },
 
 {
 imgUrl: "/assets/img/kombo-img.webp",
 technology: " CSS, TailwindCSS, Javascript",
-description: "A static dark themed website.  Website visitors can connect with the website owner through social media handles, make a call to mobile and also send email messages using the functional form on the website.",
+description: "A static dark themed website. Website visitors can connect with the website owner through social media handles, make a call to mobile and also send email messages using the functional form on the website.",
 animation: " card animate__animated animate__fadeInUp",
 webUrl: "https://kombojmg.vercel.app",
 gitUrl: "https://github.com/Thebuilderekes/kombo"
@@ -44,25 +42,26 @@ animation: " card animate__animated animate__fadeInUp",
 webUrl:  "https://praizecollectables.vercel.app/",
 gitUrl: "https://github.com/Thebuilderekes/shop"
 },
+
 {
 imgUrl: "/assets/img/bank-website.png",
 technology: " HTML, CSS grid, Javascript",
 description: "The idea behind this website was to make ithe design look like a resume. The layout was achieved using CSS grid.",
 animation: " card animate__animated animate__fadeInUp",
-webUrl:  "https://praizecollectables.vercel.app/",
-gitUrl: "https://thebuilderekes.github.io/Bank-resume/"
+webUrl:  "https://thebuilderekes.github.io/Bank-resume/",
+gitUrl: "https://github.com/Thebuilderekes/Bank-resume"
 },
+
 {
 imgUrl: "/assets/img/wuka-website.png",
-technology: " CSS, Bootstrap, Javascript",
+technology: " CSS, React, styled components",
 description: "Thi is a website for a music artiste. The idea was to lead the website visitors to the music links to various streaming platforms. Built using SASS and bootstrap ",
 animation: " card animate__animated animate__fadeInUp",
-webUrl:  "https://praizecollectables.vercel.app/",
-gitUrl: "https://github.com/Thebuilderekes/shop"
+webUrl:  "https://wuka-react-app.vercel.app/",
+gitUrl: "https://github.com/Thebuilderekes/wuka-react-app"
 },
 
 ]
-
 ]
 ---
 
@@ -86,7 +85,6 @@ gitUrl: "https://github.com/Thebuilderekes/shop"
     )
     }
   </div>
-
   <div class="card-container">
     {portfolioCards[1].map(portfolioCard =>
     <div class={portfolioCard.animation}>
