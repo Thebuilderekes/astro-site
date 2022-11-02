@@ -68,7 +68,6 @@ main .hero-section {
   main h2 {
     font-size: var(--fs-large);
     font-weight: 500;
-    color: var(--secondary-color);
     background: #0A1926;
     background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
     -webkit-background-clip: text;
