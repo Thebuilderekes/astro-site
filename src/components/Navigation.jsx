@@ -60,29 +60,39 @@ export default function Navigation() {
           </a>
         </div>
         <nav className="desktop-nav nav">
-          <div className="desktop-navItems">
+          <ul className="desktop-navItems">
+            <li>
             <a className="desktop-navLink" href="/">
               Home
             </a>
-            <a className="desktop-navLink" href="/about">
+              </li>
+          <li>
+          <a className="desktop-navLink" href="/about">
               About
             </a>
-            <a className="desktop-navLink" href="index.html#skills">
+            </li> 
+           <li>
+           <a className="desktop-navLink" href="index.html#skills">
               Skills
             </a>
-            <a className="desktop-navLink" href="index.html#portfolio">
+            </li> 
+           <li>
+           <a className="desktop-navLink" href="index.html#portfolio">
               Portfolio
             </a>
+            </li> 
+            <li>
             <a className="desktop-navLink" href={footer}>
               Contact
             </a>
-          </div>
+            </li>
+          </ul>
         </nav>
 
         <button
           className="btn"
           role="navigation"
-          aria-label="main"
+          aria-label="menu"
           onClick={handleClick}
         >
           {!navb ? (
@@ -97,38 +107,46 @@ export default function Navigation() {
       </div>
 
       <nav className="mobile-nav nav">
-        <div
+        <ul
           className={!navb || !click ? "display-mobile-nav" : "display-none"}
         >
-          <a className="mobile-navLink" onClick={handleMenu} href="/">
+        <li> <a className="mobile-navLink" onClick={handleMenu} href="/">
             Home
           </a>
-          
-          <a className="mobile-navLink" onClick={handleMenu} href="/about">
+          </li> 
+
+          <li> <a className="mobile-navLink" onClick={handleMenu} href="/about">
             About
           </a>
-<a
+          </li>
+      <li><a
             className="mobile-navLink"
             onClick={handleMenu}
             href="index.html#skills"
           >
             Skills
           </a>
+          </li>
+          <li>
           <a
-            className="mobile-navLink"
-            onClick={handleMenu}
-            href="index.html#portfolio"
-          >
-            Portfolio
-          </a>
-          <a
+                      className="mobile-navLink"
+                      onClick={handleMenu}
+                      href="index.html#portfolio"
+                    >
+                      Portfolio
+                    </a>
+          </li>
+       <li>
+       <a
             className="mobile-navLink"
             onClick={handleMenu}
             href={footer}
           >
             Contact
           </a>
-        </div>
+       </li>
+    
+        </ul>
       </nav>
     </header>
   );

@@ -52,14 +52,20 @@ html {
 .header .nav-container .desktop-nav {
   display: none;
 }
-.header .nav-container .desktop-nav .desktop-navItems .desktop-navLink {
+.header .nav-container .desktop-nav .desktop-navItems {
+  display: flex;
+}
+.header .nav-container .desktop-nav .desktop-navItems li {
+  list-style: none;
+}
+.header .nav-container .desktop-nav .desktop-navItems li .desktop-navLink {
   color: #ffffff;
   padding: 0 10px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 1000ms ease;
 }
-.header .nav-container .desktop-nav .desktop-navItems .desktop-navLink:hover {
+.header .nav-container .desktop-nav .desktop-navItems li .desktop-navLink:hover {
   transform: translateY(5px);
 }
 @media (min-width: 800px) {
@@ -91,10 +97,13 @@ html {
   padding-top: 13%;
   height: 100vh;
 }
-.header .mobile-nav .display-mobile-nav .mobile-navLink {
+.header .mobile-nav .display-mobile-nav li {
+  padding: 2rem 0;
+  list-style: none;
+}
+.header .mobile-nav .display-mobile-nav li .mobile-navLink {
   font-size: 30px;
   color: #ffffff;
-  padding: 2rem 0;
   text-decoration: none;
   font-family: "Candara";
 }/*# sourceMappingURL=navigation.css.map */

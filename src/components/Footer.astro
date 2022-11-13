@@ -36,17 +36,15 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <button  type="submit" class="btn-lrg submit-btn">Send Message</button>
+                        <button  type="submit" aria-label="send msessage" class="btn-lrg submit-btn">Send Message</button>
                     </div>
             </div>
     </form>
     </div>
 
-
-    
-    <div class="footer-attributes py-2 mt-6 bg-[#dfe1ff]">
-        <p class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg">&copy; 2022 - Today. Made with <span class="text-bold">Astro + TailwindCSS + React </span> </p>
-        <p class="text-center xs:text-center  lg:text-xs xs:text-xs sm:text-xs md:text-xl"> Designed and built by <a class=" underline" href="https://twitter.com/iamthebuilder__">Ekeopre</a> </p>  
+    <div class="footer-attributes py-2 mt-6 bg-[#dfe1ff] text-center">
+        <small class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg">&copy; 2022 - Today. Made with <span class="text-bold">Astro + TailwindCSS + React </span> </small> <br>
+        <small class="text-center xs:text-center  lg:text-xs xs:text-xs sm:text-xs md:text-xl"> Designed and built by <a class=" underline" href="https://twitter.com/iamthebuilder__">Ekeopre</a> </small>  
     </div>     
 </footer>      
 
@@ -81,7 +79,8 @@ footer h4 {
   line-height: 1.5;
 }
 
-footer .footer-attributes p {
+footer .footer-attributes small {
+  text-align: center;
   margin: 10px 0;
 }
 
