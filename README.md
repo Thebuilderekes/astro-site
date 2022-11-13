@@ -39,7 +39,7 @@
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Primary Color | #d1daf8 #0A1926 |
-| Secondary Color: #e4e4f8
+| Secondary Color | #e4e4f8 |
 | Accent Color | #3535C4 , #0A1926  |
 | Text Color | #000000 |
 
