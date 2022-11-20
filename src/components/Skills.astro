@@ -5,13 +5,15 @@ const skillCards = [
   [
     {
       icon: "https://api.iconify.design/logos:figma.svg",
-      animation: "card animate__animated animate__fadeIn delay-1",
+      animation: "card animate__animated animate__fadeInUp delay-1",
+      title: "Figma",
       alt: "Figma logo"
     },
 
     {
       icon: "https://api.iconify.design/logos:sass.svg",
-      animation: "card animate__animated animate__fadeIn delay-2",
+      animation: "card animate__animated animate__fadeInUp delay-2",
+      title: "SASS",
       alt: "SASS logo"
     },
   ],
@@ -19,13 +21,15 @@ const skillCards = [
   [
     {
       icon: "https://api.iconify.design/logos:tailwindcss.svg",
-      animation: "card animate__animated animate__fadeIn delay-3",
+      animation: "card animate__animated animate__fadeInUp delay-3",
+      title: "TailwindCSS",
       alt: "tailwindCSS logo"
     },
 
     {
       icon: "https://api.iconify.design/logos:javascript.svg",
-      animation: "card animate__animated animate__fadeIn delay-4",
+      animation: "card animate__animated animate__fadeInUp delay-4",
+      title: "Javascript",
       alt: "JavaScript logo"
     },
   ],
@@ -33,13 +37,14 @@ const skillCards = [
   [
     {
       icon: "https://api.iconify.design/logos:astro.svg",
-      animation: "card animate__animated animate__fadeIn delay-5",
+      animation: "card animate__animated animate__fadeInUp delay-5",
       alt: "Astro logo"
     },
 
     {
       icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
-      animation: "card animate__animated animate__fadeIn delay-6",
+      animation: "card animate__animated animate__fadeInUp delay-6",
+      title: "React",
       alt: "React logo"
     },
   ]
@@ -47,13 +52,14 @@ const skillCards = [
 ---
 
 <section class="skills" id= "skills">
-  <h2 class="animate__animated animate__fadeIn">SKILLS</h2>
+  <h2 class="animate__animated animate__fadeInUp">SKILLS</h2>
   <div class="design-text">SKILLS</div>
   <div class="card-container">
       {
         skillCards[0].map((skillCard) => (
           <div class={skillCard.animation}>
             <img src={skillCard.icon} alt = {skillCard.alt}/>
+            <h3>{skillCard.title}</h3>
           </div>
         ))
       }
@@ -62,6 +68,7 @@ const skillCards = [
         skillCards[1].map((skillCard) => (
           <div class={skillCard.animation}>
             <img src={skillCard.icon} alt = {skillCard.alt}/>
+            <h3>{skillCard.title}</h3>
           </div>
         ))
       }
@@ -71,6 +78,7 @@ const skillCards = [
         skillCards[2].map((skillCard) => (
           <div class={skillCard.animation}>
             <img src={skillCard.icon} alt = {skillCard.alt}/>
+            <h3>{skillCard.title}</h3>
           </div>
         ))
       }
@@ -86,27 +94,27 @@ const skillCards = [
   }
 
   /*ANIMATION STYLES FOR SKILL CARDS*/
-  .animate__animated.animate__fadeIn.delay-1 {
+  .animate__animated.animate__fadeInUp.delay-1 {
     --animate-duration: 7s;
   }
 
-  .animate__animated.animate__fadeIn.delay-2 {
+  .animate__animated.animate__fadeInUp.delay-2 {
     --animate-duration: 8s;
   }
 
-  .animate__animated.animate__fadeIn.delay-3 {
+  .animate__animated.animate__fadeInUp.delay-3 {
     --animate-duration: 9s;
   }
 
-  .animate__animated.animate__fadeIn.delay-4 {
+  .animate__animated.animate__fadeInUp.delay-4 {
     --animate-duration: 10s;
   }
 
-  .animate__animated.animate__fadeIn.delay-5 {
+  .animate__animated.animate__fadeInUp.delay-5 {
     --animate-duration: 11s;
   }
 
-  .animate__animated.animate__fadeIn.delay-6 {
+  .animate__animated.animate__fadeInUp.delay-6 {
     --animate-duration: 12s;
   }
 
@@ -178,6 +186,7 @@ const skillCards = [
       grid-template-rows: repeat(1, 1fr);
       grid-column-gap: 3rem;
       grid-row-gap: 0px;
+      margin-top: 20px;
   }
 
   
@@ -211,11 +220,10 @@ const skillCards = [
     height: 100px;
   }
 
-  .skills .card-container .card p {
-    font-size: 0.8rem;
-    line-height: 1.5;
-    text-align: left;
-    padding: 0.9rem 0;
+  .skills .card-container .card h3 {
+    padding-top: 10px;
+    font-family: 'Poppins';
+    font-size: 20px;
 
   }
 </style>
