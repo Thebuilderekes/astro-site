@@ -7,14 +7,14 @@ const skillCards = [
       icon: "https://api.iconify.design/logos:figma.svg",
       animation: "card animate__animated animate__fadeInUp delay-1",
       title: "Figma",
-      alt: "Figma logo"
+      alt: "Figma logo",
     },
 
     {
       icon: "https://api.iconify.design/logos:sass.svg",
       animation: "card animate__animated animate__fadeInUp delay-2",
       title: "SASS",
-      alt: "SASS logo"
+      alt: "SASS logo",
     },
   ],
 
@@ -23,14 +23,14 @@ const skillCards = [
       icon: "https://api.iconify.design/logos:tailwindcss.svg",
       animation: "card animate__animated animate__fadeInUp delay-3",
       title: "TailwindCSS",
-      alt: "tailwindCSS logo"
+      alt: "tailwindCSS logo",
     },
 
     {
       icon: "https://api.iconify.design/logos:javascript.svg",
       animation: "card animate__animated animate__fadeInUp delay-4",
       title: "Javascript",
-      alt: "JavaScript logo"
+      alt: "JavaScript logo",
     },
   ],
 
@@ -38,51 +38,61 @@ const skillCards = [
     {
       icon: "https://api.iconify.design/logos:astro.svg",
       animation: "card animate__animated animate__fadeInUp delay-5",
-      alt: "Astro logo"
+      alt: "Astro logo",
     },
 
     {
       icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
       animation: "card animate__animated animate__fadeInUp delay-6",
       title: "React",
-      alt: "React logo"
+      alt: "React logo",
     },
-  ]
+  ],
 ];
 ---
 
-<section class="skills" id= "skills">
+<section
+  class="skills"
+  id="skills"
+>
   <h2 class="animate__animated animate__fadeInUp">SKILLS</h2>
   <div class="design-text">SKILLS</div>
   <div class="card-container">
-      {
-        skillCards[0].map((skillCard) => (
-          <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt = {skillCard.alt}/>
-            <h3>{skillCard.title}</h3>
-          </div>
-        ))
-      }
+    {
+      skillCards[0].map((skillCard) => (
+        <div class={skillCard.animation}>
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
 
-      {
-        skillCards[1].map((skillCard) => (
-          <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt = {skillCard.alt}/>
-            <h3>{skillCard.title}</h3>
-          </div>
-        ))
-      }
+    {
+      skillCards[1].map((skillCard) => (
+        <div class={skillCard.animation}>
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
 
-
-      {
-        skillCards[2].map((skillCard) => (
-          <div class={skillCard.animation}>
-            <img src={skillCard.icon} alt = {skillCard.alt}/>
-            <h3>{skillCard.title}</h3>
-          </div>
-        ))
-      }
- 
+    {
+      skillCards[2].map((skillCard) => (
+        <div class={skillCard.animation}>
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
   </div>
 </section>
 
@@ -118,7 +128,6 @@ const skillCards = [
     --animate-duration: 12s;
   }
 
-
   /*SKILL SECTION STYLES*/
 
   .skills {
@@ -133,7 +142,6 @@ const skillCards = [
       background-color: #d1daf8;
     }
   }
-
 
   @media (max-width: 800px) {
     .skills {
@@ -161,7 +169,6 @@ const skillCards = [
     }
   }
 
-  
   .skills h2.animate__animated.animate__fadeIn {
     padding-bottom: 4rem;
     --animate-duration: 6s;
@@ -177,29 +184,25 @@ const skillCards = [
     }
   }
 
-/* SKILLS CARD STYLES*/
-
+  /* SKILLS CARD STYLES*/
   .skills .card-container {
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-      grid-column-gap: 3rem;
-      grid-row-gap: 0px;
-      margin-top: 20px;
+    display: grid;
+    padding-top: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 3rem;
+    grid-row-gap: 0px;
+    /* margin-top: 20px; */
   }
 
-  
-  @media (max-width: 600px){
-        .skills .card-container {
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 0px;
-        }
-
+  @media (max-width: 600px) {
+    .skills .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 0px;
+    }
   }
   .skills .card-container .card {
     text-align: center;
@@ -207,9 +210,9 @@ const skillCards = [
     padding: 0.9rem;
     margin: 2rem 0;
     background-color: #f3f3ff;
-    box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
--webkit-box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
--moz-box-shadow: 10px 7px 21px -7px rgba(219,213,232,0.75);
+    box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
+    -webkit-box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
+    -moz-box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
   }
 
   .skills .card-container .card img {
@@ -222,8 +225,7 @@ const skillCards = [
 
   .skills .card-container .card h3 {
     padding-top: 10px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-size: 20px;
-
   }
 </style>
