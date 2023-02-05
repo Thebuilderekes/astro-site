@@ -1,26 +1,25 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Skills from '../components/Skills.astro';
-import  "../css/index.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Skills from "../components/Skills.astro";
+import "../css/index.css";
+import "animate.css";
 
-const title= "Home - The Personal website of Ekeopre Beredugo, a frontend web developer based in Nigeria"
-const description = "Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites "
-const author = "Ekeopre Beredugo"
-
-import 'animate.css';
-
+const title = "Ekeopre Beredugo - Frontend web developer";
+const description =
+  "Ekeopre Beredugo is a frontend web developer who specializes in creating quality high converting websites. He is currently open for hire. ";
+const author = "Ekeopre Beredugo";
 ---
 
-<BaseLayout   title = {title} description = {description} author = {author} >
-       <main> 
-              <HeroSection/>
-              <Skills/>
-              <Portfolio/>
-      </main>
+<BaseLayout
+  title={title}
+  description={description}
+  author={author}
+>
+  <main>
+    <HeroSection />
+    <Skills />
+    <Portfolio />
+  </main>
 </BaseLayout>
-
-
-
-       
