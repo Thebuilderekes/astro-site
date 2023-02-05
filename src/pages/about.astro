@@ -4,18 +4,19 @@ const title = "About - Ekeopre Beredugo";
 const description =
   "Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites.";
 const author = "Ekeopre Beredugo";
-const skillsMobileLink = "#index.html#skills";
-const portfolioMobileLink = "#index.html#portfolio";
+const scrollToTop = "#about";
 ---
 
 <BaseLayout
   title={title}
-  skillsMobileLink={skillsMobileLink}
-  portfolioMobileLink={portfolioMobileLink}
   description={description}
   author={author}
+  scrollToTop={scrollToTop}
 >
-  <main class="wrapper">
+  <main
+    class="wrapper"
+    id="about"
+  >
     <h1>About</h1>
     <p>
       I am a highly skilled frontend developer with a passion for creating

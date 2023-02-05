@@ -3,7 +3,7 @@ import "../css/index.css";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
-const { title, description, author } = Astro.props;
+const { title, description, author, scrollToTop } = Astro.props;
 const footer = "#footer";
 ---
 
@@ -16,6 +16,9 @@ const footer = "#footer";
   <body>
     <Navigation client:load />
     <slot />
-    <Footer footer={footer} />
+    <Footer
+      footer={footer}
+      scrollToTop={scrollToTop}
+    />
   </body>
 </html>
