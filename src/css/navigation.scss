@@ -9,7 +9,7 @@ html {
 }
 
 .header {
-  background-color: #0A1926;
+  background-color: #0a1926;
   padding: 1rem 0;
   width: 100%;
   position: fixed;
@@ -28,14 +28,13 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0 8rem;
-    font-family: "Candara";
-
+    font-family: 'Candara';
 
     .top-icons {
       display: flex;
 
       a {
-        padding:  0 10px;
+        padding: 0 10px;
       }
     }
 
@@ -60,8 +59,7 @@ html {
 
       .desktop-navItems {
         display: flex;
-        li{
-
+        li {
           list-style: none;
           .desktop-navLink {
             color: #ffffff;
@@ -70,31 +68,28 @@ html {
             cursor: pointer;
             -webkit-transition: all 1000ms ease;
             transition: all 1000ms ease;
-  
+
             &:hover {
               transform: translateY(5px);
             }
           }
         }
-        }
-     
+      }
 
       @media (min-width: 800px) {
         display: block;
       }
     }
 
-    button {
+    button.nav-toggler {
       display: none;
       background-color: transparent;
-      color : #ffffff;
+      color: #ffffff;
       font-weight: 600;
       border: none;
-    
 
       @media (min-width: 800px) {
         display: none;
-      
       }
 
       @media (max-width: 799px) {
@@ -113,19 +108,17 @@ html {
       padding-top: 13%;
       height: 100vh;
 
-      li{
+      li {
         padding: 2rem 0;
         list-style: none;
         .mobile-navLink {
           font-size: 30px;
           color: #ffffff;
-      
+
           text-decoration: none;
-          font-family: "Candara";
+          font-family: 'Candara';
         }
       }
-
-
     }
   }
 }

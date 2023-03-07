@@ -9,7 +9,7 @@ html {
 }
 
 .header {
-  background-color: #0A1926;
+  background-color: #0a1926;
   padding: 1rem 0;
   width: 100%;
   position: fixed;
@@ -73,7 +73,7 @@ html {
     display: block;
   }
 }
-.header .nav-container button {
+.header .nav-container button.nav-toggler {
   display: none;
   background-color: transparent;
   color: #ffffff;
@@ -81,12 +81,12 @@ html {
   border: none;
 }
 @media (min-width: 800px) {
-  .header .nav-container button {
+  .header .nav-container button.nav-toggler {
     display: none;
   }
 }
 @media (max-width: 799px) {
-  .header .nav-container button {
+  .header .nav-container button.nav-toggler {
     display: block;
   }
 }
