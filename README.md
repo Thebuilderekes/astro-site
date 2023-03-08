@@ -3,6 +3,14 @@
 <!-- About the Project -->
 ## :star2: About the Project
  This is my official portfolio website to showcase projects and skills. Built with astro framework, react and tailwindcss. The idea was to keep the design simple and avoid distracting animations with a functional form for easy communication.
+
+
+<!--Challenges that I faced-->
+### Challenges IU cafed and how I solved them
+
+I added a theme switcher button which worked fine on my local machine but stopped working whwne I hosted it on vercel. The 
+
+
 <!-- Screenshots -->
 ### :camera: Screenshots
 

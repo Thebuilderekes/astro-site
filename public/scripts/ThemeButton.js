@@ -32,12 +32,12 @@ const mainHeading = document.querySelector('h1');
   const handleToggleClick = () => {
     // const section = document.querySelector('section');
     const element = document.documentElement;
-    const toggleItems = [mainHeading, subHeading, paragraphText, footer];
-    toggleItems.map((item) => {
+    const toggleItems = [element, mainHeading, subHeading, paragraphText, footer];
+    toggleItems.map(item => {
       item.classList.toggle('dark');
     });
     console.log('clicked');
-    element.classList.toggle('dark');
+  
 
     const isDark = element.classList.contains('dark');
     const isMainHeadingDark = mainHeading.classList.contains('dark');
