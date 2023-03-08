@@ -78,7 +78,7 @@ const { scrollToTop } = Astro.props;
     </form>
   </div>
 
-  <div class="footer-attributes py-2 mt-6 bg-[#dfe1ff] text-center">
+  <div class="footer-attributes py-2 mt-6 text-center">
     <nav>
       <a
         href={scrollToTop}
@@ -107,9 +107,11 @@ const { scrollToTop } = Astro.props;
 
 <style>
   /*FOOTER STYLES*/
+
   footer {
     background-color: #f2f2f3;
   }
+
   footer .row h3 {
     font-family: 'Poppins', sans-serif, 'arial';
     text-transform: uppercase;
@@ -133,6 +135,11 @@ const { scrollToTop } = Astro.props;
     font-size: 20px;
     color: #0a1926;
     line-height: 1.5;
+  }
+
+  footer .footer-attributes {
+    background-color: rgb(53, 53, 196);
+    color: #ffffff;
   }
 
   footer .footer-attributes small {
@@ -254,5 +261,9 @@ const { scrollToTop } = Astro.props;
   input[type='checkbox']:checked + label {
     color: #f00;
     font-style: normal;
+  }
+
+  .dark {
+    background-color: #3535c4;
   }
 </style>

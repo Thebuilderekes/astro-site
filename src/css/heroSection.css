@@ -24,8 +24,6 @@
 }
 
 
-
-
 .hero-section {
   background-image: url("/assets/img/bg-img.webp");
   padding: 0 2rem;
@@ -77,13 +75,9 @@ h1 {
 }
 
 
-
-
 h1.animate__animated.animate__fadeIn {
   --animate-duration: 3s;
 }
-
-
 
 
 h2 {
@@ -119,20 +113,15 @@ h2 {
 
 @media (max-width: 900px) {
   .hero-section p {
-
     max-width: 80%;
-
-
   }
 
 }
 
 @media (max-width:420px) {
-
   .hero-section p {
     font-size: var(--fs-hero-p-small-screen);
     max-width: 100%;
-
   }
 
 }
@@ -143,8 +132,7 @@ h2 {
   text-align: center;
   padding: 20px 10px;
   width: 300px;
-  background: #0A1926;
-  background: linear-gradient(to right, #0A1926 0%, #3535C4 100%);
+  background: #3535C4;
   color: #ffffff;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -156,7 +144,7 @@ h2 {
 
 .hero-section a:hover {
 
-  transform: translateY(-5px);
+  background-color: #4d4de9;
 
 
 }
