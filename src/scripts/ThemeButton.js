@@ -3,7 +3,7 @@
   const subHeading = document.querySelector('h2');
   const paragraphText = document.querySelector('p');
   const portfolioSection = document.querySelector('.portfolio');
-  const toggle = document.getElementById('ThemeSwitcher');
+  const toggleButton = document.getElementById('ThemeSwitcher');
   const theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
       return localStorage.getItem('theme');
@@ -15,18 +15,20 @@
   })();
 
   if (theme === 'light') {
-    document.documentElement.classList.remove('dark');
-    mainHeading.classList.remove('dark');
-    subHeading.classList.remove('dark');
-    paragraphText.classList.remove('dark');
-    portfolioSection.classList.remove('dark');
 
-  } else {
-    document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');
     mainHeading.classList.add('dark');
     subHeading.classList.add('dark');
     paragraphText.classList.add('dark');
     portfolioSection.classList.add('dark');
+   
+
+  } else {
+   document.documentElement.classList.remove('dark');
+    mainHeading.classList.remove('dark');
+    subHeading.classList.remove('dark');
+    paragraphText.classList.remove('dark');
+    portfolioSection.classList.remove('dark');
 
   }
 
@@ -37,9 +39,7 @@
     toggleItems.map(item => {
       item.classList.toggle('dark');
     });
-    console.log('clicked');
-  
-
+ 
     const isDark = element.classList.contains('dark');
     const isMainHeadingDark = mainHeading.classList.contains('dark');
     const isSubHeadingDark = subHeading.classList.contains('dark');
@@ -56,4 +56,4 @@
     );
   };
 
-  toggle.addEventListener('click', handleToggleClick);
+  toggleButton.addEventListener('click', handleToggleClick);
