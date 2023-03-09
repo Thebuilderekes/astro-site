@@ -2,13 +2,13 @@
 
 <!-- About the Project -->
 ## :star2: About the Project
- This is my official portfolio website to showcase projects and skills. Built with astro framework, react and tailwindcss. The idea was to keep the design simple and avoid distracting animations with a functional form for easy communication.
+ This is my official portfolio website to showcase projects and skills. Built with astro framework, react and tailwindcss, the idea was to keep the design simple and not have too many distracting animations, and also have  functional form that sends user messages to my mail. I'm adding a theme switcher for anyone who prefers switching from light mode to dark mode.
 
 
 <!--Challenges that I faced-->
-### Challenges IU cafed and how I solved them
+### Challenges that I am facing
 
-I added a theme switcher button which worked fine on my local machine but stopped working whwne I hosted it on vercel. The 
+I added a theme switcher button which works fine on my local machine but is unresponsive stopped working when I hosted it on vercel. 
 
 
 <!-- Screenshots -->
@@ -49,15 +49,16 @@ I added a theme switcher button which worked fine on my local machine but stoppe
 | Primary Color | #d1daf8 #0A1926 |
 | Secondary Color | #e4e4f8 |
 | Accent Color | #3535C4 , #0A1926  |
-| Text Color | #000000 |
+| Text Color | #3535C4;|
 
 
 <!-- Contact -->
 ## :handshake: Contact
 
-Your Name - [@twitter_handle](https://twitter.com/iamthebuilder__) - ekeopreberedugo1@gmail.com
+Your Name - [@iamthebuilder__](https://twitter.com/iamthebuilder__)<br>
+ - ekeopreberedugo1@gmail.com
 
-Project Link: [https://thebuilderekes.github.io/astro-site/](https://github.com/Louis3797/awesome-readme-template)
+Project Link: [https://thebuilderekes.github.io/astro-site/](https://thebuilderekes.github.io/astro-site/)
 
 
 
