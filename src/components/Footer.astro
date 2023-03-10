@@ -2,108 +2,6 @@
 const { scrollToTop } = Astro.props;
 ---
 
-<footer
-  class="tagline pt-20 lg:pt-40 flex flex-col justify-center"
-  id="footer"
->
-  <div class="sm: px-6 mb-24 flex flex-col justify-center">
-    <div class="row">
-      <h3 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl">Contact me</h3>
-    </div>
-    <form
-      class="pt-12 flex flex-col justify-center"
-      action="https://formsubmit.co/ekeopreberedugo1@gmail.com"
-      method="post"
-    >
-      <div class="row">
-        <h4 style="text-align:center">I'd love to hear from you!</h4>
-      </div>
-      <div class="row input-container">
-        <div class="col-xs-12">
-          <div class="styled-input wide">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-            />
-            <label for="name">Name</label>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="styled-input">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="form-control"
-              required
-            />
-            <label for="email">Email</label>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div
-            class="styled-input"
-            style="float:right;"
-          >
-            <input
-              type="text"
-              name="text"
-              id="text"
-              required
-            />
-            <label for="tel">Subject</label>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <div class="styled-input wide">
-            <textarea
-              required
-              id="text-input"
-            ></textarea>
-            <label for="text-input">Message</label>
-          </div>
-        </div>
-        <div class="col-xs-12">
-          <button
-            type="submit"
-            aria-label="send msessage"
-            class="btn-lrg submit-btn"
-            >Send Message</button
-          >
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <div class="footer-attributes py-2 mt-6 text-center">
-    <nav>
-      <a
-        href={scrollToTop}
-        class="font-extrabold text-grey-700 underline"
-        >Return to top</a
-      >
-    </nav>
-    <small
-      class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg"
-      >&copy; 2022 - Today. Made with <span class="text-bold"
-        >Astro + TailwindCSS + React
-      </span>
-    </small>
-    <br />
-    <small
-      class="text-center xs:text-center lg:text-xs xs:text-xs sm:text-xs md:text-xl"
-    >
-      Designed and built by <a
-        class="underline"
-        href="https://twitter.com/iamthebuilder__"
-        >Ekeopre</a
-      >
-    </small>
-  </div>
-</footer>
-
 <style>
   /*FOOTER STYLES*/
 
@@ -266,3 +164,105 @@ const { scrollToTop } = Astro.props;
     background-color: #3535c4;
   }
 </style>
+
+<footer
+  class="tagline pt-20 lg:pt-40 flex flex-col justify-center"
+  id="footer"
+>
+  <div class="sm: px-6 mb-24 flex flex-col justify-center">
+    <div class="row">
+      <h3 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl">Contact me</h3>
+    </div>
+    <form
+      class="pt-12 flex flex-col justify-center"
+      action="https://formsubmit.co/ekeopreberedugo1@gmail.com"
+      method="post"
+    >
+      <div class="row">
+        <h4 style="text-align:center">I'd love to hear from you!</h4>
+      </div>
+      <div class="row input-container">
+        <div class="col-xs-12">
+          <div class="styled-input wide">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
+            <label for="name">Name</label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="styled-input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              required
+            />
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div
+            class="styled-input"
+            style="float:right;"
+          >
+            <input
+              type="text"
+              name="text"
+              id="text"
+              required
+            />
+            <label for="tel">Subject</label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="styled-input wide">
+            <textarea
+              required
+              id="text-input"
+            ></textarea>
+            <label for="text-input">Message</label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <button
+            type="submit"
+            aria-label="send msessage"
+            class="btn-lrg submit-btn"
+            >Send Message</button
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer-attributes py-2 mt-6 text-center">
+    <nav>
+      <a
+        href={scrollToTop}
+        class="font-extrabold text-grey-700 underline"
+        >Return to top</a
+      >
+    </nav>
+    <small
+      class="text-center xs:text-center lg:text-xs xs:text-lg sm:text-xs md:text-lg"
+      >&copy; 2022 - Today. Made with <span class="text-bold"
+        >Astro + TailwindCSS + React
+      </span>
+    </small>
+    <br />
+    <small
+      class="text-center xs:text-center lg:text-xs xs:text-xs sm:text-xs md:text-xl"
+    >
+      Designed and built by <a
+        class="underline"
+        href="https://twitter.com/iamthebuilder__"
+        >Ekeopre</a
+      >
+    </small>
+  </div>
+</footer>

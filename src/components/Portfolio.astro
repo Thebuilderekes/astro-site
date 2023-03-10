@@ -1,4 +1,5 @@
 ---
+import '../components/ThemeToggle.astro';
 const portfolioCards = [
   [
     {
@@ -67,88 +68,6 @@ const portfolioCards = [
   ],
 ];
 ---
-
-<section
-  class="portfolio"
-  id="portfolio"
->
-  <h2>PORTFOLIO</h2>
-  <div class="design-text">PORTFOLIO</div>
-  <div class="card-container">
-    {
-      portfolioCards[0].map((portfolioCard) => (
-        <div
-          class={portfolioCard.animation}
-          id="card"
-        >
-          <figure>
-            <img
-              src={portfolioCard.imgUrl}
-              alt="portfolio card"
-            />
-          </figure>
-          <p>{portfolioCard.description}</p>
-          <p>
-            <span>Technologies used:</span> {portfolioCard.technology}
-          </p>
-          <div class="btn-group">
-            <a
-              href={portfolioCard.webUrl}
-              target="_blank"
-              role="link"
-            >
-              VISIT WEBSITE
-            </a>
-            <a
-              class="github-btn"
-              href={portfolioCard.gitUrl}
-              target="_blank"
-              role="link"
-            >
-              GITHUB
-            </a>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-  <div class="card-container">
-    {
-      portfolioCards[1].map((portfolioCard) => (
-        <div class={portfolioCard.animation}>
-          <figure>
-            <img
-              src={portfolioCard.imgUrl}
-              alt="portfolio card"
-            />
-          </figure>
-
-          <p>{portfolioCard.description}</p>
-          <p>
-            <span>Technologies used:</span> {portfolioCard.technology}
-          </p>
-          <div class="btn-group">
-            <a
-              href={portfolioCard.webUrl}
-              target="_blank"
-              role="link"
-            >
-              VISIT WEBSITE
-            </a>
-            <a
-              class="github-btn"
-              href={portfolioCard.gitUrl}
-              target="_blank"
-              role="link"
-            >
-              GITHUB
-            </a>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-</section>
 
 <style>
   * {
@@ -331,3 +250,85 @@ const portfolioCards = [
     }
   }
 </style>
+
+<section
+  class="portfolio"
+  id="portfolio"
+>
+  <h2>PORTFOLIO</h2>
+  <div class="design-text">PORTFOLIO</div>
+  <div class="card-container">
+    {
+      portfolioCards[0].map((portfolioCard) => (
+        <div
+          class={portfolioCard.animation}
+          id="card"
+        >
+          <figure>
+            <img
+              src={portfolioCard.imgUrl}
+              alt="portfolio card"
+            />
+          </figure>
+          <p>{portfolioCard.description}</p>
+          <p>
+            <span>Technologies used:</span> {portfolioCard.technology}
+          </p>
+          <div class="btn-group">
+            <a
+              href={portfolioCard.webUrl}
+              target="_blank"
+              role="link"
+            >
+              VISIT WEBSITE
+            </a>
+            <a
+              class="github-btn"
+              href={portfolioCard.gitUrl}
+              target="_blank"
+              role="link"
+            >
+              GITHUB
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="card-container">
+    {
+      portfolioCards[1].map((portfolioCard) => (
+        <div class={portfolioCard.animation}>
+          <figure>
+            <img
+              src={portfolioCard.imgUrl}
+              alt="portfolio card"
+            />
+          </figure>
+
+          <p>{portfolioCard.description}</p>
+          <p>
+            <span>Technologies used:</span> {portfolioCard.technology}
+          </p>
+          <div class="btn-group">
+            <a
+              href={portfolioCard.webUrl}
+              target="_blank"
+              role="link"
+            >
+              VISIT WEBSITE
+            </a>
+            <a
+              class="github-btn"
+              href={portfolioCard.gitUrl}
+              target="_blank"
+              role="link"
+            >
+              GITHUB
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

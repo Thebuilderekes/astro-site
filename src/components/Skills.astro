@@ -51,54 +51,6 @@ const skillCards = [
 ];
 ---
 
-<section
-  class="skills"
-  id="skills"
->
-  <h2 class="animate__animated animate__fadeInUp">SKILLS</h2>
-  <div class="design-text">SKILLS</div>
-  <div class="card-container">
-    {
-      skillCards[0].map((skillCard) => (
-        <div
-          class={skillCard.animation}
-          id="card"
-        >
-          <img
-            src={skillCard.icon}
-            alt={skillCard.alt}
-          />
-          <h3>{skillCard.title}</h3>
-        </div>
-      ))
-    }
-
-    {
-      skillCards[1].map((skillCard) => (
-        <div class={skillCard.animation}>
-          <img
-            src={skillCard.icon}
-            alt={skillCard.alt}
-          />
-          <h3>{skillCard.title}</h3>
-        </div>
-      ))
-    }
-
-    {
-      skillCards[2].map((skillCard) => (
-        <div class={skillCard.animation}>
-          <img
-            src={skillCard.icon}
-            alt={skillCard.alt}
-          />
-          <h3>{skillCard.title}</h3>
-        </div>
-      ))
-    }
-  </div>
-</section>
-
 <style>
   * {
     margin: 0;
@@ -235,3 +187,51 @@ const skillCards = [
     color: #150475;
   }
 </style>
+
+<section
+  class="skills"
+  id="skills"
+>
+  <h2 class="animate__animated animate__fadeInUp">SKILLS</h2>
+  <div class="design-text">SKILLS</div>
+  <div class="card-container">
+    {
+      skillCards[0].map((skillCard) => (
+        <div
+          class={skillCard.animation}
+          id="card"
+        >
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
+
+    {
+      skillCards[1].map((skillCard) => (
+        <div class={skillCard.animation}>
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
+
+    {
+      skillCards[2].map((skillCard) => (
+        <div class={skillCard.animation}>
+          <img
+            src={skillCard.icon}
+            alt={skillCard.alt}
+          />
+          <h3>{skillCard.title}</h3>
+        </div>
+      ))
+    }
+  </div>
+</section>
