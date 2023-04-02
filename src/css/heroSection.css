@@ -58,8 +58,8 @@
 h1 {
   color: rgb(61, 61, 61);
   font-size: var(--fs-extralarge);
+  font-weight: 900;
   font-family: 'Poppins';
-  font-weight: bold;
 }
 
 @media (max-width: 800px) {
