@@ -109,6 +109,7 @@ h2 {
   max-width: 50%;
   margin-bottom: 20px;
   color: #272727;
+  font-family: "Poppins";
 }
 
 @media (max-width: 900px) {
