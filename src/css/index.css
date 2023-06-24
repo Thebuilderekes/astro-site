@@ -1,58 +1,49 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
-
 
 :root {
-  --fs-extralarge: 5rem;
-  /*80px*/
-  --fs-large: 3rem;
-  /*48px*/
-  --fs-double: 2rem;
-  /*32px*/
-  --fs-hero-h1-small-screen: 1.875rem;
-  /*30px*/
-  --fs-hero-h2-small-screen: 1.375rem;
-  /*22px*/
-  --fs-hero-p-small-screen: 1.25rem;
-  /*20px*/
-  --fs-medium: 1.5rem;
-  /*24px*/
-  --fs-default: 1rem;
-  /*16px*/
-  --fs-small: 0.8rem;
-  /*12.8px*/
-  --primary-color: #0A1926;
-  --secondary-color: #ffffff;
-
+	--fs-extralarge: 5rem;
+	/*80px*/
+	--fs-large: 3rem;
+	/*48px*/
+	--fs-double: 2rem;
+	/*32px*/
+	--fs-hero-h1-small-screen: 1.875rem;
+	/*30px*/
+	--fs-hero-h2-small-screen: 1.375rem;
+	/*22px*/
+	--fs-hero-p-small-screen: 1.25rem;
+	/*20px*/
+	--fs-medium: 1.5rem;
+	/*24px*/
+	--fs-default: 1rem;
+	/*16px*/
+	--fs-small: 0.8rem;
+	/*12.8px*/
+	--primary-color: #0a1926;
+	--secondary-color: #ffffff;
+	--darkTheme-color: #0d0950;
 }
 
-
 .dark {
-  background-color: #0d0950;
-  color: #ffffff;
-
+	background-color: var(--darkTheme-color);
+	color: #ffffff;
 }
 
 html {
-  height: 100%;
+	height: 100%;
 }
-
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
-/* main h1 {
-  font-family: 'Archivo Black';
-} */
-
-
 footer p {
-  text-align: center;
-  font-size: var(--fs-small);
+	text-align: center;
+	font-size: var(--fs-small);
 }
