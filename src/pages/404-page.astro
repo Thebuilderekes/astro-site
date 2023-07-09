@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../css/index.css";
+const title = "404 - page";
+const description =
+	"Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites.";
+const author = "Ekeopre Beredugo";
+
+---
+
+
+<BaseLayout
+	title={title}
+	description={description}
+	author={author}
+>
+	<main class="wrapper" id="404-wrapper">
+        <img src="public/assets/img/oops-404-error-with-broken-robot-concept-illustration/3828537.jpg" alt="">
+		<h1 class="main-title">404 PAGE NOT FOUND</h1>
+		<p class="about-me">
+			The page that you are looking for does not exist.  <br />
+			<a href="/">Go to homepage</a>
+		</p>
+	</main>
+</BaseLayout>
+
+
+<style>
+
+    	@font-face {
+		font-family: "Archivo Black";
+		font-style: normal;
+		font-weight: 400;
+		src: url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot"); /* IE9 Compat Modes */
+		src: local(""),
+			url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot?#iefix")
+				format("embedded-opentype"),
+			/* IE6-IE8 */
+				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.woff2")
+				format("woff2"),
+			/* Super Modern Browsers */
+				url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.woff")
+				format("woff"),
+			/* Modern Browsers */
+				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.ttf")
+				format("truetype"),
+			/* Safari, Android, iOS */
+				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.svg#ArchivoBlack")
+				format("svg"); /* Legacy iOS */
+	}
+
+
+    main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5% 0;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    main img {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media (max-width: 375px){
+        main {
+            padding: 20% 2%;
+        }
+    }
+
+    main h1 {
+        font-family: "Archivo Black";
+        font-size: 2rem;
+    }
+
+main p {
+    font-size: 1.2rem;
+
+}
+    main p a {
+        font-size: 1.5rem;
+        color: #3535c4;
+        text-decoration: underline;
+    }
+</style>
