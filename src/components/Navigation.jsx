@@ -82,11 +82,6 @@ export default function Navigation() {
 							</a>
 						</li>
 						<li>
-							<a className="desktop-navLink" href="/404-page">
-								404
-							</a>
-						</li>
-						<li>
 							<a className="desktop-navLink" href="index.html#skills">
 								Skills
 							</a>
