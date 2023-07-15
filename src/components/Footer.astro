@@ -181,38 +181,38 @@ const { scrollToTop } = Astro.props;
 			<div class="row input-container">
 				<div class="col-xs-12">
 					<div class="styled-input wide">
-						<input type="text" name="name" id="name" required />
 						<label for="name">Name</label>
+						<input type="text" name="name" id="name" required >
 					</div>
 				</div>
 				<div class="col-xs-12">
 					<div class="styled-input">
+						<label for="email">Email</label>
 						<input
 							type="email"
 							name="email"
 							id="email"
 							class="form-control"
 							required
-						/>
-						<label for="email">Email</label>
+						>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<div class="styled-input" style="float:right;">
-						<input type="text" name="text" id="text" required />
-						<label for="tel">Subject</label>
+						<input type="text" name="text" id="text" required >
+						<label for="text">Subject</label>
 					</div>
 				</div>
 				<div class="col-xs-12">
+					<label for="text-input">Message</label>
 					<div class="styled-input wide">
 						<textarea required id="text-input"></textarea>
-						<label for="text-input">Message</label>
 					</div>
 				</div>
 				<div class="col-xs-12">
 					<button
 						type="submit"
-						aria-label="send msessage"
+						aria-label="send message"
 						class="btn-lrg submit-btn">Send Message</button
 					>
 				</div>
