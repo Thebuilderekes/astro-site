@@ -45,7 +45,7 @@ const portfolioCards = [
 		},
 
 		{
-			imgUrl: "/assets/img/jewelry-store.jpg",
+			imgUrl: "/assets/img/luxegems.png",
 			technology: " CSS, Bootstrap, Javascript",
 			description:
 				"A jewelry store website where users can place orders either through contacts available on the website or through the 'Place order' buttons under each product.",
@@ -111,7 +111,7 @@ const portfolioCards = [
 
 	.portfolio {
 		padding: 7rem 2rem;
-		/* background-color: #ffffff; */
+		background-image: url("/assets/img/bg-img.webp");
 		position: relative;
 	}
 
@@ -129,7 +129,7 @@ const portfolioCards = [
 
 	.portfolio h2 {
 		padding-bottom: 4rem;
-		color: #3535c4;
+		/* color: #3535c4; */
 	}
 
 	@media (max-width: 800px) {
@@ -214,7 +214,7 @@ const portfolioCards = [
 		line-height: 1.5;
 		text-align: left;
 		padding: 0.9rem 0;
-		color: #150475;
+		color: #090329;
 	}
 
 	.portfolio .card-container .card p span {
@@ -229,7 +229,7 @@ const portfolioCards = [
 </style>
 
 <section class="portfolio" id="portfolio">
-	<h2>PORTFOLIO</h2>
+	<h2 class="portfolio-heading">PORTFOLIO</h2>
 	<div class="card-container">
 		{
 			portfolioCards[0].map((portfolioCard) => (

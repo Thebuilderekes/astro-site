@@ -45,9 +45,9 @@
 	const toggleButton = document.getElementById("ThemeSwitcher"); // themeswitcher button
 
 	//array to hold the sections to be affected by the dark theme
-	const themedSectionsList = Array.from(
+	const themedSectionList = Array.from(
 		document.querySelectorAll(
-			".main-heading, .job-title ,.specialize, .portfolio"
+			".main-heading, .job-title, .specialty-paragraph, .portfolio, .portfolio-heading"
 		)
 	);
 	//Theme functionality
@@ -58,16 +58,16 @@
 			: "dark");
 	if (theme === "light") {
 		element.classList.add("dark");
-		themedSectionsList.forEach((item) => item.classList.add("dark"));
+		themedSectionList.forEach((item) => item.classList.add("dark"));
 	} else {
 		element.classList.remove("dark");
-		themedSectionsList.forEach((item) => item.classList.remove("dark"));
+		themedSectionList.forEach((item) => item.classList.remove("dark"));
 	}
 	window.localStorage.setItem("theme", theme);
 
 	//function to toggle the dark class on the sections
 	const handleToggleClick = () => {
-		themedSectionsList.forEach((item) => item.classList.toggle("dark"));
+		themedSectionList.forEach((item) => item.classList.toggle("dark"));
 		element.classList.toggle("dark");
 		const isDark = element.classList.contains("dark");
 		localStorage.setItem("theme", isDark ? "dark" : "light");
