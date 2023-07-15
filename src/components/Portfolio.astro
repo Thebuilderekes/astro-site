@@ -138,31 +138,8 @@ const portfolioCards = [
 		}
 	}
 
-	.portfolio .design-text {
-		font-family: "Archivo Black";
-		position: absolute;
-		top: 3%;
-		font-size: 10rem;
-		opacity: 0.1;
-	}
+	
 
-	@media (max-width: 1026px) {
-		.portfolio .design-text {
-			font-size: 5rem;
-		}
-	}
-	@media (max-width: 800px) {
-		.portfolio .design-text {
-			position: absolute;
-			top: 1%;
-		}
-	}
-	@media (max-width: 600px) {
-		.portfolio .design-text {
-			top: 2%;
-			font-size: 2.8rem;
-		}
-	}
 
 	/* PORTFOLIO CARD STYLES*/
 	.portfolio .card-container {
@@ -253,7 +230,6 @@ const portfolioCards = [
 
 <section class="portfolio" id="portfolio">
 	<h2>PORTFOLIO</h2>
-	<div class="design-text">PORTFOLIO</div>
 	<div class="card-container">
 		{
 			portfolioCards[0].map((portfolioCard) => (
