@@ -21,22 +21,22 @@ img {
 	/*30px*/
 	--fs-hero-h2-mobile: 1.2rem;
 	/*22px*/
-	--fs-p-mobile: 0.2rem;
-	/*16px*/
+	--fs-section-h2-mobile: 2rem;
+
 	--fs-medium: 1.5rem;
 	/*24px*/
 	--fs-default: 1rem;
 	/*16px*/
 	--fs-small: 0.8rem;
 	/*12.8px*/
-	--primary-color: #0a1926;
+	--accent-color: #0a1926;
 	--secondary-color: #ffffff;
 	--darkTheme-color: #0d0950;
 }
 
 .dark {
 	background-color: var(--darkTheme-color);
-	color: #ffffff;
+	color: #eeeded;
 }
 
 html {

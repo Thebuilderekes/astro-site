@@ -127,15 +127,19 @@ const portfolioCards = [
 		}
 	}
 
-	.portfolio h2 {
+	 h2 {
 		padding-bottom: 4rem;
-		/* color: #3535c4; */
+		font-size: var(--fs-section-h2-mobile);
+		font-weight: 600;
+		color: #3535c4;
+		text-align: center;
 	}
 
-	@media (max-width: 800px) {
+	@media (min-width: 800px) {
 		.portfolio h2 {
 			font-size: 3rem;
 			padding-bottom: 3rem;
+			font-size: var(--fs-large);
 		}
 	}
 

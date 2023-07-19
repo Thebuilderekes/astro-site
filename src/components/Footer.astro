@@ -33,7 +33,7 @@ const { scrollToTop } = Astro.props;
 		-webkit-text-fill-color: transparent;
 	}
 
-	@media (max-width: 400px) {
+	@media (max-width: 800px) {
 		footer h2 {
 			font-size: 30px;
 		}
@@ -68,6 +68,10 @@ const { scrollToTop } = Astro.props;
 		top: -5px;
 		-webkit-transition: all 0.225s ease;
 		transition: all 0.225s ease;
+	}
+
+	input::placeholder, textarea::placeholder {
+		color:#181f25
 	}
 
 	.styled-input {

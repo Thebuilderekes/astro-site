@@ -1,7 +1,118 @@
 ---
-import "../css/heroSection.css";
+// import "../css/heroSection.css";
 import ThemeSwitcher from "../components/ThemeToggle.astro";
 ---
+<style>
+
+.hero-section {
+	background-image: url("/assets/img/bg-img.webp");
+	margin: 15% 2rem 0 2rem;
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 800px) {
+	.hero-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 550px) {
+	.hero-section {
+		height: 95vh;
+		padding-top: 10%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+h1 {
+	color: rgb(61, 61, 61);
+	font-size: var(--fs-hero-h1-mobile);
+	font-weight: 600;
+	font-family: "Poppins";
+	display: flex;
+}
+
+h1.animate__animated.animate__fadeIn {
+	--animate-duration: 3s;
+}
+
+h2 {
+	padding-bottom: 0.8rem;
+	font-size: var(--fs-extralarge);
+	font-weight: 500;
+	color: #3535c4;
+	font-family: "Poppins";
+	line-height: 1.2;
+	--animate-duration: 2s;
+}
+
+@media (max-width: 800px) {
+	h2 {
+		font-size: var(--fs-large);
+		font-weight: 800;
+	}
+}
+
+.hero-section p {
+	font-size: 1.2rem;
+	max-width: 50%;
+	margin-bottom: 20px;
+	color: #272727;
+	font-family: "Poppins";
+}
+
+@media (max-width: 900px) {
+	.hero-section p {
+		max-width: 80%;
+	}
+}
+
+@media (max-width: 420px) {
+	.hero-section p {
+		font-size: var(--fs-p-mobile);
+		max-width: 100%;
+	}
+}
+
+.hero-section a {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	padding: 20px 10px;
+	width: 230px;
+	background: #3535c4;
+	color: #ffffff;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	font-family: "Poppins";
+	font-size: 20px;
+	transition: 1s all ease;
+}
+
+.hero-section a:hover {
+	background-color: var(--accent-color);
+}
+
+/* dark mode styles */
+
+.hero-section h2.dark {
+	color: #ffffff;
+}
+
+.hero-section p.dark {
+	color: #ffffff;
+}
+
+
+</style>
+
 
 <section class="hero-section" id="particles-js">
 	<h1 class="animate__animated animate__fadeIn main-heading">
