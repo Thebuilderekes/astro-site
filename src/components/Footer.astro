@@ -9,6 +9,19 @@ const { scrollToTop } = Astro.props;
 		background-color: #f2f2f3;
 	}
 
+	.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 	footer .row h2 {
 		font-family: "Poppins", sans-serif, "arial";
 		text-transform: uppercase;
@@ -181,32 +194,33 @@ const { scrollToTop } = Astro.props;
 			<div class="row input-container">
 				<div class="col-xs-12">
 					<div class="styled-input wide">
-						<label for="name">Name</label>
-						<input type="text" name="name" id="name" required >
+						<label class="visually-hidden " for="name">Name</label>
+						<input type="text" name="name" id="name" required placeholder="Name">
 					</div>
 				</div>
 				<div class="col-xs-12">
 					<div class="styled-input">
-						<label for="email">Email</label>
+						<label class="visually-hidden " for="email">Email</label>
 						<input
-							type="email"
-							name="email"
-							id="email"
-							class="form-control"
-							required
+						type="email"
+						name="email"
+						id="email"
+						class="form-control"
+						required
+						placeholder="Email"
 						>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<div class="styled-input" style="float:right;">
-						<input type="text" name="text" id="text" required >
-						<label for="text">Subject</label>
+						<label class="visually-hidden " for="text">Subject</label>
+						<input type="text" name="text" id="text" required placeholder="Subject" >
 					</div>
 				</div>
 				<div class="col-xs-12">
 					<div class="styled-input wide">
-						<label for="text-input">Message</label>
-						<textarea required id="text-input"></textarea>
+						<label class="visually-hidden " for="text-input">Message</label>
+						<textarea required id="text-input" placeholder="Message"></textarea>
 					</div>
 				</div>
 				<div class="col-xs-12">
