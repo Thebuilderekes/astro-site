@@ -31,12 +31,12 @@ img {
 	/*12.8px*/
 	--accent-color: #0a1926;
 	--secondary-color: #ffffff;
-	--darkTheme-color: #0d0950;
+	--darkTheme-color: #160d08;
 }
 
 .dark {
 	background-color: var(--darkTheme-color);
-	color: #eeeded;
+	color: #fafafa;
 }
 
 html {
