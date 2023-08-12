@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ThemeSwitcher from "../components/ThemeToggle.astro";
 import "../css/index.css";
 const title = "About - Ekeopre Beredugo";
 const description =
@@ -14,20 +15,55 @@ const scrollToTop = "#about";
 	author={author}
 	scrollToTop={scrollToTop}
 >
-	<main class="wrapper" id="about">
-		<h1 class="main-title">About</h1>
+	<main class="container" id="about">
+		<h1 class="main-title title">About</h1>
 		<p class="about-me">
-			I'm a self taught front end developer from Nigeria that has a strong
-			background using HTML, CSS, and JavaScript for creating
-			visually appealing user-friendly web applications. I've been building websites since 2020 and I have also gained valuable
-			experience using a range of other modern web technologies and frameworks such as React and Astro. <br><br> I'm always seeking to learn, knowledge and improve my
-			skills, and I am aso excited about the opportunity to join a dynamic and
-			innovative team where I can make contributions to the
-			development process. <br /><br />
-			<a href="/">Go to homepage</a>
+			Hello, I'm Ekeopre Beredugo, a frontend developer based in Nigeria. I'm
+			passionate about building beautiful and accessibile websites for personal
+			brands and businesses. Every project I undertake is a canvas for
+			innovation. Whether it's a portfolio showcasing a budding artist's
+			creations or an e-commerce platform revolutionizing local businesses, I
+			approach each endeavor with an artist's eye and a coder's precision. With
+			every pixel I place, every animation I design, and every interaction I
+			craft, my goal is to forge connections – connections that bridge brands
+			and their audiences in meaningful ways.
 		</p>
+		<h2 class="title">How it all started</h2>
+		<p class="about-me">
+			I began my journey into frontend development back in 2020. It all started
+			with a simple curiosity about how websites are created. I went looking
+			free online resources to learn HTML, CSS, and JavaScript, slowly building
+			up my skills. As time went on, I wanted to learn even more so I enrolled
+			in paid courses that deepened my knowledge and taught me how to create
+			websites that not only looked great but also worked smoothly ad wre
+			accessible. In addition to the basics, I explored tools like WordPress,
+			React, and Astro. These tools added extra layers to my skills. WordPress
+			made building sites easier, React let me add cool features, and Astro
+			helped speed up websites. I won't deny there were challenges along the
+			way. Coding is like solving puzzles – sometimes it's tricky, but with each
+			challenge, I got better and I have gone on to create great websites.
+		</p>
+
+		<h2 class="title">What motivates me</h2>
+		<p class="about-me">
+			Passion is my driving force – the very essence that fuels my dedication to
+			the craft. Through countless lines of code and late-night brainstorming
+			sessions, I've cultivated a deep appreciation for the intricate dance
+			between aesthetics and functionality. The ability to translate a brand's
+			vision into a digital masterpiece that resonates with its audience is a
+			challenge I wholeheartedly embrace. I'm always seeking to learn and
+			contribute, so, whether you're a fellow developer, a visionary brand
+			owner, or simply an enthusiast exploring the digital realm, I invite you
+			to join me on this journey. Let's create not just websites, but digital
+			experiences that resonate, inspire, and endure.
+		</p>
+		<a href="/">Go to homepage</a>
+
+		<ThemeSwitcher />
 	</main>
 </BaseLayout>
+
+<script></script>
 
 <style>
 	* {
@@ -76,57 +112,68 @@ const scrollToTop = "#about";
 		height: 100%;
 	}
 
-	.wrapper h1 {
-		color: #0a1926;
-
+	.container {
+		max-width: 80%;
+	}
+	.container h1 {
 		margin: 20px auto;
 		font-family: "Archivo Black";
 		text-transform: uppercase;
 		font-size: 3.5rem;
 	}
 
-	.wrapper p {
-		font-size: 18px;
+	.container h2 {
+		margin: 20px auto;
+		font-family: "Archivo Black";
+		font-size: 1.5rem;
 	}
 
-	.wrapper p a {
+	.container p {
+		font-size: 18px;
+		padding-bottom: 2%;
+	}
+
+	.container a {
 		color: var(--darkTheme-color);
 		text-decoration: underline;
+		font-size: 24px;
+	}
+
+	.container a:hover {
+		background-color: var(--darkTheme-color);
+		color: #ffffff;
 	}
 	@media (min-width: 800px) {
-		.wrapper {
-			margin: 0 20%;
-		}
-		.wrapper p {
-			font-size: 20px;
+		.container p {
+			font-size: 24px;
 		}
 	}
 	@media (max-width: 1250px) {
-		.wrapper h1 {
+		.container h1 {
 			font-size: 3rem;
 		}
 	}
 
 	@media (max-width: 820px) {
-		.wrapper {
+		.container {
 			margin: 5% 0;
 		}
-		.wrapper h1 {
+		.container h1 {
 			font-size: 30px;
 		}
 	}
 
 	@media (max-width: 599px) {
-		.wrapper {
+		.container {
 			margin: 30% 1.5rem;
 		}
-		.wrapper h1 {
+		.container h1 {
 			font-size: 25px;
 		}
 	}
 
 	@media (min-width: 600px) {
-		.wrapper {
+		.container {
 			padding: 10% 3rem;
 		}
 	}

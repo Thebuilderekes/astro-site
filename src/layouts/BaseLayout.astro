@@ -1,27 +1,20 @@
 ---
-import '../components/ThemeToggle.astro';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer.astro';
-import BaseHead from '../components/BaseHead.astro';
-import '../css/index.css';
-import '../components/ThemeToggle.astro';
+import "../components/ThemeToggle.astro";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import "../css/index.css";
+import "../components/ThemeToggle.astro";
 
 const { title, description, author, scrollToTop } = Astro.props;
-const footer = '#footer';
+const footer = "#footer";
 ---
 
 <html lang="en">
-  <BaseHead
-    title={title}
-    description={description}
-    author={author}
-  />
-  <body>
-    <Navigation client:idle />
-    <slot />
-    <Footer
-      footer={footer}
-      scrollToTop={scrollToTop}
-    />
-  </body>
+	<BaseHead title={title} description={description} author={author} />
+	<body>
+		<Navigation client:idle />
+		<slot />
+		<Footer footer={footer} scrollToTop={scrollToTop} />
+	</body>
 </html>

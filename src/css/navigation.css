@@ -26,7 +26,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8rem;
+  padding: 0 2rem;
   font-family: "Poppins";
 }
 .header .nav-container .top-icons {
@@ -64,7 +64,7 @@ html {
   padding: 0 10px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 1000ms ease;
+  transition: all 500ms ease;
 }
 .header .nav-container .desktop-nav .desktop-navItems li .desktop-navLink:hover {
   color: #7a7cec;
