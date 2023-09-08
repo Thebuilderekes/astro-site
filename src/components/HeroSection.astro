@@ -30,11 +30,11 @@ import ThemeSwitcher from "../components/ThemeToggle.astro";
 	}
 }
 
-h1 {
-	color: rgb(61, 61, 61);
+.heading {
 	font-size: var(--fs-hero-h1-mobile);
 	font-weight: 600;
 	font-family: "Poppins";
+	/* color: rgb(61, 61, 61); */
 	display: flex;
 }
 
@@ -80,20 +80,47 @@ h2 {
 	}
 }
 
-.hero-section a {
+.hero-section .cta {
+	display: flex;
+	gap: 2rem;
+}
+
+.hero-section .cta a {
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-	padding: 20px 10px;
-	width: 230px;
+	display: inline;
+	padding: 15px 7px;
+	width: 200px;
 	background: #3535c4;
 	color: #ffffff;
+
+	font-family: "Poppins";
+	font-size: 1.2rem;
+	transition: 1s all ease;
+}
+
+@media (max-width: 600px) {
+
+.hero-section .cta a {
+	font-size: 1rem;
+	/* padding: 10px 5px; */
+	
+}
+}
+.hero-section .cta a:hover {
+	background: #09091b;
+}
+.hero-section .cta .portfolio-btn{
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
-	font-family: "Poppins";
-	font-size: 20px;
-	transition: 1s all ease;
+}
+
+.hero-section .about-me-btn{
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 20px;
 }
 
 .hero-section a:hover {
@@ -115,7 +142,7 @@ h2 {
 
 
 <section class="hero-section" id="particles-js">
-	<h1 class="animate__animated animate__fadeIn main-heading">
+	<h1 class="heading animate__animated animate__fadeIn main-heading">
 		Hello, I'm Ekeopre Beredugo
 	</h1>
 	<h2 class="animate__animated animate__fadeInUp animate__faster job-title">
@@ -125,9 +152,17 @@ h2 {
 		I specialize in crafting accessible, high converting websites and web
 		applications for personal brands and businesses.
 	</p>
-	<a
-		class="porfolio-btn animate__animated animate__fadeInUp animate__faster"
+	<div class="cta">
+
+		<a
+		class="portfolio-btn animate__animated animate__fadeInUp animate__faster"
 		href="#portfolio">View portfolio</a
 	>
+	<a
+		class="about-me-btn animate__animated animate__fadeInUp animate__faster"
+		href="../about">About me</a
+	>
+	</div>
+
 	<ThemeSwitcher />
 </section>

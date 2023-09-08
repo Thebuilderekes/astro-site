@@ -2,7 +2,7 @@
 import "animate.css";
 
 const skillCards = [
-	[
+	
 		{
 			icon: "https://api.iconify.design/logos:figma.svg",
 			animation: "card animate__animated animate__fadeInUp delay-1",
@@ -12,13 +12,13 @@ const skillCards = [
 
 		{
 			icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
-			animation: "card animate__animated animate__fadeInUp delay-6",
+			animation: "card animate__animated animate__fadeInUp delay-2",
 			title: "React",
 			alt: "React logo",
 		},
-	],
+	
 
-	[
+	
 		{
 			icon: "https://api.iconify.design/logos:tailwindcss.svg",
 			animation: "card animate__animated animate__fadeInUp delay-3",
@@ -32,9 +32,9 @@ const skillCards = [
 			title: "Javascript",
 			alt: "JavaScript logo",
 		},
-	],
+	
 
-	[
+	
 		{
 			icon: "https://api.iconify.design/logos:astro.svg",
 			animation: "card animate__animated animate__fadeInUp delay-5",
@@ -44,11 +44,11 @@ const skillCards = [
 
 		{
 			icon: "https://api.iconify.design/logos:wordpress.svg",
-			animation: "card animate__animated animate__fadeInUp delay-2",
+			animation: "card animate__animated animate__fadeInUp delay-6",
 			title: "WordPress",
 			alt: "Wordpress logo",
 		},
-	],
+	
 ];
 ---
 
@@ -178,7 +178,7 @@ const skillCards = [
 	<h2 class="animate__animated animate__fadeInUp">SKILLS & TECH</h2>
 	<div class="card-container">
 		{
-			skillCards[0].map((skillCard) => (
+			skillCards.map((skillCard) => (
 				<div class={skillCard.animation} id="card">
 					<img src={skillCard.icon} alt={skillCard.alt} />
 					<h3>{skillCard.title}</h3>
@@ -186,22 +186,5 @@ const skillCards = [
 			))
 		}
 
-		{
-			skillCards[1].map((skillCard) => (
-				<div class={skillCard.animation}>
-					<img src={skillCard.icon} alt={skillCard.alt} />
-					<h3>{skillCard.title}</h3>
-				</div>
-			))
-		}
-
-		{
-			skillCards[2].map((skillCard) => (
-				<div class={skillCard.animation}>
-					<img src={skillCard.icon} alt={skillCard.alt} />
-					<h3>{skillCard.title}</h3>
-				</div>
-			))
-		}
 	</div>
 </section>

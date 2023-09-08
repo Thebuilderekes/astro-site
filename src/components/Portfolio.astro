@@ -1,7 +1,7 @@
 ---
 import "../components/ThemeToggle.astro";
 const portfolioCards = [
-	[
+	
 		{
 			imgUrl: "/assets/img/wuka-website.png",
 			technology: " CSS, React, styled components",
@@ -31,9 +31,9 @@ const portfolioCards = [
 			webUrl: "https://kombojmg.vercel.app",
 			gitUrl: "https://github.com/Thebuilderekes/kombo",
 		},
-	],
+	
 
-	[
+	
 		{
 			imgUrl: "/assets/img/restaurant-web.png",
 			technology: " CSS, Javascript",
@@ -64,9 +64,9 @@ const portfolioCards = [
 			gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
 		},
 
-		,
-	],
-];
+		
+	]
+
 ---
 
 <style>
@@ -149,12 +149,15 @@ const portfolioCards = [
 	/* PORTFOLIO CARD STYLES*/
 	.portfolio .card-container {
 		margin: 3rem 0;
-		display: flex;
-		gap: 1.5rem;
+		display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			grid-column-gap: 50px;
+			grid-row-gap: 50px;
 	}
 
 	.portfolio .card-container .card {
-		width: 33.33%;
+		/* width: 31.33%; */
 		padding: 0.9rem;
 		background-color: #e4e4f8;
 		border-top-right-radius: 24px;
@@ -227,8 +230,11 @@ const portfolioCards = [
 	}
 
 	@media (max-width: 800px) {
-		.card-container {
-			flex-direction: column;
+		.portfolio .card-container {
+			display:grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(6, 1fr);
+			grid-row-gap: 50px;
 		}
 	}
 </style>
@@ -237,7 +243,7 @@ const portfolioCards = [
 	<h2 class="portfolio-heading">PORTFOLIO</h2>
 	<div class="card-container">
 		{
-			portfolioCards[0].map((portfolioCard) => (
+			portfolioCards.map((portfolioCard) => (
 				<div class={portfolioCard.animation} id="card">
 					<figure>
 						<img src={portfolioCard.imgUrl} alt="portfolio card" />
@@ -263,33 +269,5 @@ const portfolioCards = [
 			))
 		}
 	</div>
-	<div class="card-container">
-		{
-			portfolioCards[1].map((portfolioCard) => (
-				<div class={portfolioCard.animation}>
-					<figure>
-						<img src={portfolioCard.imgUrl} alt="portfolio card" />
-					</figure>
-
-					<p>{portfolioCard.description}</p>
-					<p>
-						<span>Technologies used:</span> {portfolioCard.technology}
-					</p>
-					<div class="btn-group">
-						<a href={portfolioCard.webUrl} target="_blank" role="link">
-							VISIT WEBSITE
-						</a>
-						<a
-							class="github-btn"
-							href={portfolioCard.gitUrl}
-							target="_blank"
-							role="link"
-						>
-							GITHUB
-						</a>
-					</div>
-				</div>
-			))
-		}
-	</div>
+	
 </section>
