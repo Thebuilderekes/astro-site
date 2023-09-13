@@ -18,46 +18,40 @@ const scrollToTop = "#about";
 	<main class="container" id="about">
 		<h1 class="main-title title">About</h1>
 		<p class="about-me about-me-large">
-			Hello, I'm Ekeopre Beredugo, a frontend developer based in Nigeria.</p>  
-
-		<h2 class="title">My journey</h2>
-		<p class="about-me">
-			It all began with the big bang! Ok, maybe that's too far back.
-		</p> 
-	
-			<p>I began my journey into frontend development back in 2020 out of a simple curiosity to know how websites were made. I started my learning with free online resources and slowly built
-			up my skills. 
-		</p> 
-			
-		<p> I explored technologies like HTML, CSS and JavaScript, as well as WordPress,
-			React, and Astro. These tools added extra layers to my skills. WordPress
-			made building sites easier, React allowed me to easily create and manage custom front facing user interfaces and Astro
-			helped speed up websites.
-		</p> 
-		<p>
-			I've been building websites and improving my skills for over 3 years and it's been a really interesting journey.
+			Hello, I'm Ekeopre Beredugo, a frontend developer based in Nigeria.
 		</p>
-		
-		
+
+		<h2 class="title">A few things about me</h2>
+		<ul>
+			<li>Proficient in HTML, CSS, JavaScript, React and Astro.</li>
+			<li>
+				Familiar with a variety of front-end frameworks and libraries, such as
+				Bootstrap and Tailwind CSS.
+			</li>
+			<li>Interested in using web development to create social impact.</li>
+			<li>Quick learner and always eager to take on new challenges.</li>
+			<li>Willing to relocate for the right opportunity.</li>
+			<li>Team player and always willing to help others.</li>
+			<li>
+				Confident in skills and experience to be a valuable asset to your team.
+			</li>
+			<li>Available for full-time or freelance work.</li>
+		</ul>
 
 		<h2 class="title">What motivates me</h2>
 		<p class="about-me">
 			Passion is my driving force – the very essence that fuels my dedication to
-			the craft. I've cultivated a deep appreciation for building with aesthetics and functionality in mind. The ability to translate a
-			vision into a live website is something that fascinates me and I enjoy being able to do. 
+			the craft. I've cultivated a deep appreciation for building with
+			aesthetics and functionality in mind. The ability to translate a design
+			vision into a live website is something that fascinates me and I really
+			enjoy being able to do.
 		</p>
-		<p>I'm always seeking to learn and
-			contribute, so, whether you're a fellow developer, a visionary brand
-			owner, or simply an enthusiast exploring the digital realm, I invite you
-			to join me on this journey. Let's create not just websites, but digital
-			experiences that resonate, inspire, and endure.
-		</p>
+
 		<a class="go-to-home" href="/">Go to homepage</a>
 
 		<ThemeSwitcher />
 	</main>
 </BaseLayout>
-
 
 <style>
 	* {
@@ -72,27 +66,6 @@ const scrollToTop = "#about";
 	}
 
 	/* archivo-black-regular - latin */
-	@font-face {
-		font-family: "Archivo Black";
-		font-style: normal;
-		font-weight: 400;
-		src: url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot"); /* IE9 Compat Modes */
-		src: local(""),
-			url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot?#iefix")
-				format("embedded-opentype"),
-			/* IE6-IE8 */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.woff2")
-				format("woff2"),
-			/* Super Modern Browsers */
-				url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.woff")
-				format("woff"),
-			/* Modern Browsers */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.ttf")
-				format("truetype"),
-			/* Safari, Android, iOS */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.svg#ArchivoBlack")
-				format("svg"); /* Legacy iOS */
-	}
 
 	html {
 		width: 100%;
@@ -116,8 +89,36 @@ const scrollToTop = "#about";
 		font-size: 3.5rem;
 	}
 
+	@media (max-width: 1250px) {
+		.container h1 {
+			font-size: 3rem;
+		}
+	}
+	@media (max-width: 820px) {
+		.container {
+			margin: 5% 0;
+		}
+		.container h1 {
+			font-size: 30px;
+		}
+	}
+
+	@media (min-width: 600px) {
+		.container {
+			padding: 10% 3rem;
+		}
+	}
+	@media (max-width: 599px) {
+		.container {
+			margin: 30% 1.5rem;
+		}
+		.container h1 {
+			font-size: 25px;
+		}
+	}
+
 	.container h2 {
-		margin: 20px auto;
+		margin: 30px auto;
 		font-family: "Archivo Black";
 		font-size: 1.5rem;
 	}
@@ -126,7 +127,17 @@ const scrollToTop = "#about";
 		font-size: 18px;
 		padding-bottom: 2%;
 	}
-	.container .about-me-large{
+	.container ul li {
+		font-size: 24px;
+		list-style: circle;
+	}
+	@media (max-width: 599px) {
+		.container ul li {
+			font-size: 18px;
+			list-style: square;
+		}
+	}
+	.container .about-me-large {
 		font-size: 4rem;
 	}
 
@@ -143,35 +154,6 @@ const scrollToTop = "#about";
 	@media (min-width: 800px) {
 		.container p {
 			font-size: 24px;
-		}
-	}
-	@media (max-width: 1250px) {
-		.container h1 {
-			font-size: 3rem;
-		}
-	}
-
-	@media (max-width: 820px) {
-		.container {
-			margin: 5% 0;
-		}
-		.container h1 {
-			font-size: 30px;
-		}
-	}
-
-	@media (max-width: 599px) {
-		.container {
-			margin: 30% 1.5rem;
-		}
-		.container h1 {
-			font-size: 25px;
-		}
-	}
-
-	@media (min-width: 600px) {
-		.container {
-			padding: 10% 3rem;
 		}
 	}
 </style>

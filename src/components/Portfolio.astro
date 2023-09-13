@@ -1,72 +1,66 @@
 ---
 import "../components/ThemeToggle.astro";
 const portfolioCards = [
-	
-		{
-			imgUrl: "/assets/img/wuka-website.png",
-			technology: " CSS, React, styled components",
-			description:
-				"A website for a music artiste that was designed to guide the attention of visitors to click on the link that leads to various streaming platforms",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://wuka.vercel.app/",
-			gitUrl: "https://github.com/Thebuilderekes/wuka-react-app",
-		},
+	{
+		imgUrl: "/assets/img/wuka-website.png",
+		technology: " CSS, React, styled components",
+		description:
+			"A website for a music artiste that was designed to guide the attention of visitors to click on the link that leads to various streaming platforms",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://wuka.vercel.app/",
+		gitUrl: "https://github.com/Thebuilderekes/wuka-react-app",
+	},
 
-		{
-			imgUrl: "/assets/img/jackson-img.webp",
-			technology: " CSS, Javascript",
-			description:
-				"An Actor/Artist website that allows users to view the works of the actor/artiste by guiding the attention of visitors to the social media pages of actor/artiste.",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://jackson-tan.vercel.app",
-			gitUrl: "https://github.com/Thebuilderekes/jackson",
-		},
+	{
+		imgUrl: "/assets/img/jackson-img.webp",
+		technology: " CSS, Javascript",
+		description:
+			"An Actor/Artist website that allows users to view the works of the actor/artiste by guiding the attention of visitors to the social media pages of actor/artiste.",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://jackson-tan.vercel.app",
+		gitUrl: "https://github.com/Thebuilderekes/jackson",
+	},
 
-		{
-			imgUrl: "/assets/img/kombo-img.webp",
-			technology: " TailwindCSS, Javascript",
-			description:
-				"A dark themed website where visitors can connect with the website owner through their social media handles, place a direct call through the phone icon as well as send email messages using the functional form.",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://kombojmg.vercel.app",
-			gitUrl: "https://github.com/Thebuilderekes/kombo",
-		},
-	
+	{
+		imgUrl: "/assets/img/kombo-img.webp",
+		technology: " TailwindCSS, Javascript",
+		description:
+			"A dark themed website where visitors can connect with the website owner through their social media handles, place a direct call through the phone icon as well as send email messages using the functional form.",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://kombojmg.vercel.app",
+		gitUrl: "https://github.com/Thebuilderekes/kombo",
+	},
 
-	
-		{
-			imgUrl: "/assets/img/restaurant-web.png",
-			technology: " CSS, Javascript",
-			description:
-				"A restaurant landing page that showcases products and provides a buttons for customers to place orders.",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://restaurant-landingpage-ten.vercel.app/",
-			gitUrl: "https://github.com/Thebuilderekes/restaurant-landingpage",
-		},
+	{
+		imgUrl: "/assets/img/restaurant-web.png",
+		technology: " CSS, Javascript",
+		description:
+			"A restaurant landing page that showcases products and provides a buttons for customers to place orders.",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://restaurant-landingpage-ten.vercel.app/",
+		gitUrl: "https://github.com/Thebuilderekes/restaurant-landingpage",
+	},
 
-		{
-			imgUrl: "/assets/img/luxegems.png",
-			technology: " CSS, Bootstrap, Javascript",
-			description:
-				"A jewelry store website where users can place orders either through contacts available on the website or through the 'Place order' buttons under each product.",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://jewelrystore.vercel.app/",
-			gitUrl: "https://github.com/Thebuilderekes/shop",
-		},
+	{
+		imgUrl: "/assets/img/luxegems.png",
+		technology: " CSS, Bootstrap, Javascript",
+		description:
+			"A jewelry store website where users can place orders either through contacts available on the website or through the 'Place order' buttons under each product.",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://jewelrystore.vercel.app/",
+		gitUrl: "https://github.com/Thebuilderekes/shop",
+	},
 
-		{
-			imgUrl: "/assets/img/bank-website.png",
-			technology: "CSS grid, Javascript",
-			description:
-				"A website that has a resume-like design that showcase the owner's educational qualifications and work experience.",
-			animation: " card animate__animated animate__fadeInUp",
-			webUrl: "https://thebuilderekes.github.io/Bank-resume/",
-			gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
-		},
-
-		
-	]
-
+	{
+		imgUrl: "/assets/img/bank-website.png",
+		technology: "CSS grid, Javascript",
+		description:
+			"A website that has a resume-like design that showcase the owner's educational qualifications and work experience.",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://thebuilderekes.github.io/Bank-resume/",
+		gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
+	},
+];
 ---
 
 <style>
@@ -82,29 +76,6 @@ const portfolioCards = [
 	.dark {
 		background-color: var(--darkTheme-color);
 		color: #ffffff;
-	}
-
-	/* archivo-black-regular - latin */
-	@font-face {
-		font-family: "Archivo Black";
-		font-style: normal;
-		font-weight: 400;
-		src: url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot"); /* IE9 Compat Modes */
-		src: local(""),
-			url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.eot?#iefix")
-				format("embedded-opentype"),
-			/* IE6-IE8 */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.woff2")
-				format("woff2"),
-			/* Super Modern Browsers */
-				url("/assets/fonts/archivo-black-v17-latin/archivo-black-v17-latin-regular.woff")
-				format("woff"),
-			/* Modern Browsers */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.ttf")
-				format("truetype"),
-			/* Safari, Android, iOS */
-				url("/assets/fonts/archivo-black-v17-latin//archivo-black-v17-latin-regular.svg#ArchivoBlack")
-				format("svg"); /* Legacy iOS */
 	}
 
 	/* PORTFOLIO SECTION STYLES*/
@@ -127,7 +98,7 @@ const portfolioCards = [
 		}
 	}
 
-	 h2 {
+	h2 {
 		padding-bottom: 4rem;
 		font-size: var(--fs-section-h2-mobile);
 		font-weight: 600;
@@ -143,17 +114,14 @@ const portfolioCards = [
 		}
 	}
 
-	
-
-
 	/* PORTFOLIO CARD STYLES*/
 	.portfolio .card-container {
 		margin: 3rem 0;
 		display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(2, 1fr);
-			grid-column-gap: 50px;
-			grid-row-gap: 50px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 50px;
+		grid-row-gap: 50px;
 	}
 
 	.portfolio .card-container .card {
@@ -231,7 +199,7 @@ const portfolioCards = [
 
 	@media (max-width: 800px) {
 		.portfolio .card-container {
-			display:grid;
+			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: repeat(6, 1fr);
 			grid-row-gap: 50px;
@@ -269,5 +237,4 @@ const portfolioCards = [
 			))
 		}
 	</div>
-	
 </section>
