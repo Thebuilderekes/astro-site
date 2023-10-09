@@ -1,27 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import Portfolio from '../components/Portfolio.astro';
-import Skills from '../components/Skills.astro';
-import '../css/index.css';
-import 'animate.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import Portfolio from "../components/Portfolio.astro";
+import Skills from "../components/Skills.astro";
+import "../css/index.css";
 
-const title = 'Ekeopre Beredugo - Frontend web developer';
+const title = "Ekeopre Beredugo - Frontend web developer";
 const description =
-  'Ekeopre Beredugo is a frontend web developer who specializes in creating quality high converting websites. He is currently open for hire. ';
-const author = 'Ekeopre Beredugo';
-const scrollToTop = '#particles-js';
+	"Ekeopre Beredugo is a frontend web developer who specializes in creating quality high converting websites. He is currently open for hire. ";
+const author = "Ekeopre Beredugo";
+const scrollToTop = "#particles-js";
 ---
 
 <BaseLayout
-  title={title}
-  description={description}
-  author={author}
-  scrollToTop={scrollToTop}
+	title={title}
+	description={description}
+	author={author}
+	scrollToTop={scrollToTop}
 >
-  <main>
-    <HeroSection />
-    <Skills />
-    <Portfolio />
-  </main>
+	<main>
+		<HeroSection />
+		<Skills />
+		<Portfolio />
+	</main>
 </BaseLayout>

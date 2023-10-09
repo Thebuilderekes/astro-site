@@ -36,7 +36,7 @@ img {
 	/*12.8px*/
 	--accent-color: #0a1926;
 	--secondary-color: #ffffff;
-	--darkTheme-color: #22222b;
+	--darkTheme-color: rgb(34, 34, 43);
 }
 
 @font-face {

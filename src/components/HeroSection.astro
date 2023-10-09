@@ -2,175 +2,169 @@
 // import "../css/heroSection.css";
 import ThemeSwitcher from "../components/ThemeToggle.astro";
 ---
+
 <style>
-
-.hero-section {
-	/* background-image: url("/assets/img/bg-img.webp"); */
-	margin: 15% 2rem 0 2rem;
-	height: 95vh;
-	display: flex;
-	flex-direction: column;
-}
-
-@media (max-width: 800px) {
 	.hero-section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-}
-
-@media (max-width: 550px) {
-	.hero-section {
+		/* background-image: url("/assets/img/bg-img.webp"); */
+		margin: 15% 2rem 0 2rem;
 		height: 95vh;
-		padding-top: 10%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 	}
-}
 
-.heading {
-	font-size: var(--fs-hero-h1-mobile);
-	font-weight: 600;
-	font-family: "Poppins";
-	/* color: rgb(61, 61, 61); */
-	display: flex;
-}
+	@media (max-width: 800px) {
+		.hero-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
 
-h1.animate__animated.animate__fadeIn {
-	--animate-duration: 3s;
-}
+	@media (max-width: 550px) {
+		.hero-section {
+			height: 95vh;
+			padding-top: 10%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
 
-h2 {
-	padding-bottom: 0.8rem;
-	font-size: var(--fs-extralarge);
-	font-weight: 500;
-	color: #3535c4;
-	font-family: "Poppins";
-	line-height: 1.2;
-	--animate-duration: 2s;
-}
+	.heading {
+		font-size: var(--fs-hero-h1-mobile);
+		font-weight: 600;
+		font-family: "Poppins";
+		/* color: rgb(61, 61, 61); */
+		display: flex;
+	}
 
-@media (max-width: 800px) {
+	h1.animate__animated.animate__fadeIn {
+		--animate-duration: 3s;
+	}
+
 	h2 {
-		font-size: var(--fs-large);
-		font-weight: 800;
+		padding-bottom: 0.8rem;
+		font-size: var(--fs-extralarge);
+		font-weight: 500;
+		color: #3535c4;
+		font-family: "Poppins";
+		line-height: 1.2;
+		--animate-duration: 2s;
 	}
-}
 
-.hero-section p {
-	font-size: 1.2rem;
-	max-width: 50%;
-	margin-bottom: 20px;
-	color: #272727;
-	font-family: "Poppins";
-}
+	@media (max-width: 800px) {
+		h2 {
+			font-size: var(--fs-large);
+			font-weight: 800;
+		}
+	}
 
-@media (max-width: 900px) {
 	.hero-section p {
-		max-width: 80%;
+		font-size: 1.2rem;
+		max-width: 50%;
+		margin-bottom: 20px;
+		color: #272727;
+		font-family: "Poppins";
 	}
-}
 
-@media (max-width: 420px) {
-	.hero-section p {
-		font-size: var(--fs-p-mobile);
-		max-width: 100%;
+	@media (max-width: 900px) {
+		.hero-section p {
+			max-width: 80%;
+		}
 	}
-}
 
-.hero-section .cta {
-	display: flex;
-	gap: 2rem;
-}
+	@media (max-width: 420px) {
+		.hero-section p {
+			font-size: var(--fs-p-mobile);
+			max-width: 100%;
+		}
+	}
 
-.hero-section .cta a {
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	display: inline;
-	padding: 15px 7px;
-	width: 200px;
-	background: #3535c4;
-	color: #ffffff;
+	.hero-section .cta {
+		display: flex;
+		gap: 2rem;
+	}
 
-	font-family: "Poppins";
-	font-size: 1.2rem;
-	transition: 1s all ease;
-}
+	.hero-section .cta a {
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		display: inline;
+		padding: 15px 7px;
+		width: 200px;
+		background: #3535c4;
+		color: #ffffff;
 
-@media (max-width: 600px) {
+		font-family: "Poppins";
+		font-size: 1.2rem;
+		transition: 1s all ease;
+	}
 
-.hero-section .cta a {
-	font-size: 1rem;
-	/* padding: 10px 5px; */
-	
-}
-}
+	@media (max-width: 600px) {
+		.hero-section .cta a {
+			font-size: 1rem;
+			/* padding: 10px 5px; */
+		}
+	}
 
-@media (max-width: 375px) {
+	@media (max-width: 375px) {
+		.hero-section .cta a {
+			font-size: 0.9rem;
+			/* padding: 10px 5px; */
+		}
+	}
+	.hero-section .cta a:hover {
+		background: #09091b;
+	}
+	.hero-section .cta .portfolio-btn {
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
 
-.hero-section .cta a {
-	font-size: 0.9rem;
-	/* padding: 10px 5px; */
-	
-}
-}
-.hero-section .cta a:hover {
-	background: #09091b;
-}
-.hero-section .cta .portfolio-btn{
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
+	.hero-section .about-me-btn {
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
 
-.hero-section .about-me-btn{
-	border-top-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-	border-bottom-left-radius: 20px;
-}
+	.hero-section a:hover {
+		background-color: var(--accent-color);
+	}
 
-.hero-section a:hover {
-	background-color: var(--accent-color);
-}
+	/* dark mode styles */
 
-/* dark mode styles */
+	.hero-section h2.dark {
+		color: #d1d1d1;
+	}
 
-.hero-section h2.dark {
-	color: #d1d1d1;
-}
-
-.hero-section p.dark {
-	color: #d1d1d1;;
-}
-
-
+	.hero-section p.dark {
+		color: #d1d1d1;
+	}
 </style>
-
 
 <section class="hero-section" id="particles-js">
 	<h1 class="heading animate__animated animate__fadeIn main-heading">
 		Hello, I'm Ekeopre Beredugo
 	</h1>
 	<h2 class="animate__animated animate__fadeInUp animate__faster job-title">
-		Front-End developer
+		Front-end developer
 	</h2>
-	<p class="animate__animated animate__fadeInUp animate__faster specialty-paragraph">
+	<p
+		class="animate__animated animate__fadeInUp animate__faster specialty-paragraph"
+	>
 		I specialize in crafting accessible, high converting websites and web
 		applications for personal brands and businesses.
 	</p>
 	<div class="cta">
-
 		<a
-		class="portfolio-btn animate__animated animate__fadeInUp animate__faster"
-		href="#portfolio">View portfolio</a
-	>
-	<a
-		class="about-me-btn animate__animated animate__fadeInUp animate__faster"
-		href="../about">About me</a
-	>
+			class="portfolio-btn animate__animated animate__fadeInUp animate__faster"
+			href="#portfolio">View portfolio</a
+		>
+		<a
+			class="about-me-btn animate__animated animate__fadeInUp animate__faster"
+			href="../about">About me</a
+		>
 	</div>
 
 	<ThemeSwitcher />
