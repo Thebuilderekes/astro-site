@@ -6,7 +6,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/wuka-web.jpg",
 		technology: " CSS, React, styled components",
 		description:
-			"A website for a music artiste that was designed to guide the attention of visitors to click on the link that leads to various streaming platforms",
+			"A landing page for a music artist that is designed to direct visitors to click on the links that lead to different streaming platforms.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://wuka.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/wuka-react-app",
@@ -16,7 +16,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/jackson-img.webp",
 		technology: " CSS, Javascript",
 		description:
-			"An Actor/Artist website that allows users to view the works of the actor/artiste by guiding the attention of visitors to the social media pages of actor/artiste.",
+			"Actor/Artist website that showcases the actor/artist's work by directing visitors to their social media pages.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://jackson-tan.vercel.app",
 		gitUrl: "https://github.com/Thebuilderekes/jackson",
@@ -26,7 +26,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/kombo-img.webp",
 		technology: " TailwindCSS, Javascript",
 		description:
-			"A dark themed website where visitors can connect with the website owner through their social media handles, place a direct call through the phone icon as well as send email messages using the functional form.",
+			"A dark-themed website where visitors can contact the owner through their social media links, phone number, or email form.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://kombojmg.vercel.app",
 		gitUrl: "https://github.com/Thebuilderekes/kombo",
@@ -46,7 +46,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/luxegems.png",
 		technology: " CSS, Bootstrap, Javascript",
 		description:
-			"A jewelry store website where users can place orders either through contacts available on the website or through the 'Place order' buttons under each product.",
+			"A jewelry store website where customers can order products by using the 'place order buttons or contacting the store using the contact information",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://jewelrystore.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/shop",
@@ -56,7 +56,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/bank-website.png",
 		technology: "CSS grid, Javascript",
 		description:
-			"A website that has a resume-like design that showcase the owner's educational qualifications and work experience.",
+			"A resume-style website is a website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented in a more visually appealing",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://thebuilderekes.github.io/Bank-resume/",
 		gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
@@ -71,9 +71,7 @@ const portfolioCards = [
 		box-sizing: border-box;
 	}
 
-	html {
-		scroll-behavior: smooth;
-	}
+
 	.dark {
 		background-color: var(--darkTheme-color);
 		color: #ffffff;
@@ -82,20 +80,15 @@ const portfolioCards = [
 	/* PORTFOLIO SECTION STYLES*/
 
 	.portfolio {
-		padding: 7rem 2rem;
-		/* background-image: url("/assets/img/bg-img.webp"); */
 		position: relative;
 	}
 
-	@media (min-width: 1400px) {
-		.portfolio {
-			padding: 7rem 3rem;
-		}
-	}
-
-	@media (max-width: 800px) {
 		.portfolio {
 			padding: 3rem 3rem;
+		}
+	@media (max-width: 800px) {
+		.portfolio {
+			padding: 3rem 2rem;
 		}
 	}
 
@@ -156,6 +149,20 @@ const portfolioCards = [
 		height: auto;
 	}
 
+
+	.portfolio .card-container .card p {
+		font-family: "Helvetica";
+		font-size: 1rem;
+		line-height: 1.5;
+		text-align: left;
+		padding: 0.9rem 0;
+		color: #090329;
+	}
+
+	.portfolio .card-container .card p span {
+		font-weight: 900;
+	}
+
 	.portfolio .card-container .card .btn-group {
 		display: flex;
 	}
@@ -172,7 +179,7 @@ const portfolioCards = [
 
 	@media (max-width: 900px) {
 		.portfolio .card-container .card .btn-group a {
-			font-size: 14px;
+			font-size: 1.4rem;
 		}
 	}
 
@@ -185,18 +192,7 @@ const portfolioCards = [
 		background-color: #ffffff;
 	}
 
-	.portfolio .card-container .card p {
-		font-family: "Helvetica";
-		font-size: 0.8rem;
-		line-height: 1.5;
-		text-align: left;
-		padding: 0.9rem 0;
-		color: #090329;
-	}
 
-	.portfolio .card-container .card p span {
-		font-weight: 900;
-	}
 
 	@media (max-width: 800px) {
 		.portfolio .card-container {
@@ -208,7 +204,7 @@ const portfolioCards = [
 	}
 </style>
 
-<section class="portfolio" id="portfolio">
+<section class="portfolio section-padding" id="portfolio">
 	<h2 class="portfolio-heading">PORTFOLIO</h2>
 	<div class="card-container">
 		{
@@ -219,7 +215,7 @@ const portfolioCards = [
 					</figure>
 					<p>{portfolioCard.description}</p>
 					<p>
-						<span>Technologies used:</span> {portfolioCard.technology}
+						<span>Technologies:</span> {portfolioCard.technology}
 					</p>
 					<div class="btn-group">
 						<a href={portfolioCard.webUrl} target="_blank" role="link">
