@@ -9,7 +9,7 @@ export default function Navigation() {
 	const handleClick = () => setNavb(!navb);
 	const [click, setClick] = useState(true);
 	const handleMenu = () => setNavb(!navb);
-	const footer = "#footer";
+	const form = "#form";
 	return (
 		<header className="header">
 			<div className="nav-container">
@@ -92,7 +92,7 @@ export default function Navigation() {
 							</a>
 						</li>
 						<li>
-							<a className="desktop-navLink" href={footer}>
+							<a className="desktop-navLink" href={form}>
 								Contact
 							</a>
 						</li>
@@ -150,7 +150,7 @@ export default function Navigation() {
 						</a>
 					</li>
 					<li>
-						<a className="mobile-navLink" onClick={handleMenu} href={footer}>
+						<a className="mobile-navLink" onClick={handleMenu} href={form}>
 							Contact
 						</a>
 					</li>

@@ -4,20 +4,22 @@ import Navigation from "../components/Navigation";
 import Form from "../components/Form.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
-import "../css/index.css";
-import "../components/ThemeToggle.astro";
+// import "../css/index.css";
+import ThemeSwitcher from "../components/ThemeToggle.astro";
 import "animate.css";
 
-const { title, description, author, scrollToTop } = Astro.props;
-const form = "#form";
+const { title, description, author, form, scrollToTop } = Astro.props;
 ---
 
 <html lang="en">
 	<BaseHead title={title} description={description} author={author} />
 	<body>
 		<Navigation client:idle />
-		<slot />
-		<Form form={form} />
+		<main>
+			<slot />
+			<ThemeSwitcher />
+			<Form form={form} />
+		</main>
 		<Footer scrollToTop={scrollToTop} />
 	</body>
 </html>

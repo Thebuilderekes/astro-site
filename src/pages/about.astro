@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ThemeSwitcher from "../components/ThemeToggle.astro";
 import "../css/index.css";
 const title = "About - Ekeopre Beredugo";
 const description =
@@ -15,7 +14,7 @@ const scrollToTop = "#about";
 	author={author}
 	scrollToTop={scrollToTop}
 >
-	<main class="container" id="about">
+	<section class="container" id="about">
 		<h1 class="main-title title animate__animated animate__fadeInUp delay-1">
 			About me
 		</h1>
@@ -50,8 +49,8 @@ const scrollToTop = "#about";
 			href="/">Go to homepage</a
 		>
 
-		<ThemeSwitcher />
-	</main>
+		<!-- <ThemeSwitcher /> -->
+	</section>
 </BaseLayout>
 
 <style>
