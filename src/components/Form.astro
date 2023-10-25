@@ -1,8 +1,9 @@
-
 <style>
 	/*FORM STYLES*/
 
-
+	.form-section {
+		background-color: var(--section-color);
+	}
 	.visually-hidden {
 		position: absolute;
 		width: 1px;
@@ -35,13 +36,16 @@
 	.form-section h3 {
 		font-family: "Poppins", sans-serif, "arial";
 		font-weight: 400;
-		font-size: 20px;
+		font-size: var(--fs-double);
 		color: #0a1926;
 		line-height: 1.5;
 	}
 
-
-
+	@media (max-width: 600px) {
+		.form-section h3 {
+			font-size: var(--fs-medium);
+		}
+	}
 	/* ///// inputs /////*/
 
 	input:focus ~ label,
@@ -49,7 +53,7 @@
 	input:valid ~ label,
 	textarea:valid ~ label {
 		font-size: 0.75em;
-		color: #999;
+		color: var(--secondary-color);
 		top: -5px;
 		-webkit-transition: all 0.225s ease;
 		transition: all 0.225s ease;
@@ -75,7 +79,7 @@
 	}
 
 	.styled-input label {
-		color: #242424;
+		color: var(--accent-color);
 		padding: 1.3rem 30px 1rem 30px;
 		position: absolute;
 		top: 10px;
@@ -95,8 +99,8 @@
 		padding: 30px;
 		/* border: 0; */
 		width: 100%;
-		font-size: 1rem;
-		background-color: #e4e4f8;
+		font-size: var(--fs-medium);
+		background-color: var(--secondary-color);
 		color: #000000;
 		border-radius: 4px;
 	}
@@ -130,9 +134,8 @@
 		display: inline-block;
 		background: #0a1926;
 		background: linear-gradient(to right, #0a1926 0%, #3535c4 100%);
-		color: #ffffff;
-		color: white;
-		font-size: 18px;
+		color: var(--secondary-color);
+		font-size: var(--fs-medium);
 		cursor: pointer;
 		box-shadow:
 			0 2px 5px 0 rgba(0, 0, 0, 0.06),
@@ -142,10 +145,8 @@
 	}
 
 	.submit-btn:hover {
-		transform: translateY(1px);
-		box-shadow:
-			0 1px 1px 0 rgba(0, 0, 0, 0.1),
-			0 1px 1px 0 rgba(0, 0, 0, 0.09);
+		background: var(--accent-color);
+		color: var(--secondary-color);
 	}
 
 	@media (max-width: 768px) {
@@ -156,89 +157,79 @@
 		}
 	}
 
-	input[type="checkbox"] + label {
-		color: #ccc;
-		font-style: italic;
-	}
-
-	input[type="checkbox"]:checked + label {
-		color: #f00;
-		font-style: normal;
-	}
-
 	.dark {
 		background-color: #3535c4;
 	}
 </style>
 
-
-
-<section class="form-section section-padding bg-white flex flex-col justify-center" id="form">
+<section
+	class="form-section section-padding bg-white flex flex-col justify-center"
+	id="form"
+>
+	<div class="row">
+		<h2 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl">Contact me</h2>
+	</div>
+	<form
+		class="pt-12 flex flex-col justify-center"
+		action="https://formsubmit.co/ekeopreberedugo1@gmail.com"
+		method="post"
+	>
 		<div class="row">
-			<h2 class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl">Contact me</h2>
+			<h3 style="text-align:center">I'd love to hear from you.</h3>
 		</div>
-		<form
-			class="pt-12 flex flex-col justify-center"
-			action="https://formsubmit.co/ekeopreberedugo1@gmail.com"
-			method="post"
-		>
-			<div class="row">
-				<h3 style="text-align:center">I'd love to hear from you.</h3>
-			</div>
-			<div class="row input-container">
-				<div class="col-xs-12">
-					<div class="styled-input wide">
-						<label class="visually-hidden" for="name">Name</label>
-						<input
-							type="text"
-							name="name"
-							autocomplete="given-name"
-							id="name"
-							required
-							placeholder="Name"
-						/>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<div class="styled-input">
-						<label class="visually-hidden" for="email">Email</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							autocomplete="given-email"
-							class="form-control"
-							required
-							placeholder="Email"
-						/>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<div class="styled-input" style="float:right;">
-						<label class="visually-hidden" for="text">Subject</label>
-						<input
-							type="text"
-							name="text"
-							id="text"
-							required
-							placeholder="Subject"
-						/>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<div class="styled-input wide">
-						<label class="visually-hidden" for="text-input">Message</label>
-						<textarea required id="text-input" placeholder="Message"></textarea>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<button
-						type="submit"
-						aria-label="send message"
-						class="btn-lrg submit-btn">Send Message</button
-					>
+		<div class="row input-container">
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<label class="visually-hidden" for="name">Name</label>
+					<input
+						type="text"
+						name="name"
+						autocomplete="given-name"
+						id="name"
+						required
+						placeholder="Name"
+					/>
 				</div>
 			</div>
-		</form>
-	</section>
-
+			<div class="col-xs-12">
+				<div class="styled-input">
+					<label class="visually-hidden" for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						autocomplete="given-email"
+						class="form-control"
+						required
+						placeholder="Email"
+					/>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="styled-input" style="float:right;">
+					<label class="visually-hidden" for="text">Subject</label>
+					<input
+						type="text"
+						name="text"
+						id="text"
+						required
+						placeholder="Subject"
+					/>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="styled-input wide">
+					<label class="visually-hidden" for="text-input">Message</label>
+					<textarea required id="text-input" placeholder="Message"></textarea>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<button
+					type="submit"
+					aria-label="send message"
+					class="btn-lrg submit-btn">Send Message</button
+				>
+			</div>
+		</div>
+	</form>
+</section>

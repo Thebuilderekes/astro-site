@@ -9,7 +9,7 @@ html {
 }
 
 .header {
-	background-color: #0a1926;
+	background-color: var(--accent-color);
 	padding: 1rem 0;
 	width: 100%;
 	position: fixed;
@@ -34,7 +34,7 @@ html {
 		.top-icons {
 			display: flex;
 
-			a {
+			.top-icon-social {
 				padding: 0 10px;
 			}
 		}
@@ -45,12 +45,6 @@ html {
 
 		@media (max-width: 780px) {
 			padding: 0 1.5rem;
-		}
-
-		a {
-			text-decoration: none;
-			color: #ffffff;
-			font-size: 18px;
 		}
 
 		//DESKTOP NAVIGATION STYLES
@@ -65,7 +59,7 @@ html {
 					.desktop-navLink {
 						color: #ffffff;
 						padding: 0 10px;
-						font-size: 1.2rem;
+						font-size: var(--fs-medium);
 						cursor: pointer;
 						-webkit-transition: all 1000ms ease;
 						transition: all 500ms ease;

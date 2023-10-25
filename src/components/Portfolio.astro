@@ -56,7 +56,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/bank-website.png",
 		technology: "CSS grid, Javascript",
 		description:
-			"A resume-style website is a website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented in a more visually appealing",
+			"A resume-style website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented in a more visually appealing",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://thebuilderekes.github.io/Bank-resume/",
 		gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
@@ -95,7 +95,7 @@ const portfolioCards = [
 	h2 {
 		padding-bottom: 4rem;
 		font-size: var(--fs-section-h2-mobile);
-		font-weight: 600;
+		font-weight: 700;
 		color: #3535c4;
 		text-align: center;
 	}
@@ -146,19 +146,28 @@ const portfolioCards = [
 		border-top-right-radius: 16px;
 		border-top-left-radius: 16px;
 		width: 100%;
-		height: auto;
 	}
 
 
 	.portfolio .card-container .card p {
 		font-family: "Helvetica";
-		font-size: 1rem;
+		font-size: var(--fs-medium);
 		line-height: 1.5;
 		text-align: left;
 		padding: 0.9rem 0;
 		color: #090329;
 	}
 
+	
+	@media (max-width: 600px) {
+
+		.portfolio .card-container .card p {
+
+			font-size: var(--fs-default);	
+
+		}
+
+	}
 	.portfolio .card-container .card p span {
 		font-weight: 900;
 	}
@@ -171,10 +180,15 @@ const portfolioCards = [
 		font-weight: 600;
 		padding: 5px 10px;
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: var(--fs-medium);
 		background-color: #0a1926;
 		color: #ffffff;
 		border-radius: 10px;
+	}
+	.portfolio .card-container .card .btn-group a:hover {
+		background-color: var(--secondary-color);
+		color: var(--accent-color);
+		border: 1px solid var(--accent-color)
 	}
 
 	@media (max-width: 900px) {

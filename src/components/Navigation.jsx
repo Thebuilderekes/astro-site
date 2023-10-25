@@ -15,6 +15,7 @@ export default function Navigation() {
 			<div className="nav-container">
 				<div className="top-icons">
 					<a
+						className="top-icon-social"
 						aria-label="visit github page"
 						href="https://github.com/Thebuilderekes"
 						target="_blank"
@@ -35,6 +36,7 @@ export default function Navigation() {
 					</a>
 
 					<a
+						className="top-icon-social"
 						aria-label="visit twitter page"
 						href="https://twitter.com/iamthebuilder__"
 						target="_blank"

@@ -9,7 +9,7 @@ html {
 }
 
 .header {
-  background-color: #0a1926;
+  background-color: var(--accent-color);
   padding: 1rem 0;
   width: 100%;
   position: fixed;
@@ -32,7 +32,7 @@ html {
 .header .nav-container .top-icons {
   display: flex;
 }
-.header .nav-container .top-icons a {
+.header .nav-container .top-icons .top-icon-social {
   padding: 0 10px;
 }
 @media (max-width: 1400px) {
@@ -44,11 +44,6 @@ html {
   .header .nav-container {
     padding: 0 1.5rem;
   }
-}
-.header .nav-container a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 18px;
 }
 .header .nav-container .desktop-nav {
   display: none;
@@ -62,7 +57,7 @@ html {
 .header .nav-container .desktop-nav .desktop-navItems li .desktop-navLink {
   color: #ffffff;
   padding: 0 10px;
-  font-size: 1.2rem;
+  font-size: var(--fs-medium);
   cursor: pointer;
   transition: all 500ms ease;
 }
