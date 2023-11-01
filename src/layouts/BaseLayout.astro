@@ -14,7 +14,7 @@ const { title, description, author, form, scrollToTop } = Astro.props;
 <html lang="en">
 	<BaseHead title={title} description={description} author={author} />
 	<body>
-		<Navigation client:idle />
+		<Navigation client:only />
 		<main>
 			<slot />
 			<ThemeSwitcher />
