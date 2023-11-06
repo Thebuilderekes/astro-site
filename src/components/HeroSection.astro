@@ -21,15 +21,19 @@
 
 	@media (max-width: 550px) {
 		.hero-section {
-			padding-top: 10%;
+			padding-top: 20%;
 		}
 	}
 
 	.hero-section-main-heading {
-		font-size: var(--fs-hero-h1-mobile);
+		font-size: var(--fs-hero--mobile);
 		font-weight: 600;
 		font-family: "Poppins";
 		display: flex;
+	}
+
+	.hero-section-main-heading.dark {
+		color: var(--light-grey-color);
 	}
 
 	h1.animate__animated.animate__fadeIn {
@@ -54,8 +58,14 @@
 		}
 	}
 
+	@media (max-width: 500px) {
+		h2 {
+			font-size: var(--fs-semi-large);
+		}
+	}
+
 	.hero-section p {
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 		max-width: 50%;
 		margin-bottom: 20px;
 		color: #272727;
@@ -90,7 +100,7 @@
 		color: #ffffff;
 
 		font-family: "Poppins";
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 		transition: 1s all ease;
 	}
 
@@ -109,7 +119,7 @@
 		}
 	}
 	.hero-section .cta a:hover {
-		background: #09091b;
+		background: var(--dark-green-color);
 	}
 	.hero-section .cta .portfolio-btn {
 		border-top-right-radius: 20px;
@@ -151,7 +161,9 @@
 		class="animate__animated animate__fadeInUp animate__faster specialty-paragraph"
 	>
 		I design and develop accessible, high-converting websites for personal
-		brands and businesses.
+		brands and businesses. Whether you're looking to launch a new website or
+		redesign your existing one, I can help you create a digital presence that is
+		both visually appealing and easy to use.
 	</p>
 	<div class="cta">
 		<a

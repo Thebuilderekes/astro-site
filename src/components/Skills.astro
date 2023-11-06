@@ -1,5 +1,6 @@
 ---
 import "animate.css";
+import "../css/animationDuration.css";
 
 const skillCards = [
 	// {
@@ -73,36 +74,6 @@ const skillCards = [
 		box-sizing: border-box;
 	}
 
-	.dark {
-		background-color: var(--darkTheme-color);
-		color: #ffffff;
-	}
-
-	/*ANIMATION STYLES FOR SKILL CARDS*/
-	.animate__animated.animate__fadeInUp.delay-1 {
-		--animate-duration: 2s;
-	}
-
-	.animate__animated.animate__fadeInUp.delay-2 {
-		--animate-duration: 2.5s;
-	}
-
-	.animate__animated.animate__fadeInUp.delay-3 {
-		--animate-duration: 3s;
-	}
-
-	.animate__animated.animate__fadeInUp.delay-4 {
-		--animate-duration: 3.5s;
-	}
-
-	.animate__animated.animate__fadeInUp.delay-5 {
-		--animate-duration: 4s;
-	}
-
-	.animate__animated.animate__fadeInUp.delay-6 {
-		--animate-duration: 4.5s;
-	}
-
 	/*SKILL SECTION STYLES*/
 
 	.skills-section {
@@ -131,7 +102,7 @@ const skillCards = [
 	.skills-section h2 {
 		padding-bottom: 4rem;
 		--animate-duration: 6s;
-		color: var(--secondary-color);
+		color: var(--light-grey-color);
 		font-size: var(--fs-section-h2-mobile);
 		font-weight: 700;
 		text-align: center;
@@ -147,7 +118,7 @@ const skillCards = [
 		}
 	}
 
-	/* skills-sectionCARD STYLES*/
+	/* SKILLS SECTION STYLES*/
 	.skills-section .card-container {
 		display: grid;
 		padding-top: 3rem;
@@ -171,15 +142,14 @@ const skillCards = [
 		border-radius: 16px;
 		padding: 0.8rem;
 		margin: 2rem 0;
-		background-color: #f3f3ff;
-		box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
-		-webkit-box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
-		-moz-box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
+		background-color: var(--light-grey-color);
+		box-shadow:
+			0 1px 3px rgba(0, 0, 0, 0.12),
+			0 1px 2px rgba(0, 0, 0, 0.24);
 	}
 
 	.card-container .card.dark {
 		background: var(--light-green-color);
-		color: #ffffff;
 	}
 
 	.skills-section .card-container .card img {
@@ -193,7 +163,7 @@ const skillCards = [
 	.skills-section .card-container .card h3 {
 		padding-top: 10px;
 		font-family: "Poppins";
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 	}
 
 	@media (max-width: 600px) {

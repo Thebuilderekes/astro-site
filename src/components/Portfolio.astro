@@ -2,6 +2,9 @@
 import "../components/ThemeToggle.astro";
 
 const portfolioCards = [
+
+
+
 	{
 		imgUrl: "/assets/img/wuka-web.jpg",
 		technology: " CSS, React, styled components",
@@ -11,15 +14,14 @@ const portfolioCards = [
 		webUrl: "https://wuka.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/wuka-react-app",
 	},
-
-	{
-		imgUrl: "/assets/img/jackson-img.webp",
+			{
+		imgUrl: "/assets/img/restaurant.jpg",
 		technology: " CSS, Javascript",
 		description:
-			"Actor/Artist website that showcases the actor/artist's work by directing visitors to their social media pages.",
+			"An elegant restaurant landing page that showcases products and provides buttons for customers to place orders.",
 		animation: " card animate__animated animate__fadeInUp",
-		webUrl: "https://jackson-tan.vercel.app",
-		gitUrl: "https://github.com/Thebuilderekes/jackson",
+		webUrl: "https://restaurant-landingpage-ten.vercel.app/",
+		gitUrl: "https://github.com/Thebuilderekes/restaurant-landingpage",
 	},
 
 	{
@@ -33,20 +35,24 @@ const portfolioCards = [
 	},
 
 	{
-		imgUrl: "/assets/img/restaurant.jpg",
+		imgUrl: "/assets/img/jackson-img.webp",
 		technology: " CSS, Javascript",
 		description:
-			"A restaurant landing page that showcases products and provides a buttons for customers to place orders.",
+			" An Actor/Artist web page that allowa visitors know the actor to their social media pages.",
 		animation: " card animate__animated animate__fadeInUp",
-		webUrl: "https://restaurant-landingpage-ten.vercel.app/",
-		gitUrl: "https://github.com/Thebuilderekes/restaurant-landingpage",
+		webUrl: "https://jackson-tan.vercel.app",
+		gitUrl: "https://github.com/Thebuilderekes/jackson",
 	},
+
+
+
+
 
 	{
 		imgUrl: "/assets/img/luxegems.png",
 		technology: " CSS, Bootstrap, Javascript",
 		description:
-			"A jewelry store website where customers can order products by using the 'place order buttons or contacting the store using the contact information",
+			"A jewelry store website where customers can order products by using the 'place order' buttons or contacting the store using the contact information in the footer",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://jewelrystore.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/shop",
@@ -56,7 +62,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/bank-website.png",
 		technology: "CSS grid, Javascript",
 		description:
-			"A resume-style website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented in a more visually appealing",
+			"A resume-style website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented to be more visually appealing",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://thebuilderekes.github.io/Bank-resume/",
 		gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
@@ -72,12 +78,7 @@ const portfolioCards = [
 	}
 
 
-	/* .dark {
-		background-color: var(--darkTheme-color);
-		color: #ffffff;
-	} */
-
-	/* portfolio-section  STYLES*/
+/* PORTFOLIO SECTION STYLES*/
 
 	.portfolio-section{
 		position: relative;
@@ -105,7 +106,7 @@ const portfolioCards = [
 	}
 
 	.portfolio-heading.dark {
-		color: var(--secondary-color)
+		color: var(--light-grey-color)
 	}
 
 	@media (min-width: 800px) {
@@ -128,9 +129,12 @@ const portfolioCards = [
 
 	.portfolio-section .card-container .card {
 		padding: 0.9rem;
-		background-color: var(--secondary-color);
+		background-color: var(--light-grey-color);
 		border-top-right-radius: 24px;
 		border-top-left-radius: 24px;
+		box-shadow:
+			0 1px 3px rgba(0, 0, 0, 0.12),
+			0 1px 2px rgba(0, 0, 0, 0.24);
 	}
 
 	.animate__animated.animate__fadeInUp {
@@ -158,7 +162,7 @@ const portfolioCards = [
 
 	.portfolio-section .card-container .card p {
 		font-family: "Helvetica";
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 		line-height: 1.5;
 		text-align: left;
 		padding: 0.9rem 0;
@@ -187,13 +191,13 @@ const portfolioCards = [
 		font-weight: 600;
 		padding: 5px 10px;
 		text-decoration: none;
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 		background-color: #0a1926;
 		color: #ffffff;
 		border-radius: 10px;
 	}
 	.portfolio-section .card-container .card .btn-group a:hover {
-		background-color: var(--secondary-color);
+		background-color: var(--light-grey-color);
 		color: var(--accent-color);
 		border: 1px solid var(--accent-color)
 	}
