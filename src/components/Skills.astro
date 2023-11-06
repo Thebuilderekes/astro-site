@@ -105,44 +105,50 @@ const skillCards = [
 
 	/*SKILL SECTION STYLES*/
 
-	.skills {
-		background-color: var(--section-color);
+	.skills-section {
 		padding: 7rem 2rem;
 		position: relative;
+		background-color: var(--light-green-color);
+	}
+
+	.skills-section.dark {
+		background-color: var(--dark-green-color);
 	}
 
 	@media (min-width: 1400px) {
-		.skills {
+		.skills-section {
 			padding: 7rem 3rem;
-			background-color: #d1daf8;
+			/* background-color: #d1daf8; */
 		}
 	}
 
 	@media (max-width: 800px) {
-		.skills {
+		.skills-section {
 			padding: 4rem 1rem;
 		}
 	}
 
-	.skills h2 {
+	.skills-section h2 {
 		padding-bottom: 4rem;
 		--animate-duration: 6s;
-		color: #3535c4;
+		color: var(--secondary-color);
 		font-size: var(--fs-section-h2-mobile);
 		font-weight: 700;
-
 		text-align: center;
 	}
-
+	.skills-section h2.dark {
+		background-color: transparent;
+		color: #d1d1d1;
+	}
 	@media (min-width: 800px) {
-		.skills h2 {
+		.skills-section h2 {
 			font-size: var(--fs-large);
 			padding-bottom: 3rem;
 		}
 	}
 
-	/* SKILLS CARD STYLES*/
-	.skills .card-container {
+	/* skills-sectionCARD STYLES*/
+	.skills-section .card-container {
 		display: grid;
 		padding-top: 3rem;
 		grid-template-columns: repeat(3, 1fr);
@@ -152,7 +158,7 @@ const skillCards = [
 	}
 
 	@media (max-width: 600px) {
-		.skills .card-container {
+		.skills-section .card-container {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(3, 1fr);
@@ -160,7 +166,7 @@ const skillCards = [
 			grid-row-gap: 0px;
 		}
 	}
-	.skills .card-container .card {
+	.skills-section .card-container .card {
 		text-align: center;
 		border-radius: 16px;
 		padding: 0.8rem;
@@ -171,7 +177,12 @@ const skillCards = [
 		-moz-box-shadow: 10px 7px 21px -7px rgba(219, 213, 232, 0.75);
 	}
 
-	.skills .card-container .card img {
+	.card-container .card.dark {
+		background: var(--light-green-color);
+		color: #ffffff;
+	}
+
+	.skills-section .card-container .card img {
 		text-align: center;
 		margin: 0 auto;
 		color: #9ea3e7;
@@ -179,22 +190,23 @@ const skillCards = [
 		height: 100px;
 	}
 
-	.skills .card-container .card h3 {
+	.skills-section .card-container .card h3 {
 		padding-top: 10px;
 		font-family: "Poppins";
 		font-size: var(--fs-medium);
-		color: var(--accent-color);
 	}
 
 	@media (max-width: 600px) {
-		.skills .card-container .card h3 {
+		.skills-section .card-container .card h3 {
 			font-size: var(--fs-default);
 		}
 	}
 </style>
 
-<section class="skills" id="skills">
-	<h2 class="animate__animated animate__fadeInUp">SKILLS & TECH</h2>
+<section class="skills-section" id="skills">
+	<h2 class="skills-heading animate__animated animate__fadeInUp">
+		SKILLS & TECH
+	</h2>
 	<div class="card-container">
 		{
 			skillCards.map((skillCard) => (

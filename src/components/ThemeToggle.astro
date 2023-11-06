@@ -65,10 +65,10 @@
 	//array to hold the sections to be affected by the dark theme
 	const themedSectionList = Array.from(
 		document.querySelectorAll(
-			".heading, .job-title, .specialty-paragraph, .portfolio, .portfolio-heading, .title, .go-to-home"
+			".hero-section, .heading, .job-title, .specialty-paragraph, .skills-section, .portfolio-section, .portfolio-heading, .card-container.card, .form-section,.form-heading, .about-section, .go-to-home"
 		)
 	);
-	//Theme functionality
+	//Theme functionalitys
 	const theme =
 		localStorage.getItem("theme") ||
 		(window.matchMedia("(prefers-color-scheme: light)").matches

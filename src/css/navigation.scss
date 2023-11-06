@@ -65,7 +65,7 @@ html {
 						transition: all 500ms ease;
 
 						&:hover {
-							color: #7a7cec;
+							color: var(--secondary-color);
 						}
 					}
 				}
@@ -79,7 +79,7 @@ html {
 		button.nav-toggler {
 			display: none;
 			background-color: transparent;
-			color: #ffffff;
+			color: var(--secondary-color);
 			font-weight: 600;
 			border: none;
 
@@ -108,7 +108,7 @@ html {
 				list-style: none;
 				.mobile-navLink {
 					font-size: 30px;
-					color: #ffffff;
+					color: var(--secondary-color);
 
 					text-decoration: none;
 				}

@@ -1,38 +1,34 @@
 <style>
 	.hero-section {
-		/* background-image: url("/assets/img/bg-img.webp"); */
-		/*margin: 15% 2rem 0 2rem;*/
 		padding: 15% 2rem;
 		height: 100dvh;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 	}
 
-	
-
-	@media (max-width: 800px) {
+	@media (min-width: 900px) {
 		.hero-section {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-
+			align-items: center;
+			justify-content: space-evenly;
+			text-align: center;
 		}
+	}
+
+	.hero-section.dark {
+		background-color: var(--darker-green-color);
 	}
 
 	@media (max-width: 550px) {
 		.hero-section {
 			padding-top: 10%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
 		}
 	}
 
-	.heading {
+	.hero-section-main-heading {
 		font-size: var(--fs-hero-h1-mobile);
 		font-weight: 600;
 		font-family: "Poppins";
-		/* color: rgb(61, 61, 61); */
 		display: flex;
 	}
 
@@ -44,7 +40,8 @@
 		padding-bottom: 0.8rem;
 		font-size: var(--fs-extralarge);
 		font-weight: 500;
-		color: #3535c4;
+		color: rgb(17, 33, 27);
+		background-color: transparent;
 		font-family: "Poppins";
 		line-height: 1.2;
 		--animate-duration: 2s;
@@ -89,7 +86,7 @@
 		text-align: center;
 		display: inline;
 		padding: 20px;
-		background: #3535c4;
+		background: var(--accent-color);
 		color: #ffffff;
 
 		font-family: "Poppins";
@@ -99,8 +96,7 @@
 
 	@media (max-width: 600px) {
 		.hero-section .cta a {
-
-		padding: 15px;
+			padding: 15px;
 			font-size: 1rem;
 			/* padding: 10px 5px; */
 		}
@@ -142,8 +138,10 @@
 	}
 </style>
 
-	<section class="hero-section" id="top-page">
-	<h1 class="heading animate__animated animate__fadeIn main-heading">
+<section class="light-background hero-section" id="top-page">
+	<h1
+		class="heading animate__animated animate__fadeIn hero-section-main-heading"
+	>
 		Hello, I'm Ekeopre Beredugo
 	</h1>
 	<h2 class="animate__animated animate__fadeInUp animate__faster job-title">
@@ -152,7 +150,8 @@
 	<p
 		class="animate__animated animate__fadeInUp animate__faster specialty-paragraph"
 	>
-		I design and develop accessible, high-converting websites for personal brands and businesses.
+		I design and develop accessible, high-converting websites for personal
+		brands and businesses.
 	</p>
 	<div class="cta">
 		<a

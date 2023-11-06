@@ -20,23 +20,29 @@ img {
 :root {
 	/*font sizing*/
 	--fs-extralarge: 7rem; /*80px*/
-	--fs-large: 3rem; /*48px*/
+	--fs-large: 4rem; /*48px*/
 	--fs-double: 2rem; /*32px*/
 	--fs-hero-h1-mobile: 1.875rem; /*30px*/
+	--fs-section-h2-mobile: 1.9rem; /*30.4px*/
 	--fs-medium: 1.5rem; /*24px*/
 	--fs-default: 1rem; /*16px*/
 	--fs-small: 0.8rem; /*12.8px*/
 
 	/*colors*/
-	--accent-color: #0a1926;
-	--secondary-color: #ffffff;
-	--section-color: #d1daf8;
-	--darkTheme-color: rgb(17, 7, 54);
+	--secondary-color: #eeeeee;
+	--darker-green-color: rgb(10, 17, 15);
+	--dark-green-color: rgb(19, 32, 29);
+	--light-green-color: rgb(58, 112, 92);
+	--accent-color: var(--light-green-color);
 }
 
 .dark {
-	background-color: var(--darkTheme-color);
+	transition: background-color 0.5s ease-in-out;
 	color: #d1d1d1;
+}
+
+.light-background {
+	background-color: var(--secondary-color);
 }
 
 html {
