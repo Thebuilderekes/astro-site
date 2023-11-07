@@ -7,25 +7,17 @@
 		justify-content: center;
 	}
 
-	/* Safari */
-	@media (-webkit-transform-3d) {
-		h1,
-		h2,
-		h3,
-		h4,
-		p {
-			letter-spacing: 0.25px;
+	/* Chrome */
+	@media (-webkit-transform-3d) and (-moz-transform-3d) {
+		h1 {
+			letter-spacing: 0.5px;
 		}
 	}
 
-	/* Chrome */
-	@media (-webkit-transform-3d) and (-moz-transform-3d) {
-		h1,
-		h2,
-		h3,
-		h4,
-		p {
-			letter-spacing: 0.5px;
+	/* Safari */
+	@media (-webkit-transform-3d) {
+		h1 {
+			letter-spacing: 0.25px;
 		}
 	}
 
