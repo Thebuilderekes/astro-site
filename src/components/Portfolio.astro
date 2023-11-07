@@ -9,7 +9,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/wuka-web.jpg",
 		technology: " CSS, React, styled components",
 		description:
-			"A landing page for a music artist that is designed to direct visitors to click on the links that leads to different streaming platforms.",
+			"A landing page for a musician, designed to direct visitors to click on the links that leads to different streaming platforms.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://wuka.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/wuka-react-app",
@@ -18,7 +18,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/restaurant.jpg",
 		technology: " CSS, Javascript",
 		description:
-			"An elegant restaurant landing page that showcases products and provides buttons for customers to place orders.",
+			"An elegant restaurant landing page that showcases products and also provides buttons for customers to place orders.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://restaurant-landingpage-ten.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/restaurant-landingpage",
@@ -28,7 +28,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/kombo-img.webp",
 		technology: " TailwindCSS, Javascript",
 		description:
-			"A dark-themed website where visitors can contact the owner through their social media links, phone number, or email form.",
+			"A dark-themed website with a working contact form lets visitors connect with the owner via social media, phone, or email.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://kombojmg.vercel.app",
 		gitUrl: "https://github.com/Thebuilderekes/kombo",
@@ -38,7 +38,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/jackson-img.webp",
 		technology: " CSS, Javascript",
 		description:
-			" An Actor/Artist web page that allows visitors to know about the actor and his works, and directs them to his other social media pages where they can know more about the actor.",
+			"An artist's website that introduces the artist and their work, and provides links to their social media pages for further information.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://jackson-tan.vercel.app",
 		gitUrl: "https://github.com/Thebuilderekes/jackson",
@@ -52,7 +52,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/luxegems.png",
 		technology: " CSS, Bootstrap, Javascript",
 		description:
-			"A jewelry store website where customers can order products by using the 'place order' buttons or contacting the store using the contact information in the footer",
+			"A jewelry store website where customers can order products by using the 'place order' buttons or contacting the store using the contact information in the footer.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://jewelrystore.vercel.app/",
 		gitUrl: "https://github.com/Thebuilderekes/shop",
@@ -62,7 +62,7 @@ const portfolioCards = [
 		imgUrl: "/assets/img/bank-website.png",
 		technology: "CSS grid, Javascript",
 		description:
-			"A resume-style website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way. It is similar to a traditional resume, but it is presented to be more visually appealing",
+			"A resume-style website that is designed to showcase the owner's educational qualifications and work experience in a clear and concise way.",
 		animation: " card animate__animated animate__fadeInUp",
 		webUrl: "https://thebuilderekes.github.io/Bank-resume/",
 		gitUrl: "https://github.com/Thebuilderekes/Bank-resume",
@@ -84,21 +84,17 @@ const portfolioCards = [
 		position: relative;
 	}
 
-		.portfolio-section{
-			padding: 3rem 3rem;
-		}
-
 		.portfolio-section.dark {
 			background-color: var(--darker-green-color);
 		}
 	@media (max-width: 800px) {
 		.portfolio-section{
-			padding: 3rem 2rem;
+			padding: 4rem 1rem;
 		}
 	}
 
 	h2 {
-		padding-bottom: 2rem;
+
 		font-size: var(--fs-section-mobile);
 		font-weight: 700;
 		color: var(--darker-green-color);
@@ -123,8 +119,8 @@ const portfolioCards = [
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 50px;
-		grid-row-gap: 50px;
+		grid-column-gap: 5rem;
+		grid-row-gap: 5rem;
 	}
 
 	.card {
@@ -196,7 +192,7 @@ const portfolioCards = [
 		padding: 5px 10px;
 		text-decoration: none;
 		font-size: var(--fs-semi-medium);
-		background-color: #0a1926;
+		background-color: var(--darker-green-color);
 		color: #ffffff;
 		border-radius: 10px;
 	}
@@ -252,8 +248,7 @@ const portfolioCards = [
 						</a>
 						<a
 							class="github-btn"
-							rel=”noopener noreferrer” 
-							href=#
+							href="javascript:void(0)"
 							aria-disabled="true"
 						
 							role="link"

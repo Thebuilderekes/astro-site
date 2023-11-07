@@ -30,23 +30,20 @@ const scrollToTop = "#about";
 
 			<h2 class="animate__animated animate__fadeInUp delay-2">TLDR about me</h2>
 			<ul class="animate__animated animate__fadeInUp delay-4">
+				<li>I'm passionate about aesthethics and accessibility.</li>
 				<li>
-					Confident in my ability to learn, understand and communicate ideas and
-					tasks.
+					Supporter of open source and developer commmunities 
 				</li>
-
-				<li>Passionate about aesthethics and design.</li>
 				<li>Available for full-time or freelance work.</li>
 				<li>Willing to relocate for the right opportunity.</li>
+
 			</ul>
 
 			<h2 class="animate__animated animate__fadeInUp delay-6">
-				What motivates me
+				Why web development?
 			</h2>
 			<p class="about-me animate__animated animate__fadeInUp delay-6">
-				I enjoy building websites, I enjoy the process of taking a design and
-				making it come to life on the web and it is incredibly satisfying to see
-				something I've created being used by others.
+				I love building websites. It's interesting to take a design and turn it into a real, working website. It's even more interesting when people actually use the websites I build. 
 			</p>
 			<br />
 			<p class="about-me animate__animated animate__fadeInUp delay-6">
@@ -56,6 +53,11 @@ const scrollToTop = "#about";
 				build the best possible experiences for anyone who visits the websites
 				that I build.
 			</p>
+			<br />
+			<p class="about-me animate__animated animate__fadeInUp delay-6">
+				Overall, I'm really passionate about front-end development. It's a challenging and rewarding field that allows me to use my skills and creativity to make a positive impact on the world.
+			</p>
+		
 
 			<a
 				class="go-to-home-link animate__animated animate__fadeInUp delay-6"
@@ -122,7 +124,7 @@ const scrollToTop = "#about";
 
 	@media (max-width: 599px) {
 		.about-section {
-			padding: 30% 1.5rem 1.5rem 1.5rem;
+			padding: 30% 1.5rem 4rem 1.5rem;
 		}
 		.about-section h1 {
 			font-size: var(--fs-semi-medium);
@@ -131,8 +133,10 @@ const scrollToTop = "#about";
 
 	.about-section h2 {
 		margin: 20px auto;
-		font-family: "Archivo Black";
-		font-size: var(--fs-semi-medium);
+		font-family: "Poppins";
+		font-size: var(--fs-medium);
+		font-weight: 900;
+
 	}
 	.about-section .large-text {
 		font-family: "Poppins";
@@ -147,27 +151,31 @@ const scrollToTop = "#about";
 	}
 
 	.about-section ul li {
-		font-size: var(--fs-semi-medium);
-		list-style: circle;
+		font-size: var(--fs-medium);
+		list-style: disc;
 	}
 	@media (max-width: 599px) {
 		.about-section ul li {
-			font-size: var(--fs-mid-medium);
+			font-size: var(--fs-semi-medium);
 			list-style: square;
 		}
 	}
 
-	.about-section p {
-		font-size: var(--fs-mid-medium);
-
-		padding-bottom: 2%;
-	}
+	
 
 	@media (min-width: 800px) {
 		.about-section p {
-			font-size: var(--fs-semi-medium);
+			font-size: var(--fs-medium);
 		}
 	}
+	@media (max-width: 790px) {
+	.about-section p {
+		font-size: var(--fs-semi-medium);
+
+
+		padding-bottom: 2%;
+	}
+}
 
 	.about-section .go-to-home-link {
 		text-decoration: underline;
