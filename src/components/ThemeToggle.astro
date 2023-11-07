@@ -74,13 +74,13 @@
 		(window.matchMedia("(prefers-color-scheme: light)").matches
 			? "light"
 			: "dark");
-	if (theme === "light") {
-		element.classList.add("dark");
-		themedSectionList.forEach((item) => item.classList.add("dark"));
-	} else {
-		element.classList.remove("dark");
-		themedSectionList.forEach((item) => item.classList.remove("dark"));
-	}
+	// if (theme === "light") {
+	// 	element.classList.add("dark");
+	// 	themedSectionList.forEach((item) => item.classList.add("dark"));
+	// } else {
+	// 	element.classList.remove("dark");
+	// 	themedSectionList.forEach((item) => item.classList.remove("dark"));
+	// }
 	window.localStorage.setItem("theme", theme);
 
 	//function to toggle the dark class on the sections
