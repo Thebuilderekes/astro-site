@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 import "../css/navigation.css";
 
 export default function Navigation() {
+	const portfolio = "#portfolio";
+
+	const skills = "#skills";
+	const form = "#form";
 	const [navb, setNavb] = useState(true);
 	const [click, setClick] = useState(true);
 	const [isVisible, setIsVisible] = useState(true);
@@ -32,7 +36,6 @@ export default function Navigation() {
 		};
 	}, [previousScrollPosition]);
 
-	const form = "#form";
 	return (
 		<>
 			{isVisible && (
@@ -115,12 +118,12 @@ export default function Navigation() {
 									</a>
 								</li>
 								<li>
-									<a className="desktop-navLink" href="index.html#skills">
+									<a className="desktop-navLink" href={skills}>
 										Skills
 									</a>
 								</li>
 								<li>
-									<a className="desktop-navLink" href="index.html#portfolio">
+									<a className="desktop-navLink" href={portfolio}>
 										Portfolio
 									</a>
 								</li>
@@ -179,7 +182,7 @@ export default function Navigation() {
 								<a
 									className="mobile-navLink"
 									onClick={handleMenu}
-									href="index.html#skills"
+									href={skills}
 								>
 									Skills
 								</a>
@@ -188,7 +191,7 @@ export default function Navigation() {
 								<a
 									className="mobile-navLink"
 									onClick={handleMenu}
-									href="index.html#portfolio"
+									href={portfolio}
 								>
 									Portfolio
 								</a>

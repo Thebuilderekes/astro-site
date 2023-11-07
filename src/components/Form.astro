@@ -85,7 +85,6 @@
 	}
 
 	.styled-input label {
-		color: var(--accent-color);
 		padding: 1.3rem 30px 1rem 30px;
 		position: absolute;
 		top: 10px;
@@ -100,15 +99,18 @@
 		max-width: 100%;
 	}
 
-	input,
-	textarea {
+	.input-box {
 		padding: 30px;
-		/* border: 0; */
 		width: 100%;
 		font-size: var(--fs-semi-medium);
 		background-color: var(--light-grey-color);
 		color: #000000;
 		border-radius: 4px;
+	}
+
+	.input-box.dark {
+		background-color:var(--mid-dark-green-color);
+		color: var(--light-grey-color);
 	}
 
 	input:focus,
@@ -149,6 +151,10 @@
 		transition: all 300ms ease;
 	}
 
+	.submit-btn.dark {
+		background: var(--mid-dark-green-color);
+
+	} 
 	.submit-btn:hover {
 		background: var(--dark-green-color);
 		color: var(--light-grey-color);
@@ -191,6 +197,8 @@
 						id="name"
 						required
 						placeholder="Name"
+						class="input-box"
+
 					/>
 				</div>
 			</div>
@@ -198,6 +206,8 @@
 				<div class="styled-input">
 					<label class="visually-hidden" for="email">Email</label>
 					<input
+					class="input-box"
+
 						type="email"
 						name="email"
 						id="email"
@@ -212,6 +222,8 @@
 				<div class="styled-input" style="float:right;">
 					<label class="visually-hidden" for="text">Subject</label>
 					<input
+					class="input-box"
+
 						type="text"
 						name="text"
 						id="text"
@@ -223,7 +235,8 @@
 			<div class="col-xs-12">
 				<div class="styled-input wide">
 					<label class="visually-hidden" for="text-input">Message</label>
-					<textarea required id="text-input" placeholder="Message"></textarea>
+						
+						<textarea required id="text-input" class="input-box" placeholder="Message"></textarea>
 				</div>
 			</div>
 			<div class="col-xs-12">

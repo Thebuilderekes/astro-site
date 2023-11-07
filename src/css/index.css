@@ -17,7 +17,7 @@ img {
 	--fs-semi-large: 3rem; /*48px*/
 	--fs-double: 2rem; /*32px*/
 	--fs-hero--mobile: 1.875rem; /*30px*/
-	--fs-section--mobile: 1.9rem; /*30.4px*/
+	--fs-section-mobile: 1.9rem; /*30.4px*/
 	--fs-medium: 1.7rem; /*27.2px*/
 	--fs-semi-medium: 1.5rem; /*24px*/
 	--fs--mid-medium: 1.125rem; /*18px*/
@@ -28,6 +28,7 @@ img {
 	--light-grey-color: rgb(212, 212, 212);
 	--darker-green-color: rgb(10, 17, 15);
 	--dark-green-color: rgb(19, 32, 29);
+	--mid-dark-green-color: rgb(30, 51, 46);
 	--light-green-color: rgb(58, 112, 92);
 	--accent-color: var(--light-green-color);
 }
@@ -35,6 +36,7 @@ img {
 html {
 	height: 100%;
 	scroll-behavior: smoooth;
+	scroll-padding-top: 30px;
 }
 
 body {
@@ -45,6 +47,10 @@ body {
 
 .dark {
 	transition: background-color 0.5s ease-in-out;
+}
+.card.dark {
+	background-color: var(--mid-dark-green-color);
+	color: var(--light-grey-color);
 }
 
 .light-background {

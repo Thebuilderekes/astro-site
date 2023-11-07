@@ -2,8 +2,8 @@
 const { scrollToTop } = Astro.props;
 ---
 
-<footer class="tagline flex flex-col justify-center" id="footer">
-	<div class="footer-attributes text-white bg-[#13201d] py-2 text-center">
+<footer class="footer tagline bg-[#13201d] flex flex-col justify-center" id="footer">
+	<div class="footer-attributes text-white  py-2 text-center">
 		<nav>
 			<a
 				href={scrollToTop}
@@ -28,3 +28,13 @@ const { scrollToTop } = Astro.props;
 		</small>
 	</div>
 </footer>
+
+<style>
+
+
+
+.dark {
+    background-color: var(--darker-green-color);
+}
+
+</style>

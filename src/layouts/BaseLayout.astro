@@ -8,13 +8,13 @@ import BaseHead from "../components/BaseHead.astro";
 import ThemeSwitcher from "../components/ThemeToggle.astro";
 import "animate.css";
 
-const { title, description, author, form, scrollToTop } = Astro.props;
+const { title, description, author, form, scrollToTop, skills , portfolio } = Astro.props;
 ---
 
 <html lang="en" class="web-page">
 	<BaseHead title={title} description={description} author={author} />
 	<body>
-		<Navigation client:only />
+		<Navigation  skills={skills} portfolio={portfolio} client:only />
 		<main>
 			<slot />
 			<ThemeSwitcher />

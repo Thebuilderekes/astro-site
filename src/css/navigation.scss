@@ -17,6 +17,7 @@ html {
 	font-family: "Poppins";
 
 	.display-none {
+		opacity: 0;
 		display: none;
 	}
 
@@ -90,6 +91,11 @@ html {
 			@media (max-width: 799px) {
 				display: block;
 			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
 		}
 	}
 
@@ -98,6 +104,8 @@ html {
 	.mobile-nav {
 		.display-mobile-nav {
 			display: flex;
+			opacity: 1;
+			transition: opacity 1s, display 1s;
 			flex-direction: column;
 			align-items: center;
 			padding-top: 13%;
