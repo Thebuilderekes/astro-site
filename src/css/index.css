@@ -46,6 +46,28 @@ body {
 	justify-content: space-between;
 }
 
+/* Safari */
+@media (-webkit-transform-3d) {
+	h1,
+	h2,
+	h3,
+	h4,
+	p {
+		letter-spacing: 0.25px;
+	}
+}
+
+/* Chrome */
+@media (-webkit-transform-3d) and (-moz-transform-3d) {
+	h1,
+	h2,
+	h3,
+	h4,
+	p {
+		letter-spacing: 0.5px;
+	}
+}
+
 .dark {
 	transition: background-color 0.5s ease-in-out;
 }
