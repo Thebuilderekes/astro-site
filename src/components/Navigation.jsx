@@ -25,7 +25,6 @@ export default function Navigation() {
         currentScrollPosition > 500
       ) {
         setPreviousScrollPosition(currentScrollPosition);
-        console.log(currentScrollPosition);
         setIsVisible(false);
       } else if (currentScrollPosition < 500) setIsVisible(true);
     };
@@ -87,8 +86,8 @@ export default function Navigation() {
                   <g>
                     <path
                       d="M 185.597656 359.222656 C 89.675781 359.222656 11.972656 280.984375 11.972656 185.597656 C 11.972656 90.210938 89.675781 11.972656 185.597656 11.972656 C 281.519531 11.972656 359.222656 89.675781 359.222656 185.597656 C 359.222656 281.519531 280.984375 359.222656 185.597656 359.222656 Z M 185.597656 22.691406 C 95.570312 22.691406 22.691406 95.570312 22.691406 185.597656 C 22.691406 275.625 95.570312 348.503906 185.597656 348.503906 C 275.625 348.503906 348.503906 275.625 348.503906 185.597656 C 348.503906 95.570312 275.089844 22.691406 185.597656 22.691406 Z M 185.597656 22.691406 "
-                      fill-opacity="1"
-                      fill-rule="nonzero"
+                      fillOpacity="1"
+                      fillRule="nonzero"
                       fill="#ffffff"
                     ></path>
                   </g>

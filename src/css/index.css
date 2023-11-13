@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'animate.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 *,
 img {
@@ -20,7 +21,7 @@ img {
   --fs-hero-mobile: 1.875rem; /*30px*/
   --fs-section-mobile: 1.9rem; /*30.4px*/
   --fs-medium: 1.7rem; /*27.2px*/
-  --fs-semi-medium: 1.5rem; /*24px*/
+  --fs-semi-medium: 1.3rem; /*24px*/
   --fs--mid-medium: 1.125rem; /*18px*/
   --fs-default: 1rem; /*16px*/
   --fs-small: 0.8rem; /*12.8px*/
