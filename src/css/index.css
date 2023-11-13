@@ -1,93 +1,216 @@
-@import "fonts.css";
-@import "animate.css";
-
+@import 'fonts.css';
+@import 'animate.css';
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 *,
 img {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
-	outline: none !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
 }
 
 :root {
-	/*font sizing*/
-	--fs-extralarge: 7rem; /*80px*/
-	--fs-large: 4rem; /*48px*/
-	--fs-semi-large: 3rem; /*48px*/
-	--fs-double: 2rem; /*32px*/
+  /*font sizing*/
+  --fs-extralarge: 7rem; /*80px*/
+  --fs-large: 4rem; /*48px*/
+  --fs-semi-large: 3rem; /*48px*/
+  --fs-double: 2rem; /*32px*/
 
-	--fs-hero-mobile: 1.875rem; /*30px*/
-	--fs-section-mobile: 1.9rem; /*30.4px*/
-	--fs-medium: 1.7rem; /*27.2px*/
-	--fs-semi-medium: 1.5rem; /*24px*/
-	--fs--mid-medium: 1.125rem; /*18px*/
-	--fs-default: 1rem; /*16px*/
-	--fs-small: 0.8rem; /*12.8px*/
+  --fs-hero-mobile: 1.875rem; /*30px*/
+  --fs-section-mobile: 1.9rem; /*30.4px*/
+  --fs-medium: 1.7rem; /*27.2px*/
+  --fs-semi-medium: 1.5rem; /*24px*/
+  --fs--mid-medium: 1.125rem; /*18px*/
+  --fs-default: 1rem; /*16px*/
+  --fs-small: 0.8rem; /*12.8px*/
 
-	/*colors*/
-	--light-grey-color: rgb(212, 212, 212);
-	--darker-green-color: rgb(10, 17, 15);
-	--dark-green-color: rgb(19, 32, 29);
-	--mid-dark-green-color: rgb(30, 51, 46);
-	--light-green-color: rgb(58, 112, 92);
-	--accent-color: var(--light-green-color);
+  /*colors*/
+  --light-grey-color: rgb(212, 212, 212);
+  --darker-green-color: rgb(10, 17, 15);
+  --dark-green-color: rgb(19, 32, 29);
+  --mid-dark-green-color: rgb(30, 51, 46);
+  --light-green-color: rgb(58, 112, 92);
+  --accent-color: var(--light-green-color);
 }
 
 html {
-	height: 100%;
-	scroll-behavior: smoooth;
-	scroll-padding-top: 30px;
+  height: 100%;
+  scroll-behavior: smoooth;
+  scroll-padding-top: 30px;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Safari */
 @media (-webkit-transform-3d) {
-	h1,
-	h2,
-	h3,
-	h4,
-	p {
-		letter-spacing: 0.25px;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    letter-spacing: 0.25px;
+  }
 }
 
 /* Chrome */
 @media (-webkit-transform-3d) and (-moz-transform-3d) {
-	h1,
-	h2,
-	h3,
-	h4,
-	p {
-		letter-spacing: 0.5px;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    letter-spacing: 0.5px;
+  }
 }
 
 .dark {
-	transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .card.dark {
-	background-color: var(--mid-dark-green-color);
-	color: var(--light-grey-color);
+  background-color: var(--mid-dark-green-color);
+  color: var(--light-grey-color);
 }
 
 .light-background {
-	background-color: var(--light-grey-color);
+  background-color: var(--light-grey-color);
 }
 
 .section-padding {
-	padding: 5rem 3rem;
+  padding: 5rem 3rem;
 }
 
 h2 {
-	font-weight: 700;
+  font-weight: 700;
 }
 footer p {
-	text-align: center;
-	font-size: var(--fs-small);
+  text-align: center;
+  font-size: var(--fs-small);
 }
