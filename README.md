@@ -8,11 +8,15 @@ This is my official portfolio website to showcase projects and skills. Built wit
 
 ### Challenges that I faced and their solutions
 
-- 1. I added a theme switcher button which works fine on my local machine but is unresponsive stopped working when I hosted it on vercel.
+- 1. I added a theme switcher button which works fine on my local machine but is unresponsive stopped working when I hosted it on vercel.<br/>
      solution to 1 - took down website and hosted it again
 
-- 2. Font on the `h1` had more spacing on safari browser
-     solution to 2 - added -webkit-transform-3d to set letter spacing on chrome, mozilla and safari browsers.
+- 2. Font on the `h1` had more spacing on safari browser <br/>
+     solution to 2 - Poppins is not a web safe fontso I changed foint family from Poppins to inter
+
+- 3. layout shift in hero section
+    solution to 3. Changed height property from 100dvh to 100vh because dvh unit causes the layout shift
+
 
 <!-- Screenshots -->
 
