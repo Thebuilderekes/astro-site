@@ -36,7 +36,7 @@ export default function Navigation() {
 			{isVisible && (
 				<header className="navbar header">
 					<div className="nav-container">
-						<div className="top-icons">
+						<div className="social-media-icons">
 							<a
 								className="top-icon-social"
 								aria-label="visit github page"

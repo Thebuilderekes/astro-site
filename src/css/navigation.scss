@@ -15,6 +15,7 @@ html {
 	position: fixed;
 	z-index: 999;
 	font-family: "Inter";
+	border-bottom: 1px solid rgb(56, 56, 56);
 
 	.hide-mobile-nav {
 		opacity: 0;
@@ -32,7 +33,7 @@ html {
 		padding: 0 2rem;
 		font-family: "Inter";
 
-		.top-icons {
+		.social-media-icons {
 			display: flex;
 
 			.top-icon-social {
