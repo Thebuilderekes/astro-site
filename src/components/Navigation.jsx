@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 // import ThemeToggle from './ThemeToggle.jsx';
 
@@ -20,13 +19,10 @@ export default function Navigation() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const currentScrollPosition = window.scrollY;
-			if (
-				currentScrollPosition > previousScrollPosition &&
-				currentScrollPosition > 500
-			) {
+			if (currentScrollPosition > 2000) {
 				setPreviousScrollPosition(currentScrollPosition);
 				setIsVisible(false);
-			} else if (currentScrollPosition < 500) setIsVisible(true);
+			} else if (currentScrollPosition < 2000) setIsVisible(true);
 		};
 
 		window.addEventListener("scroll", handleScroll);
@@ -163,7 +159,7 @@ export default function Navigation() {
 					<nav className="mobile-nav nav">
 						<ul
 							className={
-								!navb || !click ? "display-mobile-nav" : "display-none"
+								!navb || !click ? "display-mobile-nav" : "hide-mobile-nav"
 							}
 						>
 							<li>

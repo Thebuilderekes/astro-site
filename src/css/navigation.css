@@ -16,7 +16,7 @@ html {
 	z-index: 999;
 	font-family: "Inter";
 }
-.header .display-none {
+.header .hide-mobile-nav {
 	opacity: 0;
 	display: none;
 }
