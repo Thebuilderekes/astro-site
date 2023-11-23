@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import "../css/navigation.css";
 
 export default function Navigation() {
-	const portfolio = "#portfolio";
+	const portfolio = "index.html#portfolio";
 
-	const skills = "#skills";
+	const skills = "index.html#skills";
 	const form = "#form";
 	const [navb, setNavb] = useState(true);
 	const [click, setClick] = useState(true);
