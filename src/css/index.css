@@ -27,6 +27,7 @@ img {
 	--fs-small: 0.8rem; /*12.8px*/
 
 	/*colors*/
+	--dark-grey-color: #b9b9b9;
 	--light-grey-color: #d4d4d4;
 	--darker-green-color: #0a110f;
 	--dark-green-color: #13201d;
