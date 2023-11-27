@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Verdana, 'Courier New', monospace"
+	"editor.fontFamily": "Verdana, 'Courier New', monospace",
+	"editor.inlineSuggest.showToolbar": "always"
 }
