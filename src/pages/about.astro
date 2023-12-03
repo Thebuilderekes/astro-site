@@ -20,7 +20,7 @@ const scrollToTop = "#about";
 			<h1
 				class="about-heading title animate__animated animate__fadeInUp delay-1"
 			>
-				About me
+				About
 			</h1>
 			<h2
 				class="about-me large-text animate__animated animate__fadeInUp delay-2"
@@ -29,13 +29,17 @@ const scrollToTop = "#about";
 			</h2>
 
 			<p class="description animate__animated animate__fadeInUp delay-2">
-				With a comprehensive background in computer science and over three(3)
+				With a background in computer science and over three(3)
 				years of hands-on experience in web development, I possess a deep
-				understanding of web technologies and principles. Proficient in HTML,
-				CSS, JavaScript, React, and other essential web tools, I am adept at
-				crafting visually appealing and user-centric web applications. My
-				experience has instilled in me a keen eye for both design aesthetics and
-				web accessibility, ensuring that my creations cater to a diverse range
+				understanding of web technologies and principles. I am proficient in HTML,
+				CSS, JavaScript, React, and other essential web tools. </p>
+
+
+			<p class="description animate__animated animate__fadeInUp delay-2">
+                                                       
+			My
+				experience has allowed me to develop a keen eye for both design aesthetics and
+				web accessibility enabling me to craft visually appealing and user-centric web applications and  ensuring that my creations cater to a diverse range
 				of users and their needs.
 			</p>
 
@@ -125,7 +129,6 @@ const scrollToTop = "#about";
 	}
 	.about-section h1 {
 		margin: 20px auto;
-
 		text-align: center;
 		font-family: "Archivo Black";
 		text-transform: uppercase;
@@ -206,14 +209,27 @@ const scrollToTop = "#about";
 		.about-section p {
 			font-size: var(--fs-semi-medium);
 
-			padding-bottom: 2%;
+			padding-bottom: 20px;
 		}
 	}
 
+	@media (max-width: 500px) {
+			.about-section .description {
+		padding-top: 10px;
+	}
+		.about-section p {
+			font-size: var(--fs-p-mobile);
+
+		}
+
+	.about-section ul li {
+		font-size: var(--fs-p-mobile);
+	}
+	}
 	.about-section .go-to-home-link {
 		padding-top: 20px;
 		text-decoration: underline;
-		font-size: var(--fs-medium);
+		font-size: var(--fs-semi-medium);
 		font-weight: 800;
 	}
 </style>
