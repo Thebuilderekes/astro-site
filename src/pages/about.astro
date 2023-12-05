@@ -18,12 +18,12 @@ const scrollToTop = "#about";
 	<section class="about-section" id="about">
 		<div class="text-container">
 			<h1
-				class="about-heading title animate__animated animate__fadeInUp delay-1"
+				class="about-section__main-heading title animate__animated animate__fadeInUp delay-1"
 			>
 				About
 			</h1>
 			<h2
-				class="about-me large-text animate__animated animate__fadeInUp delay-2"
+				class="about-section__large-heading animate__animated animate__fadeInUp delay-2"
 			>
 				I'm a front-end developer based in Nigeria.
 			</h2>
@@ -66,7 +66,6 @@ const scrollToTop = "#about";
 
 	.about-section {
 		width: 100%;
-		/*text-align:center;*/
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -74,8 +73,8 @@ const scrollToTop = "#about";
 		background-color: var(--light-grey-color);
 	}
 
-	.about-section.dark {
-		background-color: var(--darker-green-color);
+	.about-section__large-heading.dark {
+     
 		color: var(--light-grey-color);
 	}
 
@@ -90,6 +89,7 @@ const scrollToTop = "#about";
 		}
 	}
 	.about-section h1 {
+
 		margin: 20px auto;
 		text-align: center;
 		font-family: "Archivo Black";
@@ -120,18 +120,11 @@ const scrollToTop = "#about";
 		}
 	}
 
-	.about-section .sub-heading {
-		padding-top: 12%;
-		padding-bottom: 3%;
-
-		text-align: center;
-		font-family: "Inter";
-		font-size: var(--fs-double);
-		font-weight: 700;
-	}
 
 	@media (min-width: 900px) {
-		.about-section .large-text {
+		.about-section .about-section__large-heading {
+
+		  color: var(--light-green-color);
 			font-family: "Inter", sans-serif;
 			text-align: center;
 			font-weight: 700;
@@ -139,7 +132,8 @@ const scrollToTop = "#about";
 		}
 	}
 	@media (max-width: 800px) {
-		.about-section .large-text {
+		.about-section .about-section__large-heading {
+
 			font-size: var(--fs-semi-large);
 			font-weight: 700;
 		}
@@ -187,4 +181,12 @@ const scrollToTop = "#about";
 		.about-section .go-to-home-link {
 		}
 	}
+
+	.about-section.dark {
+		background-color: var(--darker-green-color);
+		color: var(--light-grey-color);
+	}
+
+
+
 </style>
