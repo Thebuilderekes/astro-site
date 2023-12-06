@@ -10,40 +10,36 @@
 
 	/*desktop view*/
 
-
-	@media (max-width: 1200px) {
+	@media (min-width: 900px) {
 		.hero-section {
 			align-items: center;
-
-			padding: 50% 2rem;
+			justify-content: space-evenly;
+			text-align: center;
 		}
-
 	}
 
 	@media (max-width: 950px) {
 		.hero-section {
 			align-items: center;
+			justify-content: space-evenly;
+			text-align: center;
 
-			padding: 45% 2rem;
+			padding: 40% 5rem;
 		}
 
 	}
 
 	@media (max-width: 899px) {
+
 		.hero-section {
-     text-align: center;
+
 			align-items: center;
+			justify-content: space-evenly;
+			text-align: center;
 			padding: 50% 5rem;
 		}
-}
 
 
-	@media (min-width: 900px) {
-		.hero-section {
-			align-items: center;
-			gap: 1.5rem;
-			text-align: center;
-		}
 	}
 
 	.hero-section.dark {
@@ -52,14 +48,9 @@
 
 	@media (max-width: 550px) {
 		.hero-section {
-
-			padding: 0 2rem;
-			align-items: start;
-			text-align: left;
 			padding-top: 35%;
 		}
 	}
-	
 
 	.hero-section-main-heading {
 		
@@ -120,7 +111,7 @@
 		}
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 420px) {
 		.hero-section p {
 			font-size: var(--fs-p-mobile);
 			max-width: 100%;
