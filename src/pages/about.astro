@@ -7,6 +7,7 @@ const description =
 	"Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites.";
 const author = "Ekeopre Beredugo";
 const scrollToTop = "#about";
+const contact = "#form";
 ---
 
 <BaseLayout
@@ -29,26 +30,23 @@ const scrollToTop = "#about";
 			</h2>
 
 			<p class="description animate__animated animate__fadeInUp delay-2">
+				I have a strong commitment to delivering high-quality solutions that
+				meet and exceed client expectations. My collaborative spirit and
+				unwavering commitment to continuous learning has allowed me to remain at the
+				forefront of the web development industry, constantly adapting and innovating to deliver impactful results.
+			</p>
+			<p class="description animate__animated animate__fadeInUp delay-2">
 				My background in <strong>computer science</strong> and over
 				<strong>three years</strong> of experience using web development
 				technologies has given me deep understanding of web
 				technologies and their underlying principles. My skills encompasses a
 				diverse range of modern web tools and frameworks, enabling me to confidently produce high converting websites.
+				<br><br>
+				Have a question or project in mind or just want to say Hi? <a class="contact-link" href={contact}>Contact me<a>.<br>
+
+
 			</p>
 
-			<p class="description animate__animated animate__fadeInUp delay-2">
-				I have a strong commitment to delivering high-quality solutions that
-				meet and exceed client expectations. My collaborative spirit and
-				unwavering commitment to continuous learning ensures that I remain at the
-				forefront of the web development industry, constantly adapting and
-				innovating to deliver impactful results. <br /> <br>
-
-				Have a question or project in mind? Let's connect! Fill out the form below and I'll be in touch shortly.<br>
-				<a
-					class="go-to-home-link animate__animated animate__fadeInUp delay-2"
-					href="/">Go to homepage</a
-				>
-			</p>
 
 		</div>
 	</section>
@@ -165,7 +163,7 @@ const scrollToTop = "#about";
 		}
 	}
 
-	.about-section .go-to-home-link {
+	.about-section .contact-link {
 		padding-top: 20px;
 		text-decoration: underline;
 		font-size: var(--fs-medium);
