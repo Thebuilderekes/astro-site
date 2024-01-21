@@ -1,6 +1,6 @@
-@import 'fonts.css';
-@import 'animate.css';
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import "fonts.css";
+@import "animate.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 *,
 img {
@@ -88,7 +88,7 @@ body {
 
 h2 {
   font-weight: 700;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 footer p {
   text-align: center;

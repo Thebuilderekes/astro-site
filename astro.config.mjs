@@ -1,6 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
-import React from 'react';
+import React from "react";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -8,8 +8,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ["svgo"],
+    },
   },
-  integrations: [react(), tailwind()]
+  integrations: [react(), tailwind()],
 });

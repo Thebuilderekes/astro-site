@@ -15,8 +15,7 @@ This is my official portfolio website to showcase projects and skills. Built wit
      solution to 2 - Poppins is not a web safe fontso I changed foint family from Poppins to inter
 
 - 3. layout shift in hero section <br/>
-    solution to 3. Changed height property from 100dvh to 100vh because dvh unit causes the layout shift
-
+     solution to 3. Changed height property from 100dvh to 100vh because dvh unit causes the layout shift
 
 <!-- Screenshots -->
 
