@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
-// import ThemeToggle from './ThemeToggle.jsx';
 
 import "../css/navigation.css";
 
 export default function Navigation() {
-  const portfolio = "index.html#portfolio";
-
-  const skills = "index.html#skills";
   const form = "#form";
   const [isMobileNav, setIsMobileNav] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -122,16 +118,6 @@ export default function Navigation() {
                   </a>
                 </li>
                 <li>
-                  <a className="desktop-navLink" href={skills}>
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a className="desktop-navLink" href={portfolio}>
-                    Portfolio
-                  </a>
-                </li>
-                <li>
                   <a className="desktop-navLink" href={form}>
                     Contact
                   </a>
@@ -182,24 +168,6 @@ export default function Navigation() {
                     href="/about"
                   >
                     About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="mobile-navLink"
-                    onClick={handleMenuToggle}
-                    href={skills}
-                  >
-                    Skills
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="mobile-navLink"
-                    onClick={handleMenuToggle}
-                    href={portfolio}
-                  >
-                    Portfolio
                   </a>
                 </li>
                 <li>
