@@ -52,7 +52,7 @@ const { scrollToTop } = Astro.props;
 	 </small><br>
 	 <small
 		class="text-center xs:text-center mt-6 lg:text-xl xs:text-lg sm:text-xs md:text-lg"
-	>&copy; 2022&ndash;2024. All rights reserved.</small>
+	>&copy; 2022&ndash;<span id="current-year"></span> All rights reserved.</small>
 	 </div>
  </div>
 </footer>
@@ -87,3 +87,8 @@ const { scrollToTop } = Astro.props;
 		text-decoration: underline;
 	}
 </style>
+
+<script>
+  // Set the current year dynamically
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
