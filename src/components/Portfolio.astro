@@ -10,8 +10,8 @@ const portfolioCards = [
 			
 		alt: " screenshot of photographer's website",
 		animation: " card animate__animated animate__fadeInUp",
-		webUrl: "https://johnsanpmemo.vercel.app",
-		gitUrl: "https://github.com/Thebuilderekes/give-a-thing",
+		webUrl: "https://johnsnapmemo.vercel.app",
+		gitUrl: "https://github.com/Thebuilderekes/johnphotography",
 	},
 	{
 		imgUrl: "/assets/img/wuka-web.jpg",
@@ -37,6 +37,17 @@ const portfolioCards = [
 	},
 
 	{
+		imgUrl: "/assets/img/luxegems-webscreen.jpg",
+		technology: " CSS, Bootstrap, Javascript",
+		description:
+			"A jewelry store website where customers can order products by using the 'place order' buttons or contacting the store using the contact information in the footer.",
+		alt: " screenshot of jewelry ecommerce website",
+		animation: " card animate__animated animate__fadeInUp",
+		webUrl: "https://jewelrystore.vercel.app/",
+		gitUrl: "https://github.com/Thebuilderekes/shop",
+	},
+
+	{
 		imgUrl: "/assets/img/kombo-img.webp",
 		technology: " TailwindCSS, Javascript",
 		description:
@@ -47,16 +58,6 @@ const portfolioCards = [
 		gitUrl: "https://github.com/Thebuilderekes/kombo",
 	},
 
-	{
-		imgUrl: "/assets/img/luxegems-webscreen.jpg",
-		technology: " CSS, Bootstrap, Javascript",
-		description:
-			"A jewelry store website where customers can order products by using the 'place order' buttons or contacting the store using the contact information in the footer.",
-		alt: " screenshot of jewelry ecommerce website",
-		animation: " card animate__animated animate__fadeInUp",
-		webUrl: "https://jewelrystore.vercel.app/",
-		gitUrl: "https://github.com/Thebuilderekes/shop",
-	},
 
 
 	{
@@ -78,7 +79,6 @@ const portfolioCards = [
 
 	.portfolio-section {
 		font-family: "Inter", sans-serif;
-		/* position: relative; */
 		background-color: var(--dark-grey-color);
 	}
 
@@ -182,14 +182,44 @@ const portfolioCards = [
 
 	.portfolio-section .card-container .card .btn-group a {
 		font-weight: 600;
+    position: relative;
 		padding: 5px 10px;
 		text-decoration: none;
 		font-size: var(--fs-semi-medium);
 		background-color: var(--darker-green-color);
-		border: 1px solid transparent;
+		border: 3px solid transparent;
 		color: #ffffff;
 		border-radius: 10px;
 	}
+
+
+		.portfolio-section .card-container .card .btn-group a::after {
+
+    content: "opens in new tab";
+    background: var(--dark-green-color);
+ position: absolute;
+  left: 0;
+  bottom: -1.5em;
+  white-space: nowrap;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Prevents space allocation */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  }
+
+		.portfolio-section .card-container .card .btn-group a:hover::after {
+  opacity: 1; /* Make the message visible on hover */
+  visibility: visible;
+  }
+
+.portfolio-section .card-container .card .btn-group a:focus {
+  border: 3px solid green;
+}
+
 	.portfolio-section .card-container .card .btn-group a:hover {
 		background-color: var(--light-grey-color);
 		color: var(--accent-color);
@@ -221,12 +251,12 @@ const portfolioCards = [
 	}
 </style>
 
-<section class="portfolio-section section-padding" id="portfolio">
+<section aria-label="portfolio-heading" class="portfolio-section section-padding" id="portfolio">
 	<h2 class="portfolio-heading">PORTFOLIO</h2>
-	<div class="card-container">
+	<ul class="card-container">
 		{
 			portfolioCards.map((portfolioCard) => (
-				<div class={portfolioCard.animation} id="card">
+				<li class={portfolioCard.animation} id="card">
 					<figure>
 						<img src={portfolioCard.imgUrl} alt={portfolioCard.alt} />
 					</figure>
@@ -235,20 +265,28 @@ const portfolioCards = [
 						<span>Technologies:</span> {portfolioCard.technology}
 					</p>
 					<div class="btn-group">
-						<a href={portfolioCard.webUrl} target="_blank" role="link">
+						<a href={portfolioCard.webUrl}
+
+              aria-label=" visit website (opens in a new tab)"
+              class="btn" 
+              target="_blank" 
+              role="link">
 							VISIT WEBSITE
 						</a>
 						<a
-							class="github-btn"
-							href="#"
+              aria-label=" visit github repo for website (opens in a new tab)"
+							class="github-btn btn"
+              target="_blank" 
+							href={portfolioCard.gitUrl}
 							aria-disabled="true"
 							role="link"
 						>
 							GITHUB
 						</a>
 					</div>
-				</div>
+				</li>
 			))
 		}
-	</div>
+	</ul>
 </section>
+

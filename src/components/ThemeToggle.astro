@@ -42,7 +42,7 @@
 	}
 </style>
 
-<button aria-label="themeToggler" id="ThemeSwitcher">
+<button aria-label="theme Toggler" id="ThemeSwitcher">
 	<svg width="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<path
 			class="moon"
@@ -74,20 +74,13 @@
 		(window.matchMedia("(prefers-color-scheme: light)").matches
 			? "light"
 			: "dark");
-	// if (theme === "light") {
-	// 	element.classList.add("dark");
-	// 	themedSectionList.forEach((item) => item.classList.add("dark"));
-	// } else {
-	// 	element.classList.remove("dark");
-	// 	themedSectionList.forEach((item) => item.classList.remove("dark"));
-	// }
 	window.localStorage.setItem("theme", theme);
 
 	//function to toggle the dark class on the sections
 	const handleToggleClick = () => {
 		themedSectionList.forEach((item) => item.classList.toggle("dark"));
 		element.classList.toggle("dark");
-		const isDark = element.classList.contains("dark");
+		//	const isDark = element.classList.contains("dark");
 		localStorage.setItem("theme", isDark ? "dark" : "light");
 	};
 

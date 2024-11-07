@@ -32,7 +32,6 @@ const skillCards = [
 
 	{
 		icon: "https://www.cdnlogo.com/logos/t/58/tailwindcss.svg",
-		//icon: "https://api.iconify.design/logos:tailwindcss.svg",
 		animation: "card animate__animated animate__fadeInUp delay-4",
 		title: "TailwindCSS",
 		alt: "tailwindCSS logo",
@@ -166,14 +165,14 @@ const skillCards = [
 	<h2 class="skills-heading animate__animated animate__fadeInUp">
 		SKILLS & TECH
 	</h2>
-	<div class="card-container">
+	<ul class="card-container">
 		{
 			skillCards.map((skillCard) => (
-				<div class={skillCard.animation} id="card">
+				<li class={skillCard.animation} id="card">
 					<img src={skillCard.icon} alt={skillCard.alt} />
 					<h3>{skillCard.title}</h3>
-				</div>
+				</li>
 			))
 		}
-	</div>
+	</ul>
 </section>
