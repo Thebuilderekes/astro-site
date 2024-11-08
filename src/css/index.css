@@ -1,6 +1,6 @@
-@import "fonts.css";
-@import "animate.css";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import 'fonts.css';
+@import 'animate.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
 *,
 img {
@@ -16,6 +16,7 @@ img {
   --fs-extralarge: 7rem; /*80px*/
   --fs-large: 4rem; /*48px*/
   --fs-semi-large: 3rem; /*48px*/
+  --fs-mid: 2.5rem; /*40px*/
   --fs-double: 2rem; /*32px*/
 
   --fs-hero-mobile: 1.875rem; /*30px*/
@@ -95,7 +96,7 @@ a:focus {
 
 h2 {
   font-weight: 700;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 footer p {
   text-align: center;
