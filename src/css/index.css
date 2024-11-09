@@ -71,10 +71,14 @@ body {
     letter-spacing: 0.5px;
   }
 }
-a {
+
+
+a{
   border: 3px solid transparent;
 }
-a:focus {
+
+
+a:focus-visible {
   border: 3px solid var(--green);
 }
 

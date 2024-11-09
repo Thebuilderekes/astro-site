@@ -4,6 +4,9 @@
 
 This is my official portfolio website to showcase projects and skills. Built with astro framework, react and tailwindcss, the idea was to keep the design simple and not have too many distracting animations, and also have functional form that sends user messages to my mail. I'm adding a theme switcher for anyone who prefers switching from light mode to dark mode.
 
+
+
+
 <!--Challenges that I faced-->
 
 ### Challenges that I faced and their solutions
@@ -16,6 +19,7 @@ This is my official portfolio website to showcase projects and skills. Built wit
 
 - 3. layout shift in hero section <br/>
      solution to 3. Changed height property from 100dvh to 100vh because dvh unit causes the layout shift
+
 
 <!-- Screenshots -->
 
