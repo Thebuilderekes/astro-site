@@ -66,7 +66,7 @@
 	//array to hold the sections to be affected by the dark theme
 	const themedSectionList = Array.from(
 		document.querySelectorAll(
-			".header, .hero-section, .hero-section-main-heading, .heading, .job-title, .specialty-paragraph, .skills-section, .portfolio-section, .portfolio-heading, .card, .form-section,.form-heading, .input-box, .submit-btn, .footer, .about-section, .go-to-home"
+			".navbar, .nav-menu, .hero-section, .hero-section-main-heading, .heading, .job-title, .specialty-paragraph, .skills-section, .portfolio-section, .portfolio-heading, .card, .form-section,.form-heading, .input-box, .submit-btn, .footer, .about-section"
 		)
 	);
 	//Theme functionalitys
@@ -81,7 +81,7 @@
 	const handleToggleClick = () => {
 		themedSectionList.forEach((item) => item.classList.toggle("dark"));
 		element.classList.toggle("dark");
-		//	const isDark = element.classList.contains("dark");
+		const isDark = element.classList.contains("dark");
 		localStorage.setItem("theme", isDark ? "dark" : "light");
 	};
 

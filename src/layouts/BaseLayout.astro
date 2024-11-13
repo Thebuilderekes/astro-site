@@ -3,6 +3,7 @@
 import "../css/index.css";
 import "../components/ThemeToggle.astro";
 import Navigation from "../components/Navigation";
+import Navigation from "../components/Navigation.astro"
 import Form from "../components/Form.astro";
 import Footer from "../components/Footer.astro";
 import BaseHead from "../components/BaseHead.astro";
@@ -13,10 +14,12 @@ const { title, description, author, form, scrollToTop} =
 	Astro.props;
 ---
 
-<html lang="en" class="web-page">
+<html lang="en">
 	<BaseHead title={title} description={description} author={author} />
 	<body>
-		<Navigation client:only />
+		<header>
+			<Navigation/>
+		</header>
 		<main>
 			<slot />
 			<ThemeSwitcher />

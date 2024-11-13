@@ -31,19 +31,39 @@ const contact = "#form";
 
 
    <p class="description animate__animated animate__fadeInUp delay-2">
-	After earning a degree in computer science, I found my passion in web development. I became curious by how websites worked, and how user-friendly websites were made to reflect people and brand ideas and I wanted to be able to create those kinds of welcoming experiences. My goal was to learn how to design websites that not only look good but also provided smooth, engaging experiences that leave lasting impressions.
+		 I’m a web developer with a passion for creating user-friendly, visually stunning websites. After earning a computer science degree, I discovered my love for web development and became fascinated with how websites work, especially how they can be designed to reflect brand ideas and connect with users. Since then, I've focused on designing websites that don't just look good, but deliver smooth, engaging experiences that leave lasting impressions.
   </p>
-
- <p class="description animate__animated animate__fadeInUp delay-2">
-	 My journey as a web developer has been as much about understanding people as it has been about learning code. Early on, I thought that functionality was everything, if a site worked well, then it was good enough. But as I began to study the best performing websites, I realized that design is more than just visual appeal, it’s the bridge between the user and the experience we’re creating. I learned that even the most powerful features are only as impactful as they are accessible and engaging. Now, I approach each project with a focus on thoughtful design, aiming to create intuitive, inclusive, and visually compelling experiences. I believe that a well-designed website doesn’t just look good, it tells a story, guides users effortlessly, and ultimately makes them feel at home. This journey has taught me that great design is not a final touch but an essential foundation.
+<!-- Button to toggle more content -->
+		<button 
+			class="read-more-toggle animate__animated animate__fadeInUp delay-2" 
+			aria-expanded="false" 
+			aria-controls="more-content"
+		>
+			Read more
+		</button>
+<div id="more-content" class="more-content" hidden>
+ <p class="description">
+	 My journey as a developer has been as much about understanding people as it has been about learning code. Initially, I thought functionality was everything—if a site worked, that was enough. But I quickly realized that great design is the bridge between the user and the experience we're crafting. Now, I approach each project with a focus on thoughtful, inclusive design, creating websites that tell a story, guide users effortlessly, and feel like home.
   </p>
-   	<p class="description animate__animated animate__fadeInUp delay-2">
+   	<p class="description">
 				I'm looking forward to collaborating with brands and businesses to align design elements with their vision, helping businesses achieve goals like building awareness, driving sales, and fostering trust.
 				If you're looking for someone who genuinely cares about helping you achieve your website's goals, I'd love the opportunity to work with you. 
 		</p>
+</div>
 	</section>
 </BaseLayout>
 
+<script>
+document.querySelector('.read-more-toggle').addEventListener('click', function() {
+	const moreContent = document.getElementById('more-content');
+	const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+	// Toggle the visibility and button state
+	this.setAttribute('aria-expanded', !isExpanded);
+	this.textContent = isExpanded ? 'Read more' : 'Read less';
+	moreContent.classList.toggle('expanded');
+});
+</script>
 <style>
 	html {
 		width: 100%;
@@ -75,7 +95,7 @@ const contact = "#form";
 	}
 	@media (min-width: 600px) {
 		.about-section {
-			padding: 10% 3rem;
+			padding: 6% 2rem;
 		}
 	}
 	.about-section h1 {
@@ -93,9 +113,6 @@ const contact = "#form";
 		}
 	}
 	@media (max-width: 820px) {
-		.about-section {
-			padding: 5% 0;
-		}
 		.about-section h1 {
 			font-size: var(--fs-semi-large);
 		}
@@ -103,7 +120,7 @@ const contact = "#form";
 
 	@media (max-width: 800px) {
 		.about-section {
-			padding: 30% 1.5rem 4rem 1.5rem;
+			padding: 15% 1.5rem 4rem 1.5rem;
 		}
 		.about-section h1 {
 			font-size: var(--fs-semi-medium);
@@ -172,7 +189,34 @@ const contact = "#form";
 		.about-section .go-to-home-link {
 		}
 	}
+.more-content {
+	display: none; /* Initially hidden */
+}
 
+.more-content.expanded {
+	display: block; /* Visible when 'expanded' class is added */
+}
+.read-more-toggle {
+	background-color: var(--light-green-color);
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	cursor: pointer;
+	font-size: clamp(var(--fs-p-mobile), 10vw, var(--fs-medium));
+	margin-top: 10px;
+}
+
+
+.read-more-toggle:hover {
+
+	background-color: var(--dark-green-color);
+}
+
+
+.read-more-toggle:focus {
+	outline: 2px solid var(--green);
+	outline-offset: 4px;
+}
 	.about-section.dark {
 		background-color: var(--darker-green-color);
 		color: var(--light-grey-color);
