@@ -79,8 +79,8 @@
     
       <button id="nav-close" aria-label="Close navigation">✕</button>
       <ul>
-        <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
-        <li><a class="nav-link" href="/about">About</a></li>
+        <li><a class="nav-link" href="/index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-link" href="/about.html">About</a></li>
         <li><a class="nav-link" href="#form">Contact</a></li>
       </ul>
     </nav>
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
   const navClose = document.getElementById("nav-close");
-
+const navLinks = navMenu.querySelectorAll("a"); 
   const toggleMenu = (isExpanded) => {
     navToggle.setAttribute("aria-expanded", !isExpanded);
     navMenu.setAttribute("aria-hidden", isExpanded);
@@ -263,7 +263,35 @@ document.addEventListener("DOMContentLoaded", () => {
   navClose.addEventListener("click", () => {
     toggleMenu(true);
   });
+
+
+
+
+  const setAriaCurrent = () => {
+
+    const currentURL = window.location.hash || window.location.pathname;
+
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href");
+      
+      // Set aria-current="page" if the link matches the current URL
+      if (linkPath === currentURL) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  // Run aria-current update on page load
+  setAriaCurrent();
+
+  // Run aria-current update on hash change (for single-page apps)
+  window.addEventListener("hashchange", setAriaCurrent);
+
+
 });
 
 
+  // Function to update aria-current based on active page
 </script>
