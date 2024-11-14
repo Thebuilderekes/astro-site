@@ -79,9 +79,9 @@
     
       <button id="nav-close" aria-label="Close navigation">✕</button>
       <ul>
-        <li><a class="nav-link" href="/index.html" aria-current="page">Home</a></li>
-        <li><a class="nav-link" href="/about.html">About</a></li>
-        <li><a class="nav-link" href="#form">Contact</a></li>
+        <li><a aria-label="hompage" class="nav-link" href="/">Home</a></li>
+        <li><a aria-label="about page" class="nav-link" href="/about">About</a></li>
+        <li><a aria-label="contact form" class="nav-link contact-link" href="#form">Contact</a></li>
       </ul>
     </nav>
     <div>
@@ -92,7 +92,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   background-color: var(--light-green-color);
   color: #fff;
   position: relative;
@@ -149,7 +149,6 @@
 		 background: var(--dark-green-color);
    }
 
-   
   }
 
 /* Navigation menu links */
@@ -170,6 +169,10 @@
  font-size: var(--fs-medium);
 }
 
+  .nav-menu .nav-link[aria-current="page"] {
+    color: var(--yellow);
+    border-bottom: 2px solid var(--border-color);
+  }
 
   .nav-menu .nav-link:hover {
   color: var(--light-grey-color);
@@ -189,11 +192,17 @@
   .nav-menu li {
     margin: 2rem 0;
 }
+
+.nav-menu[aria-hidden="true"] {
+   display: none;
+}
 }
 
 .nav-menu[aria-hidden="false"] {
   transform: translateY(0);
 }
+
+
 
 /* Close button in the overlay menu */
 #nav-close {
@@ -238,6 +247,10 @@
   }
 }
 
+.hidden{
+  display: none;
+ }
+
 </style>
 
 
@@ -247,35 +260,54 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
   const navClose = document.getElementById("nav-close");
-const navLinks = navMenu.querySelectorAll("a"); 
+  const navLinks = navMenu.querySelectorAll("a"); 
+  const contactLink = document.querySelector(".contact-link")
   const toggleMenu = (isExpanded) => {
+
     navToggle.setAttribute("aria-expanded", !isExpanded);
+
     navMenu.setAttribute("aria-hidden", isExpanded);
   };
 
   // Open menu on toggle button click
   navToggle.addEventListener("click", () => {
+
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+
     toggleMenu(isExpanded);
   });
 
   // Close menu on close button click
   navClose.addEventListener("click", () => {
+
     toggleMenu(true);
+
   });
 
 
+  //Hide Navigation on click of navigation link
+contactLink.addEventListener('click', () => {
+  // Add the hidden class to hide the menu
+  navMenu.classList.add('hidden');
+  
 
+  // Remove the hidden class after 1 second (1000 ms)
+  setTimeout(() => {
+    navMenu.classList.remove('hidden');
+  }, 1000);
 
-  const setAriaCurrent = () => {
+  // Call toggleMenu immediately
+  toggleMenu(true);
+});
 
-    const currentURL = window.location.hash || window.location.pathname;
+  // set aria-current="page" on link of active page
+  function setAriaCurrent() {
+
 
     navLinks.forEach(link => {
-      const linkPath = link.getAttribute("href");
-      
+
       // Set aria-current="page" if the link matches the current URL
-      if (linkPath === currentURL) {
+      if (link.href === window.location.href){
         link.setAttribute("aria-current", "page");
       } else {
         link.removeAttribute("aria-current");
@@ -287,11 +319,10 @@ const navLinks = navMenu.querySelectorAll("a");
   setAriaCurrent();
 
   // Run aria-current update on hash change (for single-page apps)
-  window.addEventListener("hashchange", setAriaCurrent);
+//window.addEventListener("hashchange", setAriaCurrent);
 
 
 });
 
 
-  // Function to update aria-current based on active page
 </script>

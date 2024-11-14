@@ -31,6 +31,7 @@ img {
   --dark-grey-color: #b9b9b9;
   --light-grey-color: #d4d4d4;
   --green: green;
+  --border-color: yellow;
   --darker-green-color: #0a110f;
   --dark-green-color: #13201d;
   --mid-dark-green-color: #1e332e;
@@ -72,14 +73,16 @@ body {
   }
 }
 
-
-a{
+a {
   border: 3px solid transparent;
 }
 
-
 a:focus-visible {
-  border: 3px solid var(--green);
+  border: 3px solid var(--border-color);
+}
+
+button:focus-visible {
+  border: 3px solid var(--border-color);
 }
 
 .dark {
