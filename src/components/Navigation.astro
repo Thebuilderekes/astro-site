@@ -71,14 +71,29 @@
 
     <!-- Navigation toggle button -->
     <button id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-      ☰
+
+
+<svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="5" y1="7" x2="19" y2="7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<line x1="5" y1="12" x2="19" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="5" y1="17" x2="19" y2="17" stroke="#fff"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
+    <!-- Full-screen navigation menu -->
+    <nav id="nav-menu" class="nav-menu" aria-label="main" aria-hidden="true">
+    
+      <button id="nav-close" aria-label="Close navigation">
+
+<svg fill="#fff" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 371.23 371.23" xml:space="preserve">
+<polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 
+	185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
+</svg>
     </button>
 
-    <!-- Full-screen navigation menu -->
-    <nav id="nav-menu" class="nav-menu" aria-hidden="true">
-    
-      <button id="nav-close" aria-label="Close navigation">✕</button>
-      <ul>
+      </button>
+      <ul role="list">
         <li><a aria-label="hompage" class="nav-link" href="/">Home</a></li>
         <li><a aria-label="about page" class="nav-link" href="/about">About</a></li>
         <li><a aria-label="contact form" class="nav-link contact-link" href="#form">Contact</a></li>
@@ -92,7 +107,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.9rem 1rem;
   background-color: var(--light-green-color);
   color: #fff;
   position: relative;
@@ -153,7 +168,7 @@
 
 /* Navigation menu links */
 .nav-menu ul {
-  list-style: none;
+  list-style-type: "";
   padding: 0;
   text-align: center;
 }

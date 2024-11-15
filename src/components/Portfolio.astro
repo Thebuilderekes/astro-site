@@ -5,7 +5,8 @@ const portfolioCards = [
   {
     imgUrl: "/assets/img/johnweb.jpg",
     technology: "React, TailwindCSS",
-    ariaLabel: "project: a photographer's website",
+    ariaLabel: "Photographer's portfolio",
+    heading: "Photographer's website",
     description: "A photographer's website that showcases his works and also connects users to his email and social media pages, providing better exposure to the photographer and his works.",
     alt: "screenshot of photographer's website",
     animation: "card animate__animated animate__fadeInUp",
@@ -14,8 +15,9 @@ const portfolioCards = [
   },
   {
     imgUrl: "/assets/img/wuka-web.jpg",
-    technology: "CSS, React, styled components",
-    ariaLabel: "project: a musician's website",
+    technology: "React, styled components",
+    ariaLabel: "Musician's website",
+    heading: "Musician's website",
     description: "A landing page for a musician, designed to direct visitors to links for different streaming platforms, allowing users to listen to his music.",
     alt: "screenshot of musician landing page website",
     animation: "card animate__animated animate__fadeInUp",
@@ -26,6 +28,7 @@ const portfolioCards = [
     imgUrl: "/assets/img/restaurant.jpg",
     technology: "CSS, Javascript",
     ariaLabel: "project: a restaurant landing page",
+    heading: "Restaurant landing page",
     description: "An elegant restaurant landing page that showcases products and provides buttons for customers to place orders.",
     alt: "screenshot of restaurant landing page website",
     animation: "card animate__animated animate__fadeInUp",
@@ -34,8 +37,9 @@ const portfolioCards = [
   },
   {
     imgUrl: "/assets/img/luxegems-webscreen.jpg",
-    technology: "CSS, Bootstrap, Javascript",
-    ariaLabel: "project: an ecommerce website",
+    technology: "Bootstrap, Javascript",
+    ariaLabel: "project: jewelry store website",
+    heading: "Jewelry store",
     description: "A jewelry store website where customers can order products using 'place order' buttons or contact the store via contact information in the footer.",
     alt: "screenshot of jewelry ecommerce website",
     animation: "card animate__animated animate__fadeInUp",
@@ -45,7 +49,8 @@ const portfolioCards = [
   {
     imgUrl: "/assets/img/kombo-img.webp",
     technology: "TailwindCSS, Javascript",
-    ariaLabel: "project: a dark-themed portfolio website",
+    ariaLabel: "project: a dark-themed professional portfolio website",
+    heading: "Professional portfolio",
     description: "A dark-themed portfolio website with a working contact form that lets visitors connect with him via email, social media, or phone.",
     alt: "screenshot of dark-themed portfolio website",
     animation: "card animate__animated animate__fadeInUp",
@@ -56,6 +61,7 @@ const portfolioCards = [
     imgUrl: "/assets/img/jackson-img.webp",
     technology: "CSS, Javascript",
     ariaLabel: "project: an artist's website",
+    heading: "An artist's portfolio",
     description: "An artist's website that introduces the artist and their work, with links to social media pages for further information.",
     alt: "screenshot of artist's website",
     animation: "card animate__animated animate__fadeInUp",
@@ -124,7 +130,24 @@ const portfolioCards = [
 			0 1px 2px rgba(0, 0, 0, 0.24);
 	}
 
-	
+  .card article {
+    display: flex;
+    flex-direction:column;
+    gap: 0.3rem;
+  }
+
+
+  .card .flex-col-reverse {
+   display: flex;
+   flex-direction: column-reverse;
+  }
+
+
+  .card h3  {
+    font-size: var(--fs-semi-medium);
+  margin-top: 1.5rem;
+    font-weight: 600;
+  }	
 	 .card.dark {
 		 background: var(--dark-green-color);
 		 color: var(--light-grey-color); 
@@ -186,11 +209,11 @@ const portfolioCards = [
 	}
 
 
-		.portfolio-section .card-container .card .btn-group a::after {
+.portfolio-section .card-container .card .btn-group a::after {
 
-    content: "opens in new tab";
-    background: var(--dark-green-color);
- position: absolute;
+  content: "opens in new tab";
+  background: var(--dark-green-color);
+  position: absolute;
   left: 0;
   bottom: -1.5em;
   white-space: nowrap;
@@ -246,17 +269,23 @@ const portfolioCards = [
 
 <section aria-label="portfolio-heading" class="portfolio-section section-padding" id="portfolio">
 	<h2 class="portfolio-heading">PORTFOLIO</h2>
-	<ul class="card-container">
+	<ul role="list" class="card-container">
 		{
 		portfolioCards.map((portfolioCard) => (
 		<li class={portfolioCard.animation} aria-label={portfolioCard.ariaLabel} id="card">
-					<figure>
+      <article>
+        <div class="flex-col-reverse">
+          <h3>{portfolioCard.heading}</h3>
+      <figure>
 						<img src={portfolioCard.imgUrl} alt={portfolioCard.alt} />
-					</figure>
+      </figure>
+        </div>
+          <div class="text">
 					<p>{portfolioCard.description}</p>
 					<p>
 						<span>Technologies:</span> {portfolioCard.technology}
-					</p>
+          </p>
+          </div>
 					<div class="btn-group">
 						<a href={portfolioCard.webUrl}
 
@@ -276,7 +305,8 @@ const portfolioCards = [
 						>
 							GITHUB
 						</a>
-					</div>
+          </div>
+          <article>
 				</li>
 			))
 		}

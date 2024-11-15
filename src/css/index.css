@@ -85,6 +85,10 @@ button:focus-visible {
   border: 3px solid var(--border-color);
 }
 
+ul {
+  list-style-type: '';
+}
+
 .dark {
   transition: background-color 0.5s ease-in-out;
 }
