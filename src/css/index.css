@@ -1,6 +1,6 @@
-@import 'fonts.css';
-@import 'animate.css';
-@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import "fonts.css";
+@import "animate.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
 *,
 img {
@@ -23,7 +23,7 @@ img {
   --fs-section-mobile: 1.9rem; /*30.4px*/
   --fs-medium: 1.7rem; /*27.2px*/
   --fs-semi-medium: 1.2rem; /*24px*/
-  --fs--mid-medium: 1.125rem; /*18px*/
+  --fs-mid-medium: 1.125rem; /*18px*/
   --fs-default: 1rem; /*16px*/
   --fs-small: 0.8rem; /*12.8px*/
 
@@ -86,7 +86,7 @@ button:focus-visible {
 }
 
 ul {
-  list-style-type: '';
+  list-style-type: "";
 }
 
 .dark {
@@ -107,7 +107,7 @@ ul {
 
 h2 {
   font-weight: 700;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 footer p {
   text-align: center;

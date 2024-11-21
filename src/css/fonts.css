@@ -22,9 +22,8 @@
       format("svg"); /* Legacy iOS */
 }
 
-
 @font-face {
-  font-family:"Inter";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -32,7 +31,5 @@
   src:
     local(""),
     url("/assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf")
-      format("truetype"),
+      format("truetype");
 }
-
-

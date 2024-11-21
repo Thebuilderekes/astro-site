@@ -7,7 +7,6 @@ const description =
 	"Ekeopre Beredugo is a frontend web developer that specializes in creating quality high converting websites.";
 const author = "Ekeopre Beredugo";
 const scrollToTop = "#about";
-const contact = "#form";
 ---
 
 <BaseLayout
@@ -17,39 +16,33 @@ const contact = "#form";
 	scrollToTop={scrollToTop}
 	>
 	<section class="about-section" id="about">
-		<div class="text-container">
-			<h1
+		<h1
 		 class="about-section__main-heading title animate__animated animate__fadeInUp delay-1"
 	 >
 	 About
-			</h1>
-			<h2
-		 class="about-section__large-heading animate__animated animate__fadeInUp delay-2"
-	 >
-	 I develop websites for personal brands and businesses
-			</h2>
-
-
-   <p class="description animate__animated animate__fadeInUp delay-2">
-		 I’m a web developer with a passion for creating user-friendly, visually stunning websites. After earning a computer science degree, I discovered my love for web development and became fascinated with how websites work, especially how they can be designed to reflect brand ideas and connect with users. Since then, I've focused on designing websites that don't just look good, but deliver smooth, engaging experiences that leave lasting impressions.
-  </p>
-<!-- Button to toggle more content -->
-		<button 
-			class="read-more-toggle animate__animated animate__fadeInUp delay-2" 
-			aria-expanded="false" 
-			aria-controls="more-content"
-		>
-			Read more
-		</button>
-<div id="more-content" class="more-content" hidden>
- <p class="description">
-	 My journey as a developer has been as much about understanding people as it has been about learning code. Initially, I thought functionality was everything—if a site worked, that was enough. But I quickly realized that great design is the bridge between the user and the experience we're crafting. Now, I approach each project with a focus on thoughtful, inclusive design, creating websites that tell a story, guide users effortlessly, and feel like home.
-  </p>
-   	<p class="description">
-				I'm looking forward to collaborating with brands and businesses to align design elements with their vision, helping businesses achieve goals like building awareness, driving sales, and fostering trust.
+		</h1>
+	 
+       </h2>
+	   <div class="description-container">
+   	   		<p class="description animate__animated animate__fadeInUp delay-2">
+		    After earning a computer science degree, I discovered my love for web development and became fascinated with how websites work, especially how they can be designed to reflect brand ideas and connect with users. Since then, I've focused on designing websites that not only look good, but deliver smooth, engaging experiences that leave lasting impressions.
+  			</p>
+			<!-- Button to toggle more content -->
+			<details class="animated animate__fadeInUp delay-2">
+				<summary class="read-more-toggle">
+					+ Read more about me
+				</summary>
+				<div id="more-content" class="more-content" hidden>
+ 					<p class="description">
+	 					My journey as a developer has been as much about understanding people as it has been about learning code. Initially, I thought functionality was everything. If the website worked, that was enough. But I quickly realized that great design is the bridge between the user and the experience we're crafting. I now prioritize not just functionality, but also inclusive design and user experience. I strive to create products that are intuitive, engaging, and feel familiar.
+  					</p>
+   					<p class="description">
+						I'm always looking forward to collaborating with brands and businesses to align design elements with their vision, while helping them achieve goals like building awareness, driving sales, and fostering trust.
 				If you're looking for someone who genuinely cares about helping you achieve your website's goals, I'd love the opportunity to work with you. 
-		</p>
-</div>
+				  </p>
+				</div>
+			</details>
+		</div>
 	</section>
 </BaseLayout>
 
@@ -60,51 +53,36 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 
 	// Toggle the visibility and button state
 	this.setAttribute('aria-expanded', !isExpanded);
-	this.textContent = isExpanded ? 'Read more' : 'Read less';
+	this.textContent = isExpanded ? '+ Read more about me' : '- Read less';
 	moreContent.classList.toggle('expanded');
 });
 </script>
 <style>
-	html {
-		width: 100%;
-	}
 
 	body {
 		width: 100%;
 		font-family: "Inter", sans-serif;
-	}
-
-	.about-section {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		background-color: var(--light-grey-color);
 	}
 
-	.about-section__large-heading.dark {
 
-		color: var(--light-grey-color);
-	}
-
-	@media (min-width: 1200px) {
-		.text-container {
-			max-width: 60%;
-		}
-	}
 	@media (min-width: 600px) {
 		.about-section {
-			padding: 3% 2rem;
+			padding: 3% 7rem;
 		}
 	}
+
+@media (max-width: 800px) {
+		.about-section {
+			padding: 15% 1.5rem 4rem 1.5rem;
+		}
+}
 	.about-section h1 {
 
-		margin: 20px auto;
+		margin: 15px auto;
 		text-align: center;
 		font-family: "Archivo Black";
 		text-transform: uppercase;
-		font-size: var(--fs-large);
 		color: var(--light-green-color);
 	}
 
@@ -119,32 +97,20 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 		}
 	}
 
-@media (max-width: 800px) {
-		.about-section {
-			padding: 15% 1.5rem 4rem 1.5rem;
-		}
+	.about-section .description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
 }
 
+@media (max-width: 820px) {
+ 
+	.about-section .description-container {
 
-@media (min-width: 810px) {
-		.about-section .about-section__large-heading {
-
-			color: var(--light-green-color);
-			font-family: "Inter", sans-serif;
-			text-align: center;
-			font-weight: 700;
-			font-size: var(--fs-large);
-		}
-}
-
-@media (max-width: 800px) {
-		.about-section .about-section__large-heading {
-
-			color: var(--light-green-color);
-			font-size: var(--fs-semi-large);
-			font-weight: 700;
-		}
-}
+  width: 100%;
+	}
+	}
 	.about-section .description {
 		line-height: 1.5;
 		padding-top: 50px;
@@ -155,16 +121,29 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 	color: white;
 	border: none;
 	padding: 8px 16px;
+	display: inline-block;
 	cursor: pointer;
-	font-size: var(--fs-medium);
+	font-size: var(--fs-default);
 	margin-top: 10px;
 }
 
-@media (min-width: 800px) {
+.about-section .read-more-toggle:hover {
+
+	background-color: var(--dark-green-color);
+}
+
+
+.about-section .read-more-toggle:focus {
+	outline: 2px solid var(--green);
+	outline-offset: 4px;
+}
+
+@media (min-width: 1200px) {
 
 		.about-section .description {
 			font-family: "Inter", sans-serif;
 			font-size: var(--fs-medium);
+
 		}
 
 		.about-section .read-more-toggle {
@@ -196,19 +175,13 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 		}
 
 .about-section .read-more-toggle {
-
+  text-align: left;
 	font-size: var(--fs-p-mobile);
 
 }
 
 }
 
-.about-section .contact-link {
-		padding-top: 20px;
-		text-decoration: underline;
-		font-size: var(--fs-medium);
-		font-weight: 600;
-}
 
 .more-content {
 	display: none; /* Initially hidden */
@@ -216,19 +189,6 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 
 .more-content.expanded {
 	display: block; /* Visible when 'expanded' class is added */
-}
-
-
-
-.about-section .read-more-toggle:hover {
-
-	background-color: var(--dark-green-color);
-}
-
-
-.about-section .read-more-toggle:focus {
-	outline: 2px solid var(--green);
-	outline-offset: 4px;
 }
 
 
