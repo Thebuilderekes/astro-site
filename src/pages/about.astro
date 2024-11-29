@@ -30,7 +30,7 @@ const scrollToTop = "#about";
 			<!-- Button to toggle more content -->
 			<details class="animated animate__fadeInUp delay-2">
 				<summary class="read-more-toggle">
-					+ Read more about me
+					&#x25BC;  Read more about me
 				</summary>
 				<div id="more-content" class="more-content" hidden>
  					<p class="description">
@@ -53,51 +53,57 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 
 	// Toggle the visibility and button state
 	this.setAttribute('aria-expanded', !isExpanded);
-	this.textContent = isExpanded ? '+ Read more about me' : '- Read less';
+	this.textContent = isExpanded ? '\u25BC Read more about me' : '\u25B2 Read less';
 	moreContent.classList.toggle('expanded');
 });
 </script>
 <style>
 
-	body {
-		width: 100%;
-		font-family: "Inter", sans-serif;
-		background-color: var(--light-grey-color);
-	}
+body {
+	width: 100%;
+	font-family: "Inter", sans-serif;
+	background-color: var(--light-grey-color);
+}
 
-
-	@media (min-width: 600px) {
-		.about-section {
-			padding: 3% 7rem;
-		}
+@media (min-width: 600px) {
+	.about-section {
+		padding: 3% 7rem;
 	}
+}
 
 @media (max-width: 800px) {
-		.about-section {
-			padding: 15% 1.5rem 4rem 1.5rem;
-		}
-}
-	.about-section h1 {
-
-		margin: 15px auto;
-		text-align: center;
-		font-family: "Archivo Black";
-		text-transform: uppercase;
-		color: var(--light-green-color);
+	.about-section {
+		padding: 15% 1.5rem 4rem 1.5rem;
 	}
+}
+
+/*about section dark mode*/
+.about-section.dark {
+	background-color: var(--darker-green-color);
+	color: var(--light-grey-color);
+}
+
+.about-section h1 {
+	margin: 15px auto;
+	text-align: center;
+	font-family: "Archivo Black";
+	text-transform: uppercase;
+	color: var(--light-green-color);
+}
 
 @media (min-width: 700px) {
-		.about-section h1 {
-			font-size: var(--fs-semi-large);
-		}
+	.about-section h1 {
+		font-size: var(--fs-semi-large);
 	}
-@media (max-width: 820px) {
-		.about-section h1 {
-			font-size: var(--fs-semi-large);
-		}
-	}
+}
 
-	.about-section .description-container {
+@media (max-width: 820px) {
+	.about-section h1 {
+	   font-size: var(--fs-semi-large);
+	}
+}
+
+.about-section .description-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -105,11 +111,9 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 }
 
 @media (max-width: 820px) {
- 
-	.about-section .description-container {
-
+ .about-section .description-container {
   width: 100%;
-	}
+}
 	}
 	.about-section .description {
 		line-height: 1.5;
@@ -127,11 +131,13 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 	margin-top: 10px;
 }
 
-.about-section .read-more-toggle:hover {
-
+.read-more-toggle.dark  {
 	background-color: var(--dark-green-color);
 }
 
+.about-section .read-more-toggle:hover {
+	background-color: var(--darker-green-color);
+}
 
 .about-section .read-more-toggle:focus {
 	outline: 2px solid var(--green);
@@ -140,48 +146,39 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 
 @media (min-width: 1200px) {
 
-		.about-section .description {
-			font-family: "Inter", sans-serif;
-			font-size: var(--fs-medium);
+	.about-section .description {
+		font-family: "Inter", sans-serif;
+		font-size: var(--fs-medium);
+	}
 
-		}
-
-		.about-section .read-more-toggle {
-
-			font-size: var(--fs-medium);
+	.about-section .read-more-toggle {
+		font-size: var(--fs-medium);
 	}
 }
 
 @media (max-width: 790px) {
 
-		.about-section .description {
-			font-size: var(--fs-semi-medium);
-			padding-bottom: 20px;
-		}
+	.about-section .description {
+		font-size: var(--fs-semi-medium);
+		padding-bottom: 20px;
+	}
 
-
-		.about-section .read-more-toggle {
-
-			font-size: var(--fs-semi-medium);
-			
+	.about-section .read-more-toggle {
+		font-size: var(--fs-semi-medium);
+    }
 }
-}
-
 
 @media (max-width: 500px) {
-		.about-section .description {
-			padding-top: 10px;
-			font-size: var(--fs-p-mobile);
-		}
+	.about-section .description {
+		padding-top: 10px;
+		font-size: var(--fs-p-mobile);
+}
 
 .about-section .read-more-toggle {
   text-align: left;
-	font-size: var(--fs-p-mobile);
-
+font-size: var(--fs-p-mobile);
 }
-
 }
-
 
 .more-content {
 	display: none; /* Initially hidden */
@@ -191,9 +188,4 @@ document.querySelector('.read-more-toggle').addEventListener('click', function()
 	display: block; /* Visible when 'expanded' class is added */
 }
 
-
-.about-section.dark {
-		background-color: var(--darker-green-color);
-		color: var(--light-grey-color);
-}
 </style>
