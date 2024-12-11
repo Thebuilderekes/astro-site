@@ -84,6 +84,7 @@ const portfolioCards = [
 	.portfolio-section.dark {
 		background-color: var(--darker-green-color);
 	}
+
 	@media (max-width: 800px) {
 		.portfolio-section {
 			padding: 4.5rem 1rem;
@@ -179,7 +180,6 @@ const portfolioCards = [
 		font-size: var(--fs-semi-medium);
 		text-align: left;
 		padding: 0.9rem 0;
-
 		line-height: 1.5;
 	}
 
@@ -188,6 +188,7 @@ const portfolioCards = [
 			font-size: var(--fs-default);
 		}
 	}
+
 	.portfolio-section .card-container .card p span {
 		font-weight: 900;
 	}
@@ -197,18 +198,18 @@ const portfolioCards = [
 	}
 
 	.portfolio-section .card-container .card .btn-group a {
-		font-weight: 600;
-    position: relative;
-		padding: 5px 10px;
 		text-decoration: none;
+	  position: relative;
+		padding: 5px 10px;
+		font-weight: 600;
 		font-size: var(--fs-semi-medium);
+		color: #ffffff;
 		background-color: var(--darker-green-color);
 		border: 3px solid transparent;
-		color: #ffffff;
 		border-radius: 10px;
 	}
 
-
+/*opens in new tab tip*/
 .portfolio-section .card-container .card .btn-group a::after {
   content: "opens in new tab";
   background: var(--dark-green-color);
@@ -287,7 +288,6 @@ const portfolioCards = [
           </div>
 					<div class="btn-group">
 						<a href={portfolioCard.webUrl}
-
               aria-label=" visit website (opens in a new tab)"
               class="btn" 
               target="_blank" 

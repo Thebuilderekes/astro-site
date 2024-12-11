@@ -21,42 +21,21 @@ const scrollToTop = "#about";
 	 >
 	 About
 		</h1>
-	 
-       </h2>
 	   <div class="description-container">
    	   		<p class="description animate__animated animate__fadeInUp delay-2">
-		    After earning a computer science degree, I discovered my love for web development and became fascinated with how websites work, especially how they can be designed to reflect brand ideas and connect with users. Since then, I've focused on designing websites that not only look good, but deliver smooth, engaging experiences that leave lasting impressions.
+		    After earning a computer science degree, I discovered my love for web development and became fascinated with how websites work, especially how they can be designed to reflect brand ideas and connect with users. With my extensive knowledge about HTML, CSS and Javascript as well as libraries and frameworks such React and next JS, I can design websites that not only look good, but deliver smooth, engaging experiences that leave lasting impressions. 
   			</p>
-			<!-- Button to toggle more content -->
-			<details class="animated animate__fadeInUp delay-2">
-				<summary class="read-more-toggle">
-					&#x25BC;  Read more about me
-				</summary>
-				<div id="more-content" class="more-content" hidden>
- 					<p class="description">
-	 					My journey as a developer has been as much about understanding people as it has been about learning code. Initially, I thought functionality was everything. If the website worked, that was enough. But I quickly realized that great design is the bridge between the user and the experience we're crafting. I now prioritize not just functionality, but also inclusive design and user experience. I strive to create products that are intuitive, engaging, and feel familiar.
+   	   		<p class="description animate__animated animate__fadeInUp delay-2">
+	 					My journey as a developer has been as much about understanding people as it has been about building websites. I've learnt that great design is a direct result of great communication that bridges the gap between the user and the experience we're crafting. I prioritize not just functionality, but also inclusive design and user experience and I strive to create products that are intuitive, engaging, and feel familiar.
   					</p>
-   					<p class="description">
+   	   		<p class="description animate__animated animate__fadeInUp delay-2">
 						I'm always looking forward to collaborating with brands and businesses to align design elements with their vision, while helping them achieve goals like building awareness, driving sales, and fostering trust.
 				If you're looking for someone who genuinely cares about helping you achieve your website's goals, I'd love the opportunity to work with you. 
 				  </p>
-				</div>
-			</details>
 		</div>
 	</section>
 </BaseLayout>
 
-<script>
-document.querySelector('.read-more-toggle').addEventListener('click', function() {
-	const moreContent = document.getElementById('more-content');
-	const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-	// Toggle the visibility and button state
-	this.setAttribute('aria-expanded', !isExpanded);
-	this.textContent = isExpanded ? '\u25BC Read more about me' : '\u25B2 Read less';
-	moreContent.classList.toggle('expanded');
-});
-</script>
 <style>
 
 body {
@@ -115,45 +94,19 @@ body {
   width: 100%;
 }
 	}
+
 	.about-section .description {
 		line-height: 1.5;
 		padding-top: 50px;
 	}
 
-.about-section .read-more-toggle {
-	background-color: var(--light-green-color);
-	color: white;
-	border: none;
-	padding: 8px 16px;
-	display: inline-block;
-	cursor: pointer;
-	font-size: var(--fs-default);
-	margin-top: 10px;
-}
-
-.read-more-toggle.dark  {
-	background-color: var(--dark-green-color);
-}
-
-.about-section .read-more-toggle:hover {
-	background-color: var(--darker-green-color);
-}
-
-.about-section .read-more-toggle:focus {
-	outline: 2px solid var(--green);
-	outline-offset: 4px;
-}
 
 @media (min-width: 1200px) {
-
 	.about-section .description {
 		font-family: "Inter", sans-serif;
 		font-size: var(--fs-medium);
 	}
 
-	.about-section .read-more-toggle {
-		font-size: var(--fs-medium);
-	}
 }
 
 @media (max-width: 790px) {
@@ -163,9 +116,6 @@ body {
 		padding-bottom: 20px;
 	}
 
-	.about-section .read-more-toggle {
-		font-size: var(--fs-semi-medium);
-    }
 }
 
 @media (max-width: 500px) {
@@ -174,10 +124,6 @@ body {
 		font-size: var(--fs-p-mobile);
 }
 
-.about-section .read-more-toggle {
-  text-align: left;
-font-size: var(--fs-p-mobile);
-}
 }
 
 .more-content {
