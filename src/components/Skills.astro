@@ -3,18 +3,19 @@ import "animate.css";
 import "../css/animationDuration.css";
 
 const skillCards = [
-	// {
-	// 	icon: "https://api.iconify.design/logos:figma.svg",
-	// 	animation: "card animate__animated animate__fadeInUp delay-1",
-	// 	title: "Figma",
-	// 	alt: "figma logo",
-	// },
+	 {
+	 	icon: "https://api.iconify.design/logos:figma.svg",
+	 	animation: "card animate__animated animate__fadeInUp delay-1",
+	 	title: "Figma",
+	 	alt: "figma logo",
+	 },
 	{
 		icon: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg ",
 		animation: "card animate__animated animate__fadeInUp delay-1",
 		title: "React",
 		alt: "React logo",
 	},
+
 
 	{
 		icon: "https://api.iconify.design/logos:javascript.svg",
@@ -44,19 +45,19 @@ const skillCards = [
 		alt: "Terminal logo",
 	},
 
-	// {
-	// 	icon: "https://api.iconify.design/logos:sass.svg",
-	// 	animation: "card animate__animated animate__fadeInUp delay-6",
-	// 	title: "SASS",
-	// 	alt: "SASS logo",
-	// },
+	 {
+	 	icon: "https://api.iconify.design/logos:php.svg",
+	 	animation: "card animate__animated animate__fadeInUp delay-6",
+		title: "PHP",
+	 	alt: "PHP logo",
+	 },
 
-	// {
-	// 	icon: "https://api.iconify.design/logos:astro.svg",
-	// 	animation: "card animate__animated animate__fadeInUp delay-6",
-	// 	title: "Astro",
-	// 	alt: "Astro logo",
-	// },
+	 {
+	 	icon: "https://api.iconify.design/logos:astro.svg",
+	 	animation: "card animate__animated animate__fadeInUp delay-6",
+	 	title: "Astro",
+	 	alt: "Astro logo",
+	 },
 
 	{
 		icon: "https://api.iconify.design/logos:firebase.svg",
@@ -73,7 +74,10 @@ const skillCards = [
 
 	.skills-section {
 		position: relative;
-		background-color: var(--light-green-color);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: var(--light-grey-color);
 	}
 
 	.skills-section.dark {
@@ -89,14 +93,13 @@ const skillCards = [
 	.skills-section h2 {
 	font-family: "Archivo Black";
 		--animate-duration: 6s;
-		color: var(--light-grey-color);
+		color: var(--dark-green-color);
 		font-size: var(--fs-section-mobile);
 		font-weight: 700;
 		text-align: center;
 	}
 	.skills-section h2.dark {
-		background-color: transparent;
-		color: #d1d1d1;
+		color: var(--light-grey-color);
 	}
 	@media (min-width: 800px) {
 		.skills-section h2 {
@@ -108,10 +111,11 @@ const skillCards = [
 	/* SKILLS SECTION STYLES*/
 	.skills-section .card-container {
 		display: grid;
+		justify-content: center;
 		padding-top: 3rem;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(1, 1fr);
-		grid-column-gap: 3rem;
+		grid-column-gap: 6rem;
 		grid-row-gap: 0px;
 	}
 
@@ -144,8 +148,8 @@ const skillCards = [
 		text-align: center;
 		margin: 0 auto;
 		color: #9ea3e7;
-		width: 100px;
-		height: 100px;
+		width: 150px;
+		height: 150px;
 	}
 
 	.skills-section .card-container .card h3 {
