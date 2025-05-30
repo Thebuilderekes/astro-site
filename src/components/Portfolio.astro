@@ -92,7 +92,6 @@ const portfolioCards = [
 	}
 
 	h2 {
-		font-size: var(--fs-section-mobile);
 	  font-family: "Archivo Black";
 		font-weight: 700;
 		color: var(--light-grey-color);
@@ -105,9 +104,8 @@ const portfolioCards = [
 
 	@media (min-width: 800px) {
 		.portfolio-section h2 {
-			font-size: var(--fs-semi-large);
 			padding-bottom: 3rem;
-			font-size: var(--fs-large);
+			font-size: var(--fs-64);
 		}
 	}
 
@@ -151,7 +149,7 @@ const portfolioCards = [
 
 
   .card h3  {
-    font-size: var(--fs-semi-medium);
+    font-size: var(--fs-24);
   margin-top: 1.5rem;
     font-weight: 600;
   }	
@@ -183,7 +181,7 @@ const portfolioCards = [
 	}
 
 	.card p {
-		font-size: var(--fs-semi-medium);
+		font-size: var(--fs-24);
 		text-align: left;
 		padding: 0.9rem 0;
 		line-height: 1.5;
@@ -208,7 +206,7 @@ const portfolioCards = [
 	  position: relative;
 		padding: 5px 10px;
 		font-weight: 600;
-		font-size: var(--fs-semi-medium);
+		font-size: var(--fs-24);
 		color: #ffffff;
 		background-color: var(--darker-green-color);
 		border: 3px solid transparent;
@@ -256,7 +254,9 @@ const portfolioCards = [
 
 	.portfolio-section .card-container .card .btn-group .github-btn {
 		margin-left: 15px;
-	}
+}
+
+
 	.portfolio-section .card-container .card a:hover,
 	a:focus {
 		color: #0a1926;
@@ -274,7 +274,7 @@ const portfolioCards = [
 </style>
 
 <section aria-label="portfolio-heading" class="portfolio-section section-padding" id="portfolio">
-	<h2 class="portfolio-heading">PORTFOLIO</h2>
+	<h2 class="portfolio-heading section-heading fade-in-up">PORTFOLIO</h2>
 	<ul role="list" class="card-container">
 		{
 		portfolioCards.map((portfolioCard) => (

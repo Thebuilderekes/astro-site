@@ -2,7 +2,6 @@
 
 import "../css/index.css";
 import "../components/ThemeToggle.astro";
-import Navigation from "../components/Navigation";
 import Navigation from "../components/Navigation.astro"
 import Form from "../components/Form.astro";
 import Footer from "../components/Footer.astro";
@@ -26,5 +25,27 @@ const { title, description, author, form, scrollToTop} =
 			<Form form={form} />
 		</main>
 		<Footer scrollToTop={scrollToTop} />
+
+		<script>
+function fadeInOnScroll() {
+  const elements = document.querySelectorAll('.skills-heading, .card, .form-heading');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  elements.forEach(element => {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.top <= windowHeight && !prefersReducedMotion) {
+      element.classList.add('fade-in-up');
+    }
+  });
+}
+
+window.addEventListener('scroll', fadeInOnScroll);
+window.addEventListener('load', fadeInOnScroll);
+
+
+console.log("scrip working");
+		</script>
 	</body>
 </html>

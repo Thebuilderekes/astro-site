@@ -90,20 +90,12 @@ const skillCards = [
 		}
 	}
 
-	.skills-section h2 {
-	font-family: "Archivo Black";
-		--animate-duration: 6s;
-		color: var(--dark-green-color);
-		font-size: var(--fs-section-mobile);
-		font-weight: 700;
-		text-align: center;
-	}
+
 	.skills-section h2.dark {
 		color: var(--light-grey-color);
 	}
 	@media (min-width: 800px) {
 		.skills-section h2 {
-			font-size: var(--fs-large);
 			padding-bottom: 3rem;
 		}
 	}
@@ -118,6 +110,8 @@ const skillCards = [
 		grid-column-gap: 6rem;
 		grid-row-gap: 0px;
 	}
+
+
 
 	@media (max-width: 600px) {
 		.skills-section .card-container {
@@ -155,7 +149,7 @@ const skillCards = [
 	.skills-section .card-container .card h3 {
 		padding-top: 10px;
 		font-family: "Inter", sans-serif;
-		font-size: var(--fs-semi-medium);
+		font-size: var(--fs-24);
 	}
 
 	@media (max-width: 600px) {
@@ -166,7 +160,7 @@ const skillCards = [
 </style>
 
 <section aria-labelledby="skills-heading" class="skills-section section-padding" id="skills">
-	<h2 id="skills-heading" class="skills-heading animate__animated animate__fadeInUp">
+	<h2 id="skills-heading" class="skills-heading section-heading">
 		SKILLS & TECH
 	</h2>
 	<ul role="list" class="card-container">
