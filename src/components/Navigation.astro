@@ -258,31 +258,26 @@
 <script>
 // JavaScript for opening and closing the mobile menu
 document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.getElementById("nav-toggle");
+  const navToggleBtn = document.getElementById("nav-toggle");
   const navMenu = document.getElementById("nav-menu");
-  const navClose = document.getElementById("nav-close");
+  const navCloseBtn = document.getElementById("nav-close");
   const navLinks = navMenu.querySelectorAll("a"); 
   const contactLink = document.querySelector(".contact-link")
+
   const toggleMenu = (isExpanded) => {
-
-    navToggle.setAttribute("aria-expanded", !isExpanded);
-
+    navToggleBtn.setAttribute("aria-expanded", !isExpanded);
     navMenu.setAttribute("aria-hidden", isExpanded);
   };
 
   // Open menu on toggle button click
-  navToggle.addEventListener("click", () => {
-
-    const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
-
+  navToggleBtn.addEventListener("click", () => {
+    const isExpanded = navToggleBtn.getAttribute("aria-expanded") === "true";
     toggleMenu(isExpanded);
   });
 
   // Close menu on close button click
-  navClose.addEventListener("click", () => {
-
+  navCloseBtn.addEventListener("click", () => {
     toggleMenu(true);
-
   });
 
   //Hide Navigation on click of navigation link
